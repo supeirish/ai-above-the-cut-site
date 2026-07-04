@@ -22,17 +22,15 @@ ml('account', '2488958');
  .skip{position:absolute;left:-999px;top:0;background:#fff;color:var(--blue);padding:10px 16px;font-weight:600;z-index:50}
  .skip:focus{left:8px;top:8px}
  .container{max-width:1200px;margin:0 auto;padding:0 32px}
- /* Contained, balanced top navigation */
  .sitenav{position:sticky;top:0;z-index:30;background:var(--navy)}
  .sitenav .container{display:flex;align-items:center;gap:16px;min-height:66px;flex-wrap:wrap}
  .sitenav .brand{display:inline-flex;align-items:center;gap:11px;text-decoration:none;color:#fff;font:700 20px/1 'Space Grotesk',sans-serif;letter-spacing:-.01em}
- .sitenav .menu{margin-left:auto;display:flex;align-items:center;gap:6px;flex-wrap:wrap}
- .sitenav .menu a{color:#e7edf6;text-decoration:none;font:600 16px/1 'IBM Plex Sans',sans-serif;padding:10px 14px;border-radius:8px;display:inline-flex;align-items:center;min-height:44px}
+ .sitenav .menu{margin-left:auto;display:flex;align-items:center;gap:14px;flex-wrap:wrap}
+ .sitenav .menu a{color:#e7edf6;text-decoration:none;font:600 16px/1 'IBM Plex Sans',sans-serif;padding:11px 16px;border-radius:8px;display:inline-flex;align-items:center;min-height:44px}
  .sitenav .menu a:hover{color:#fff;background:rgba(255,255,255,.10)}
  .sitenav .menu a[aria-current="page"]{color:#fff;box-shadow:inset 0 -2px 0 var(--blue)}
  .sitenav .menu a.sub{background:var(--blue);color:#fff;font-weight:700;padding:11px 20px}
  .sitenav .menu a.sub:hover{background:#3a6cff}
- /* Two-column hero */
  .hero{display:grid;grid-template-columns:1.15fr .85fr;gap:54px;align-items:start;padding-top:52px;padding-bottom:26px}
  .eyebrow{font:700 13px/1.4 'IBM Plex Mono',monospace;letter-spacing:.14em;text-transform:uppercase;color:var(--blue);margin:0 0 16px}
  .hero h1{font:700 clamp(36px,4.6vw,56px)/1.06 'Space Grotesk',sans-serif;letter-spacing:-.03em;color:var(--navy);margin:0 0 20px}
@@ -43,12 +41,10 @@ ml('account', '2488958');
  .hero-btns{display:flex;gap:12px;flex-wrap:wrap;margin-top:24px}
  .btn-ghost{display:inline-flex;align-items:center;gap:8px;border:1.5px solid var(--hair);border-radius:10px;padding:14px 20px;text-decoration:none;color:var(--navy);font:600 15.5px 'Space Grotesk',sans-serif;min-height:48px}
  .btn-ghost:hover{border-color:var(--blue);color:var(--blue)}
- /* Subscribe call-to-action box (hero right column) */
  .subscribe{border:2px solid var(--blue);background:#F2F6FF;border-radius:16px;padding:26px 24px;box-shadow:0 10px 30px rgba(27,87,240,.12)}
  .subscribe h2{font:700 23px/1.2 'Space Grotesk',sans-serif;letter-spacing:-.01em;color:var(--navy);margin:0 0 6px}
  .subscribe .sub-p{font-size:15.5px;line-height:1.55;color:var(--body);margin:0 0 16px}
  .subscribe .fineprint{font:600 12px/1.5 'IBM Plex Mono',monospace;letter-spacing:.04em;text-transform:uppercase;color:var(--slate);margin:14px 0 0}
- /* Archive */
  .archive{max-width:780px;margin:14px 0 0;padding-top:30px;border-top:1px solid var(--hair)}
  .archive h2{font:700 22px/1.2 'Space Grotesk',sans-serif;letter-spacing:-.01em;color:var(--navy);margin:0 0 4px}
  .archive .asub{font:400 16px/1.5 'IBM Plex Sans',sans-serif;color:var(--slate);margin:0 0 14px}
@@ -65,7 +61,6 @@ ml('account', '2488958');
   .container{padding:0 20px}
   .hero{grid-template-columns:1fr;gap:30px;padding-top:32px}
  }
- /* MailerLite embedded form → Radar look */
  .ml-form-embedContainer,.ml-form-embedWrapper{max-width:none!important;background:transparent!important;border:0!important;box-shadow:none!important}
  .ml-form-embedWrapper .ml-form-embedContent,.ml-form-embedWrapper .ml-form-embedContent h4,.ml-form-embedWrapper .ml-form-embedContent p{display:none!important}
  .ml-form-embedBody{padding:0!important;border:0!important}
@@ -84,7 +79,7 @@ ml('account', '2488958');
   </a>
   <nav class="menu" aria-label="Main">
    <a href="index.html" aria-current="page">Home</a>
-   <a href="2026-06-28.html">Current issue</a>
+   <a href="/current">Current issue</a>
    <a href="about.html">About</a>
    <a class="sub" href="#subscribe">Subscribe</a>
   </nav>
@@ -100,7 +95,7 @@ ml('account', '2488958');
     <span>Frontier</span><span>Labs</span><span>Enterprise</span><span>Policy</span><span>Healthcare</span>
    </div>
    <div class="hero-btns">
-    <a class="btn-ghost" href="2026-06-28.html">Current issue &rarr;</a>
+    <a class="btn-ghost" href="/current">Current issue &rarr;</a>
     <a class="btn-ghost" href="#archive">Past issues &darr;</a>
    </div>
   </div>
@@ -108,7 +103,6 @@ ml('account', '2488958');
    <section class="subscribe" id="subscribe" aria-labelledby="sub-h">
     <h2 id="sub-h">Get the Sunday brief</h2>
     <p class="sub-p">Free, every Sunday morning. A 4-minute read on what the field's top minds actually said this week — signal over hype.</p>
-    <!-- MailerLite embedded signup form (feeds the "AI Above the Cut" group, double opt-in) -->
     <div class="ml-embedded" data-form="cgeGZU"></div>
     <p class="fineprint">Free · Weekly · Sundays · No spam · Unsubscribe anytime</p>
    </section>
@@ -132,12 +126,11 @@ ml('account', '2488958');
 </main>
 <footer class="foot">
  <div class="container">
-  <a href="index.html">Home</a> &nbsp;·&nbsp; <a href="2026-06-28.html">Current issue</a> &nbsp;·&nbsp; <a href="about.html">About</a> &nbsp;·&nbsp; <a href="#subscribe">Subscribe</a><br>
+  <a href="index.html">Home</a> &nbsp;·&nbsp; <a href="/current">Current issue</a> &nbsp;·&nbsp; <a href="about.html">About</a> &nbsp;·&nbsp; <a href="#subscribe">Subscribe</a><br>
   AI Above the Cut — a weekly AI brief for executives.
  </div>
 </footer>
 <script>
-/* Force the MailerLite embed's Subscribe button to brand blue (beats MailerLite's injected stylesheet, which can lag on their cache). */
 (function(){function fix(){document.querySelectorAll('.ml-embedded button, .ml-form-embedSubmit button').forEach(function(b){b.style.setProperty('background-color','#1B57F0','important');b.style.setProperty('color','#fff','important');});}var n=0,t=setInterval(function(){fix();if(++n>40)clearInterval(t);},250);if(document.readyState!=='loading')fix();else document.addEventListener('DOMContentLoaded',fix);})();
 </script>
 </body></html>

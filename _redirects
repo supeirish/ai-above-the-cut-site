@@ -1,0 +1,4 @@
+# Stable "current issue" URL — always serves the latest edition.
+# When a new edition ships, update the target on the next line.
+/current        /2026-06-28.html    200
+/current-issue  /2026-06-28.html    200
