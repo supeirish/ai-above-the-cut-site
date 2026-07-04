@@ -12,45 +12,50 @@
  :focus-visible{outline:3px solid #7aa2ff;outline-offset:2px;border-radius:4px}
  .skip{position:absolute;left:-999px;top:0;background:#fff;color:var(--blue);padding:10px 16px;font-weight:600;z-index:50}
  .skip:focus{left:8px;top:8px}
- .sitenav{position:sticky;top:0;z-index:30;background:var(--navy);display:flex;align-items:center;gap:12px 16px;padding:6px 22px;flex-wrap:wrap}
- .sitenav .brand{display:inline-flex;align-items:center;gap:10px;text-decoration:none;color:#fff;font:700 19px/1 'Space Grotesk',sans-serif;letter-spacing:-.01em;padding:12px 0;min-height:44px}
- .sitenav .menu{margin-left:auto;display:flex;align-items:center;gap:4px;flex-wrap:wrap}
- .sitenav .menu a{color:#e7edf6;text-decoration:none;font:600 16px/1 'IBM Plex Sans',sans-serif;padding:12px 13px;border-radius:8px;display:inline-flex;align-items:center;min-height:44px}
+ .container{max-width:1200px;margin:0 auto;padding:0 32px}
+ .sitenav{position:sticky;top:0;z-index:30;background:var(--navy)}
+ .sitenav .container{display:flex;align-items:center;gap:16px;min-height:66px;flex-wrap:wrap}
+ .sitenav .brand{display:inline-flex;align-items:center;gap:11px;text-decoration:none;color:#fff;font:700 20px/1 'Space Grotesk',sans-serif;letter-spacing:-.01em}
+ .sitenav .menu{margin-left:auto;display:flex;align-items:center;gap:6px;flex-wrap:wrap}
+ .sitenav .menu a{color:#e7edf6;text-decoration:none;font:600 16px/1 'IBM Plex Sans',sans-serif;padding:10px 14px;border-radius:8px;display:inline-flex;align-items:center;min-height:44px}
  .sitenav .menu a:hover{color:#fff;background:rgba(255,255,255,.10)}
  .sitenav .menu a[aria-current="page"]{color:#fff;box-shadow:inset 0 -2px 0 var(--blue)}
- .sitenav .menu a.sub{background:var(--blue);color:#fff;font-weight:700;padding:12px 18px}
+ .sitenav .menu a.sub{background:var(--blue);color:#fff;font-weight:700;padding:11px 20px}
  .sitenav .menu a.sub:hover{background:#3a6cff}
- .wrap{max-width:680px;margin:0 auto;padding:26px 26px 56px}
- .kicker{font:700 12px/1 'IBM Plex Mono',monospace;letter-spacing:.12em;text-transform:uppercase;color:var(--blue);margin:26px 0 10px}
- h1{font:700 32px/1.2 'Space Grotesk',sans-serif;letter-spacing:-.02em;color:var(--navy);margin:0 0 16px}
- h2{font:700 20px/1.25 'Space Grotesk',sans-serif;letter-spacing:-.01em;color:var(--navy);margin:34px 0 8px}
- p{font-size:17px;line-height:1.75}
- .lead-p{font-size:19px;line-height:1.65;color:var(--navy)}
- .roster{list-style:none;padding:0;margin:14px 0 0;display:grid;grid-template-columns:1fr 1fr;gap:10px 22px}
- .roster li{font:500 16px/1.5 'IBM Plex Sans',sans-serif;color:var(--navy);padding-left:17px;position:relative}
+ .article{max-width:780px;margin:0 auto;padding:12px 32px 56px}
+ .kicker{font:700 13px/1 'IBM Plex Mono',monospace;letter-spacing:.14em;text-transform:uppercase;color:var(--blue);margin:34px 0 12px}
+ h1{font:700 clamp(32px,3.6vw,44px)/1.12 'Space Grotesk',sans-serif;letter-spacing:-.02em;color:var(--navy);margin:0 0 18px}
+ h2{font:700 21px/1.25 'Space Grotesk',sans-serif;letter-spacing:-.01em;color:var(--navy);margin:36px 0 8px}
+ p{font-size:17.5px;line-height:1.75}
+ .lead-p{font-size:20px;line-height:1.6;color:var(--navy)}
+ .roster{list-style:none;padding:0;margin:16px 0 0;display:grid;grid-template-columns:1fr 1fr;gap:10px 26px}
+ .roster li{font:500 16px/1.5 'IBM Plex Sans',sans-serif;color:var(--navy);padding-left:18px;position:relative}
  .roster li::before{content:"";position:absolute;left:0;top:9px;width:7px;height:7px;border-radius:2px;background:var(--blue)}
  .roster li span{color:var(--slate);font-weight:400}
- .cta{display:inline-block;margin:28px 0 0;background:var(--blue);color:#fff;text-decoration:none;font:700 16px 'Space Grotesk';padding:15px 26px;border-radius:9px;min-height:48px}
+ .cta{display:inline-block;margin:30px 0 0;background:var(--blue);color:#fff;text-decoration:none;font:700 16px 'Space Grotesk';padding:15px 26px;border-radius:9px;min-height:48px}
  .cta:hover{background:var(--blue-dk)}
- .foot{max-width:680px;margin:0 auto;padding:22px 26px 46px;border-top:1px solid var(--hair);font:400 14px/1.7 'IBM Plex Sans',sans-serif;color:var(--slate)}
+ .foot{border-top:1px solid var(--hair);margin-top:8px}
+ .foot .container{padding-top:24px;padding-bottom:46px;font:400 14.5px/1.7 'IBM Plex Sans',sans-serif;color:var(--slate)}
  .foot a{color:var(--slate);text-decoration:underline;font-weight:600}
  .foot a:hover{color:var(--blue)}
- @media(max-width:520px){.roster{grid-template-columns:1fr}}
+ @media(max-width:860px){.container{padding:0 20px}.article{padding:12px 20px 46px}.roster{grid-template-columns:1fr}}
 </style></head><body>
 <a class="skip" href="#main">Skip to content</a>
 <header class="sitenav">
- <a class="brand" href="index.html">
-  <svg width="26" height="26" viewBox="0 0 30 30" aria-hidden="true" focusable="false"><g fill="none" stroke="#1B57F0" stroke-width="1.8"><circle cx="15" cy="15" r="13.2"/><circle cx="15" cy="15" r="8.6"/><circle cx="15" cy="15" r="4"/></g><circle cx="15" cy="15" r="2.4" fill="#1B57F0"/></svg>
-  AI ABOVE THE CUT
- </a>
- <nav class="menu" aria-label="Main">
-  <a href="index.html">Home</a>
-  <a href="2026-06-28.html">Current issue</a>
-  <a href="about.html" aria-current="page">About</a>
-  <a class="sub" href="index.html#subscribe">Subscribe</a>
- </nav>
+ <div class="container">
+  <a class="brand" href="index.html">
+   <svg width="27" height="27" viewBox="0 0 30 30" aria-hidden="true" focusable="false"><g fill="none" stroke="#1B57F0" stroke-width="1.8"><circle cx="15" cy="15" r="13.2"/><circle cx="15" cy="15" r="8.6"/><circle cx="15" cy="15" r="4"/></g><circle cx="15" cy="15" r="2.4" fill="#1B57F0"/></svg>
+   AI ABOVE THE CUT
+  </a>
+  <nav class="menu" aria-label="Main">
+   <a href="index.html">Home</a>
+   <a href="2026-06-28.html">Current issue</a>
+   <a href="about.html" aria-current="page">About</a>
+   <a class="sub" href="index.html#subscribe">Subscribe</a>
+  </nav>
+ </div>
 </header>
-<main class="wrap" id="main">
+<main class="article" id="main">
  <div class="kicker">About</div>
  <h1>Staying on top of AI, without drowning in it.</h1>
  <p class="lead-p">AI Above the Cut exists to make one thing simple: keeping executives on top of what's happening in AI. The field moves fast and the feed never stops — so instead of chasing every headline, we do the reading for you and surface only what actually matters.</p>
@@ -80,7 +85,9 @@
  <a class="cta" href="index.html#subscribe">Get the Sunday brief &rarr;</a>
 </main>
 <footer class="foot">
- <a href="index.html">Home</a> &nbsp;·&nbsp; <a href="2026-06-28.html">Current issue</a> &nbsp;·&nbsp; <a href="about.html">About</a> &nbsp;·&nbsp; <a href="index.html#subscribe">Subscribe</a><br>
- AI Above the Cut — a weekly AI brief for executives.
+ <div class="container">
+  <a href="index.html">Home</a> &nbsp;·&nbsp; <a href="2026-06-28.html">Current issue</a> &nbsp;·&nbsp; <a href="about.html">About</a> &nbsp;·&nbsp; <a href="index.html#subscribe">Subscribe</a><br>
+  AI Above the Cut — a weekly AI brief for executives.
+ </div>
 </footer>
 </body></html>
