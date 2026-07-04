@@ -4,45 +4,53 @@
 <meta name="description" content="AI Above the Cut makes it simple for executives to stay on top of AI. We track the field's top minds and curate what actually matters — signal over hype.">
 <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&family=IBM+Plex+Sans:wght@400;500;600&family=IBM+Plex+Mono:wght@500;600&display=swap" rel="stylesheet">
 <style>
- :root{--blue:#1B57F0;--navy:#0A1422;--body:#3D4B5C;--slate:#5A6B7E;--slate2:#7E8D9E;--chipblue:#EAF1FF;--chipgrey:#EEF1F5;--hair:#E8ECF1}
+ :root{--blue:#1B57F0;--blue-dk:#1543c7;--navy:#0A1422;--body:#37444F;--slate:#566573;--hair:#E3E8EE}
  *{box-sizing:border-box}
- body{margin:0;font-family:'IBM Plex Sans',sans-serif;color:var(--body);background:#fff}
+ html{scroll-behavior:smooth}
+ body{margin:0;font-family:'IBM Plex Sans',sans-serif;color:var(--body);background:#fff;font-size:17px;line-height:1.65}
  a{color:var(--blue)}
- .bar{background:var(--navy);color:#fff;padding:9px 26px;display:flex;justify-content:space-between;font:600 11px/1 'IBM Plex Mono',monospace;letter-spacing:.12em;text-transform:uppercase}
- .bar span:last-child{color:#9fb0c4}
- .wrap{max-width:660px;margin:0 auto;padding:26px 26px 56px}
- .top{display:flex;align-items:center;gap:13px;flex-wrap:wrap}
- .brand{display:flex;align-items:center;gap:13px;text-decoration:none}
- .wm{font:700 26px/1 'Space Grotesk',sans-serif;letter-spacing:-.02em;color:var(--navy)}
- .nav{margin-left:auto;display:flex;gap:18px;align-items:center}
- .nav a{font:600 11px/1 'IBM Plex Mono',monospace;letter-spacing:.1em;text-transform:uppercase;color:var(--slate);text-decoration:none}
- .nav a:hover{color:var(--blue)}
- .kicker{font:600 11px/1 'IBM Plex Mono',monospace;letter-spacing:.12em;text-transform:uppercase;color:var(--blue);margin:30px 0 8px}
- h1{font:700 30px/1.2 'Space Grotesk',sans-serif;letter-spacing:-.02em;color:var(--navy);margin:0 0 14px}
- h2{font:700 18px/1.25 'Space Grotesk',sans-serif;letter-spacing:-.01em;color:var(--navy);margin:34px 0 8px}
- p{font-size:16px;line-height:1.75}
- .lead-p{font-size:18px;line-height:1.7;color:var(--navy)}
- .roster{list-style:none;padding:0;margin:12px 0 0;display:grid;grid-template-columns:1fr 1fr;gap:8px 20px}
- .roster li{font:500 15px/1.5 'IBM Plex Sans';color:var(--navy);padding-left:16px;position:relative}
- .roster li::before{content:"";position:absolute;left:0;top:9px;width:6px;height:6px;border-radius:2px;background:var(--blue)}
- .roster li span{color:var(--slate2);font-weight:400}
- .cta{display:inline-block;margin:26px 0 0;background:var(--blue);color:#fff;text-decoration:none;font:600 15px 'Space Grotesk';padding:13px 24px;border-radius:8px}
- .cta:hover{background:#1543c7}
- .foot{margin-top:38px;padding-top:18px;border-top:1px solid var(--hair);font:400 13px/1.7 'IBM Plex Sans';color:var(--slate2)}
- .foot a{color:var(--slate);text-decoration:none;font-weight:600}
+ :focus-visible{outline:3px solid #7aa2ff;outline-offset:2px;border-radius:4px}
+ .skip{position:absolute;left:-999px;top:0;background:#fff;color:var(--blue);padding:10px 16px;font-weight:600;z-index:50}
+ .skip:focus{left:8px;top:8px}
+ .sitenav{position:sticky;top:0;z-index:30;background:var(--navy);display:flex;align-items:center;gap:12px 16px;padding:6px 22px;flex-wrap:wrap}
+ .sitenav .brand{display:inline-flex;align-items:center;gap:10px;text-decoration:none;color:#fff;font:700 19px/1 'Space Grotesk',sans-serif;letter-spacing:-.01em;padding:12px 0;min-height:44px}
+ .sitenav .menu{margin-left:auto;display:flex;align-items:center;gap:4px;flex-wrap:wrap}
+ .sitenav .menu a{color:#e7edf6;text-decoration:none;font:600 16px/1 'IBM Plex Sans',sans-serif;padding:12px 13px;border-radius:8px;display:inline-flex;align-items:center;min-height:44px}
+ .sitenav .menu a:hover{color:#fff;background:rgba(255,255,255,.10)}
+ .sitenav .menu a[aria-current="page"]{color:#fff;box-shadow:inset 0 -2px 0 var(--blue)}
+ .sitenav .menu a.sub{background:var(--blue);color:#fff;font-weight:700;padding:12px 18px}
+ .sitenav .menu a.sub:hover{background:#3a6cff}
+ .wrap{max-width:680px;margin:0 auto;padding:26px 26px 56px}
+ .kicker{font:700 12px/1 'IBM Plex Mono',monospace;letter-spacing:.12em;text-transform:uppercase;color:var(--blue);margin:26px 0 10px}
+ h1{font:700 32px/1.2 'Space Grotesk',sans-serif;letter-spacing:-.02em;color:var(--navy);margin:0 0 16px}
+ h2{font:700 20px/1.25 'Space Grotesk',sans-serif;letter-spacing:-.01em;color:var(--navy);margin:34px 0 8px}
+ p{font-size:17px;line-height:1.75}
+ .lead-p{font-size:19px;line-height:1.65;color:var(--navy)}
+ .roster{list-style:none;padding:0;margin:14px 0 0;display:grid;grid-template-columns:1fr 1fr;gap:10px 22px}
+ .roster li{font:500 16px/1.5 'IBM Plex Sans',sans-serif;color:var(--navy);padding-left:17px;position:relative}
+ .roster li::before{content:"";position:absolute;left:0;top:9px;width:7px;height:7px;border-radius:2px;background:var(--blue)}
+ .roster li span{color:var(--slate);font-weight:400}
+ .cta{display:inline-block;margin:28px 0 0;background:var(--blue);color:#fff;text-decoration:none;font:700 16px 'Space Grotesk';padding:15px 26px;border-radius:9px;min-height:48px}
+ .cta:hover{background:var(--blue-dk)}
+ .foot{max-width:680px;margin:0 auto;padding:22px 26px 46px;border-top:1px solid var(--hair);font:400 14px/1.7 'IBM Plex Sans',sans-serif;color:var(--slate)}
+ .foot a{color:var(--slate);text-decoration:underline;font-weight:600}
  .foot a:hover{color:var(--blue)}
  @media(max-width:520px){.roster{grid-template-columns:1fr}}
 </style></head><body>
-<div class="bar"><span>WEEKLY &middot; SUNDAYS</span><span>SIGNAL OVER NOISE</span></div>
-<div class="wrap">
- <div class="top">
-  <a class="brand" href="index.html">
-   <svg width="30" height="30" viewBox="0 0 30 30"><g fill="none" stroke="#1B57F0" stroke-width="1.6"><circle cx="15" cy="15" r="13.2"/><circle cx="15" cy="15" r="8.6"/><circle cx="15" cy="15" r="4"/></g><circle cx="15" cy="15" r="2.4" fill="#1B57F0"/></svg>
-   <span class="wm">AI ABOVE THE CUT</span>
-  </a>
-  <nav class="nav"><a href="index.html">Home</a><a href="index.html#archive">Every issue</a></nav>
- </div>
-
+<a class="skip" href="#main">Skip to content</a>
+<header class="sitenav">
+ <a class="brand" href="index.html">
+  <svg width="26" height="26" viewBox="0 0 30 30" aria-hidden="true" focusable="false"><g fill="none" stroke="#1B57F0" stroke-width="1.8"><circle cx="15" cy="15" r="13.2"/><circle cx="15" cy="15" r="8.6"/><circle cx="15" cy="15" r="4"/></g><circle cx="15" cy="15" r="2.4" fill="#1B57F0"/></svg>
+  AI ABOVE THE CUT
+ </a>
+ <nav class="menu" aria-label="Main">
+  <a href="index.html">Home</a>
+  <a href="2026-06-28.html">Current issue</a>
+  <a href="about.html" aria-current="page">About</a>
+  <a class="sub" href="index.html#subscribe">Subscribe</a>
+ </nav>
+</header>
+<main class="wrap" id="main">
  <div class="kicker">About</div>
  <h1>Staying on top of AI, without drowning in it.</h1>
  <p class="lead-p">AI Above the Cut exists to make one thing simple: keeping executives on top of what's happening in AI. The field moves fast and the feed never stops — so instead of chasing every headline, we do the reading for you and surface only what actually matters.</p>
@@ -58,7 +66,7 @@
   <li>Fei-Fei Li <span>— world models</span></li>
   <li>Demis Hassabis <span>— AGI direction</span></li>
   <li>Yann LeCun <span>— research / LLM critique</span></li>
-  <li>Dario Amodei <span>— safety & scaling</span></li>
+  <li>Dario Amodei <span>— safety &amp; scaling</span></li>
   <li>Geoffrey Hinton <span>— long-term implications</span></li>
   <li>Ethan Mollick <span>— AI at work</span></li>
   <li>Cassie Kozyrkov <span>— enterprise adoption</span></li>
@@ -69,11 +77,10 @@
  <h2>How we curate it</h2>
  <p>Every Sunday we read the week's output from that roster and distill it into two speeds: a <strong>4-minute Quick Hits</strong> skim of what actually happened, then a longer <strong>Synthesis</strong> that connects the moves, takes a position, and links straight to the primary work. Quality over hype — we point you to the source, not the noise around it, and we flag anything that isn't confirmed.</p>
 
- <a class="cta" href="index.html">Get the Sunday brief &rarr;</a>
-
- <div class="foot">
-  <a href="index.html">Home</a> &nbsp;·&nbsp; <a href="index.html#archive">Every issue</a><br>
-  AI Above the Cut — a weekly AI brief for executives.
- </div>
-</div>
+ <a class="cta" href="index.html#subscribe">Get the Sunday brief &rarr;</a>
+</main>
+<footer class="foot">
+ <a href="index.html">Home</a> &nbsp;·&nbsp; <a href="2026-06-28.html">Current issue</a> &nbsp;·&nbsp; <a href="about.html">About</a> &nbsp;·&nbsp; <a href="index.html#subscribe">Subscribe</a><br>
+ AI Above the Cut — a weekly AI brief for executives.
+</footer>
 </body></html>

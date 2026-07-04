@@ -13,76 +13,101 @@ ml('account', '2488958');
 </script>
 <!-- End MailerLite Universal -->
 <style>
- :root{--blue:#1B57F0;--navy:#0A1422;--body:#3D4B5C;--slate:#5A6B7E;--slate2:#7E8D9E;--chipblue:#EAF1FF;--chipgrey:#EEF1F5;--hair:#E8ECF1}
+ :root{--blue:#1B57F0;--blue-dk:#1543c7;--navy:#0A1422;--body:#37444F;--slate:#566573;--chipblue:#EAF1FF;--chipgrey:#EEF1F5;--hair:#E3E8EE}
  *{box-sizing:border-box}
- body{margin:0;font-family:'IBM Plex Sans',sans-serif;color:var(--body);background:#fff}
+ html{scroll-behavior:smooth}
+ body{margin:0;font-family:'IBM Plex Sans',sans-serif;color:var(--body);background:#fff;font-size:17px;line-height:1.65}
  a{color:var(--blue)}
- .bar{background:var(--navy);color:#fff;padding:9px 26px;display:flex;justify-content:space-between;font:600 11px/1 'IBM Plex Mono',monospace;letter-spacing:.12em;text-transform:uppercase}
- .bar span:last-child{color:#9fb0c4}
- .wrap{max-width:660px;margin:0 auto;padding:26px 26px 56px}
- .top{display:flex;align-items:center;gap:13px;flex-wrap:wrap}
- .brand{display:flex;align-items:center;gap:13px}
- .wm{font:700 26px/1 'Space Grotesk',sans-serif;letter-spacing:-.02em;color:var(--navy)}
- .nav{margin-left:auto;display:flex;gap:18px;align-items:center}
- .nav a{font:600 11px/1 'IBM Plex Mono',monospace;letter-spacing:.1em;text-transform:uppercase;color:var(--slate);text-decoration:none}
- .nav a:hover{color:var(--blue)}
- .tag{font:400 14px/1.45 'IBM Plex Sans';color:var(--slate);margin:8px 0 16px}
- .latest{display:flex;align-items:center;gap:12px;text-decoration:none;background:#F5F8FF;border:1px solid #DCE7FF;border-radius:10px;padding:12px 16px;margin:0 0 18px}
- .latest .lbl{font:600 10px/1 'IBM Plex Mono',monospace;letter-spacing:.12em;text-transform:uppercase;color:var(--blue);background:#fff;border:1px solid #DCE7FF;border-radius:5px;padding:5px 8px;white-space:nowrap}
- .latest .lt{font:600 14.5px/1.35 'Space Grotesk',sans-serif;color:var(--navy)}
- .latest .arr{margin-left:auto;color:var(--blue);font-weight:700}
- .chips span{display:inline-block;font:600 11px/1 'IBM Plex Mono',monospace;letter-spacing:.1em;text-transform:uppercase;padding:6px 11px;border-radius:5px;margin:3px 5px 3px 0}
- .on{background:var(--chipblue);color:var(--blue)} .off{background:var(--chipgrey);color:var(--slate2)}
- h1{font:700 27px/1.25 'Space Grotesk',sans-serif;letter-spacing:-.02em;color:var(--navy);margin:26px 0 10px}
- p{font-size:16px;line-height:1.7}
- .lead{border-left:3px solid var(--blue);background:#F5F8FF;border-radius:0 10px 10px 0;padding:16px 18px;margin:18px 0}
- .kick{font:600 11px/1 'IBM Plex Mono',monospace;letter-spacing:.12em;text-transform:uppercase;color:var(--blue);margin-bottom:8px}
- .signup{margin:22px 0 6px}
- .signup .prompt{font:600 14px/1.4 'IBM Plex Mono',monospace;letter-spacing:.06em;text-transform:uppercase;color:var(--navy);margin-bottom:10px}
- small{color:var(--slate2);font-family:'IBM Plex Mono',monospace;font-size:11px;letter-spacing:.06em;text-transform:uppercase}
- .archive{margin:40px 0 6px;padding-top:22px;border-top:1px solid var(--hair)}
- .archive h2{font:700 18px/1.2 'Space Grotesk',sans-serif;letter-spacing:-.01em;color:var(--navy);margin:0 0 4px}
- .archive .sub{font:400 14px/1.5 'IBM Plex Sans';color:var(--slate);margin:0 0 14px}
- .issue{display:block;padding:15px 0;border-bottom:1px solid var(--hair);text-decoration:none;color:inherit}
+ :focus-visible{outline:3px solid #7aa2ff;outline-offset:2px;border-radius:4px}
+ .skip{position:absolute;left:-999px;top:0;background:#fff;color:var(--blue);padding:10px 16px;font-weight:600;z-index:50}
+ .skip:focus{left:8px;top:8px}
+ /* Top navigation */
+ .sitenav{position:sticky;top:0;z-index:30;background:var(--navy);display:flex;align-items:center;gap:12px 16px;padding:6px 22px;flex-wrap:wrap}
+ .sitenav .brand{display:inline-flex;align-items:center;gap:10px;text-decoration:none;color:#fff;font:700 19px/1 'Space Grotesk',sans-serif;letter-spacing:-.01em;padding:12px 0;min-height:44px}
+ .sitenav .menu{margin-left:auto;display:flex;align-items:center;gap:4px;flex-wrap:wrap}
+ .sitenav .menu a{color:#e7edf6;text-decoration:none;font:600 16px/1 'IBM Plex Sans',sans-serif;padding:12px 13px;border-radius:8px;display:inline-flex;align-items:center;min-height:44px}
+ .sitenav .menu a:hover{color:#fff;background:rgba(255,255,255,.10)}
+ .sitenav .menu a[aria-current="page"]{color:#fff;box-shadow:inset 0 -2px 0 var(--blue)}
+ .sitenav .menu a.sub{background:var(--blue);color:#fff;font-weight:700;padding:12px 18px}
+ .sitenav .menu a.sub:hover{background:#3a6cff}
+ .wrap{max-width:680px;margin:0 auto;padding:26px 26px 56px}
+ .tag{font:400 16.5px/1.5 'IBM Plex Sans',sans-serif;color:var(--slate);margin:6px 0 18px}
+ .latest{display:flex;align-items:center;gap:14px;text-decoration:none;background:#F2F6FF;border:1px solid #CBDaFF;border-radius:12px;padding:14px 18px;margin:0 0 20px}
+ .latest .lbl{font:700 11.5px/1 'IBM Plex Mono',monospace;letter-spacing:.1em;text-transform:uppercase;color:#fff;background:var(--blue);border-radius:6px;padding:7px 9px;white-space:nowrap}
+ .latest .lt{font:600 16px/1.35 'Space Grotesk',sans-serif;color:var(--navy)}
+ .latest .arr{margin-left:auto;color:var(--blue);font-weight:700;font-size:20px}
+ .latest:hover .lt{color:var(--blue)}
+ .chips{margin:0 0 6px}
+ .chips span{display:inline-block;font:600 12px/1 'IBM Plex Mono',monospace;letter-spacing:.08em;text-transform:uppercase;padding:7px 11px;border-radius:6px;margin:3px 6px 3px 0}
+ .on{background:var(--chipblue);color:var(--blue)}
+ h1{font:700 30px/1.25 'Space Grotesk',sans-serif;letter-spacing:-.02em;color:var(--navy);margin:24px 0 12px}
+ p{font-size:17px;line-height:1.7}
+ .lead{border-left:4px solid var(--blue);background:#F2F6FF;border-radius:0 10px 10px 0;padding:18px 20px;margin:18px 0}
+ .kick{font:700 12px/1 'IBM Plex Mono',monospace;letter-spacing:.12em;text-transform:uppercase;color:var(--blue);margin-bottom:9px}
+ /* Prominent subscribe call-to-action box */
+ .subscribe{border:2px solid var(--blue);background:#F2F6FF;border-radius:16px;padding:26px 24px;margin:30px 0;box-shadow:0 8px 26px rgba(27,87,240,.10)}
+ .subscribe h2{font:700 23px/1.2 'Space Grotesk',sans-serif;letter-spacing:-.01em;color:var(--navy);margin:0 0 6px}
+ .subscribe .sub-p{font-size:16px;line-height:1.55;color:var(--body);margin:0 0 16px}
+ .subscribe .fineprint{font:600 12.5px/1 'IBM Plex Mono',monospace;letter-spacing:.05em;text-transform:uppercase;color:var(--slate);margin:14px 0 0}
+ .archive{margin:44px 0 6px;padding-top:24px;border-top:1px solid var(--hair)}
+ .archive h2{font:700 20px/1.2 'Space Grotesk',sans-serif;letter-spacing:-.01em;color:var(--navy);margin:0 0 4px}
+ .archive .asub{font:400 15.5px/1.5 'IBM Plex Sans',sans-serif;color:var(--slate);margin:0 0 14px}
+ .issue{display:block;padding:16px 0;border-bottom:1px solid var(--hair);text-decoration:none;color:inherit}
  .issue:first-of-type{border-top:1px solid var(--hair)}
- .issue-date{font:600 11px/1 'IBM Plex Mono',monospace;letter-spacing:.1em;text-transform:uppercase;color:var(--slate2);margin-bottom:6px}
- .issue-title{font:600 16px/1.4 'Space Grotesk',sans-serif;color:var(--navy)}
+ .issue-date{font:600 12px/1 'IBM Plex Mono',monospace;letter-spacing:.08em;text-transform:uppercase;color:var(--slate);margin-bottom:7px}
+ .issue-title{font:600 17px/1.4 'Space Grotesk',sans-serif;color:var(--navy)}
  .issue:hover .issue-title{color:var(--blue)}
- .foot{margin-top:34px;padding-top:18px;border-top:1px solid var(--hair);font:400 13px/1.7 'IBM Plex Sans';color:var(--slate2)}
- .foot a{color:var(--slate);text-decoration:none;font-weight:600}
+ .foot{max-width:680px;margin:0 auto;padding:22px 26px 46px;border-top:1px solid var(--hair);font:400 14px/1.7 'IBM Plex Sans',sans-serif;color:var(--slate)}
+ .foot a{color:var(--slate);text-decoration:underline;font-weight:600}
  .foot a:hover{color:var(--blue)}
+ /* MailerLite embedded form → Radar look */
+ .ml-form-embedContainer,.ml-form-embedWrapper{max-width:none!important;background:transparent!important;border:0!important;box-shadow:none!important}
+ .ml-form-embedWrapper .ml-form-embedContent,.ml-form-embedWrapper .ml-form-embedContent h4,.ml-form-embedWrapper .ml-form-embedContent p{display:none!important}
+ .ml-form-embedBody{padding:0!important;border:0!important}
+ .ml-form-embedWrapper .ml-form-formContent{margin:0!important}
+ .ml-form-embedWrapper input.form-control{padding:14px 15px!important;border:1px solid #C7D2DE!important;border-radius:8px!important;font:400 16px 'IBM Plex Sans'!important;height:auto!important}
+ .ml-form-embedWrapper .ml-form-embedSubmit button,.ml-form-embedWrapper button.primary{background-color:var(--blue)!important;background:var(--blue)!important;color:#fff!important;border:0!important;border-radius:8px!important;padding:14px 22px!important;font:700 16px 'Space Grotesk'!important;box-shadow:none!important;min-height:48px!important}
+ .ml-form-embedWrapper .ml-form-embedSubmit button:hover,.ml-form-embedWrapper button.primary:hover{background-color:var(--blue-dk)!important;background:var(--blue-dk)!important}
+ .ml-form-successBody h4,.ml-form-successBody p{color:var(--navy)!important;font-family:'IBM Plex Sans'!important}
 </style></head><body>
-<div class="bar"><span>WEEKLY &middot; SUNDAYS</span><span>SIGNAL OVER NOISE</span></div>
-<div class="wrap">
- <div class="top">
-  <div class="brand">
-   <svg width="30" height="30" viewBox="0 0 30 30"><g fill="none" stroke="#1B57F0" stroke-width="1.6"><circle cx="15" cy="15" r="13.2"/><circle cx="15" cy="15" r="8.6"/><circle cx="15" cy="15" r="4"/></g><circle cx="15" cy="15" r="2.4" fill="#1B57F0"/></svg>
-   <span class="wm">AI ABOVE THE CUT</span>
-  </div>
-  <nav class="nav"><a href="#archive">Every issue</a><a href="about.html">About</a></nav>
- </div>
- <div class="tag">Tracking the top minds in AI — a weekly brief for executives.</div>
- <a class="latest" href="2026-06-28.html">
-  <span class="lbl">Latest issue · Jun 28</span>
-  <span class="lt">The economics arrived — and Washington put a gate on GPT-5.6</span>
-  <span class="arr">&rarr;</span>
+<a class="skip" href="#main">Skip to content</a>
+<header class="sitenav">
+ <a class="brand" href="index.html">
+  <svg width="26" height="26" viewBox="0 0 30 30" aria-hidden="true" focusable="false"><g fill="none" stroke="#1B57F0" stroke-width="1.8"><circle cx="15" cy="15" r="13.2"/><circle cx="15" cy="15" r="8.6"/><circle cx="15" cy="15" r="4"/></g><circle cx="15" cy="15" r="2.4" fill="#1B57F0"/></svg>
+  AI ABOVE THE CUT
  </a>
- <div class="chips">
+ <nav class="menu" aria-label="Main">
+  <a href="index.html" aria-current="page">Home</a>
+  <a href="2026-06-28.html">Current issue</a>
+  <a href="about.html">About</a>
+  <a class="sub" href="#subscribe">Subscribe</a>
+ </nav>
+</header>
+<main class="wrap" id="main">
+ <p class="tag">Tracking the top minds in AI — a weekly brief for executives.</p>
+ <a class="latest" href="2026-06-28.html">
+  <span class="lbl">Latest · Jun 28</span>
+  <span class="lt">The economics arrived — and Washington put a gate on GPT-5.6</span>
+  <span class="arr" aria-hidden="true">&rarr;</span>
+ </a>
+ <div class="chips" aria-label="Coverage areas">
   <span class="on">Frontier</span><span class="on">Labs</span><span class="on">Enterprise</span><span class="on">Policy</span><span class="on">Healthcare</span>
  </div>
  <h1>The week in AI, for the people who have to act on it.</h1>
  <p>A 4-minute skim of what actually happened, then a longer brief that connects the moves, takes a position, and links to the primary work. Built for VP-and-up leaders in strategy, healthcare, and AI transformation. Quality over hype.</p>
- <div class="lead"><div class="kick">The One Thing</div><p style="margin:0;font:600 19px/1.4 'Space Grotesk';color:#0A1422">We read the field's top minds so you get signal, not a feed.</p></div>
- <div class="signup">
-  <div class="prompt">Get the Sunday brief — free, every week</div>
+ <div class="lead"><div class="kick">The One Thing</div><p style="margin:0;font:600 20px/1.4 'Space Grotesk';color:#0A1422">We read the field's top minds so you get signal, not a feed.</p></div>
+
+ <section class="subscribe" id="subscribe" aria-labelledby="sub-h">
+  <h2 id="sub-h">Get the Sunday brief</h2>
+  <p class="sub-p">Free, every Sunday morning. A 4-minute read on what the field's top minds actually said this week — signal over hype.</p>
   <!-- MailerLite embedded signup form (feeds the "AI Above the Cut" group, double opt-in) -->
   <div class="ml-embedded" data-form="cgeGZU"></div>
- </div>
- <small>Free · Weekly · Sundays · No spam</small>
+  <p class="fineprint">Free · Weekly · Sundays · No spam · Unsubscribe anytime</p>
+ </section>
 
- <section class="archive" id="archive">
-  <h2>Every issue</h2>
-  <p class="sub">Read the archive. A new edition lands every Sunday morning.</p>
+ <section class="archive" id="archive" aria-labelledby="arch-h">
+  <h2 id="arch-h">Every issue</h2>
+  <p class="asub">Read the archive. A new edition lands every Sunday morning.</p>
   <a class="issue" href="2026-06-28.html">
    <div class="issue-date">Issue 002 · June 28, 2026 · 14 min read</div>
    <div class="issue-title">The economics arrived — and Washington put a gate on GPT-5.6</div>
@@ -92,21 +117,9 @@ ml('account', '2488958');
    <div class="issue-title">The minds are moving — and the map they're drawing</div>
   </a>
  </section>
-
- <div class="foot">
-  <a href="about.html">About</a> &nbsp;·&nbsp; <a href="#archive">Every issue</a> &nbsp;·&nbsp; <a href="#">Subscribe</a><br>
-  AI Above the Cut — a weekly AI brief for executives.
- </div>
-</div>
-<style>
- /* Make the MailerLite embedded form match the Radar look */
- .ml-form-embedContainer,.ml-form-embedWrapper{max-width:none!important;background:transparent!important;border:0!important;box-shadow:none!important}
- .ml-form-embedWrapper .ml-form-embedContent,.ml-form-embedWrapper .ml-form-embedContent h4,.ml-form-embedWrapper .ml-form-embedContent p{display:none!important}
- .ml-form-embedBody{padding:0!important;border:0!important}
- .ml-form-embedWrapper .ml-form-formContent{margin:0!important}
- .ml-form-embedWrapper input.form-control{padding:13px 14px!important;border:1px solid #E8ECF1!important;border-radius:8px!important;font:400 15px 'IBM Plex Sans'!important;height:auto!important}
- .ml-form-embedWrapper .ml-form-embedSubmit button,.ml-form-embedWrapper .ml-form-embedSubmit button.primary,.ml-form-embedWrapper button.primary{background-color:#1B57F0!important;background:#1B57F0!important;color:#fff!important;border:0!important;border-radius:8px!important;padding:13px 22px!important;font:600 14px 'Space Grotesk'!important;box-shadow:none!important}
- .ml-form-embedWrapper .ml-form-embedSubmit button:hover,.ml-form-embedWrapper button.primary:hover{background-color:#1543c7!important;background:#1543c7!important}
- .ml-form-successBody h4,.ml-form-successBody p{color:#0A1422!important;font-family:'IBM Plex Sans'!important}
-</style>
+</main>
+<footer class="foot">
+ <a href="index.html">Home</a> &nbsp;·&nbsp; <a href="2026-06-28.html">Current issue</a> &nbsp;·&nbsp; <a href="about.html">About</a> &nbsp;·&nbsp; <a href="#subscribe">Subscribe</a><br>
+ AI Above the Cut — a weekly AI brief for executives.
+</footer>
 </body></html>
