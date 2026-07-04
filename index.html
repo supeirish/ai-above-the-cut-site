@@ -16,12 +16,21 @@ ml('account', '2488958');
  :root{--blue:#1B57F0;--navy:#0A1422;--body:#3D4B5C;--slate:#5A6B7E;--slate2:#7E8D9E;--chipblue:#EAF1FF;--chipgrey:#EEF1F5;--hair:#E8ECF1}
  *{box-sizing:border-box}
  body{margin:0;font-family:'IBM Plex Sans',sans-serif;color:var(--body);background:#fff}
+ a{color:var(--blue)}
  .bar{background:var(--navy);color:#fff;padding:9px 26px;display:flex;justify-content:space-between;font:600 11px/1 'IBM Plex Mono',monospace;letter-spacing:.12em;text-transform:uppercase}
  .bar span:last-child{color:#9fb0c4}
  .wrap{max-width:660px;margin:0 auto;padding:26px 26px 56px}
+ .top{display:flex;align-items:center;gap:13px;flex-wrap:wrap}
  .brand{display:flex;align-items:center;gap:13px}
  .wm{font:700 26px/1 'Space Grotesk',sans-serif;letter-spacing:-.02em;color:var(--navy)}
- .tag{font:400 14px/1.45 'IBM Plex Sans';color:var(--slate);margin:8px 0 18px}
+ .nav{margin-left:auto;display:flex;gap:18px;align-items:center}
+ .nav a{font:600 11px/1 'IBM Plex Mono',monospace;letter-spacing:.1em;text-transform:uppercase;color:var(--slate);text-decoration:none}
+ .nav a:hover{color:var(--blue)}
+ .tag{font:400 14px/1.45 'IBM Plex Sans';color:var(--slate);margin:8px 0 16px}
+ .latest{display:flex;align-items:center;gap:12px;text-decoration:none;background:#F5F8FF;border:1px solid #DCE7FF;border-radius:10px;padding:12px 16px;margin:0 0 18px}
+ .latest .lbl{font:600 10px/1 'IBM Plex Mono',monospace;letter-spacing:.12em;text-transform:uppercase;color:var(--blue);background:#fff;border:1px solid #DCE7FF;border-radius:5px;padding:5px 8px;white-space:nowrap}
+ .latest .lt{font:600 14.5px/1.35 'Space Grotesk',sans-serif;color:var(--navy)}
+ .latest .arr{margin-left:auto;color:var(--blue);font-weight:700}
  .chips span{display:inline-block;font:600 11px/1 'IBM Plex Mono',monospace;letter-spacing:.1em;text-transform:uppercase;padding:6px 11px;border-radius:5px;margin:3px 5px 3px 0}
  .on{background:var(--chipblue);color:var(--blue)} .off{background:var(--chipgrey);color:var(--slate2)}
  h1{font:700 27px/1.25 'Space Grotesk',sans-serif;letter-spacing:-.02em;color:var(--navy);margin:26px 0 10px}
@@ -31,24 +40,33 @@ ml('account', '2488958');
  .signup{margin:22px 0 6px}
  .signup .prompt{font:600 14px/1.4 'IBM Plex Mono',monospace;letter-spacing:.06em;text-transform:uppercase;color:var(--navy);margin-bottom:10px}
  small{color:var(--slate2);font-family:'IBM Plex Mono',monospace;font-size:11px;letter-spacing:.06em;text-transform:uppercase}
- /* --- Make the MailerLite embedded form match the Radar look --- */
- .ml-form-embedContainer,.ml-form-embedWrapper{max-width:none!important;background:transparent!important;border:0!important;box-shadow:none!important}
- .ml-form-embedWrapper .ml-form-embedContent,.ml-form-embedWrapper .ml-form-embedContent h4,.ml-form-embedWrapper .ml-form-embedContent p{display:none!important}
- .ml-form-embedBody{padding:0!important;border:0!important}
- .ml-form-embedWrapper .ml-form-formContent{margin:0!important}
- .ml-form-embedWrapper input.form-control{padding:13px 14px!important;border:1px solid var(--hair)!important;border-radius:8px!important;font:400 15px 'IBM Plex Sans'!important;height:auto!important}
- .ml-form-embedSubmit button.primary,.ml-form-embedSubmit button{background:var(--blue)!important;color:#fff!important;border:0!important;border-radius:8px!important;padding:13px 22px!important;font:600 14px 'Space Grotesk'!important;box-shadow:none!important}
- .ml-form-embedSubmit button.primary:hover{background:#1543c7!important}
- .ml-form-successBody{padding:6px 0!important}
- .ml-form-successBody h4,.ml-form-successBody p{color:var(--navy)!important;font-family:'IBM Plex Sans'!important}
+ .archive{margin:40px 0 6px;padding-top:22px;border-top:1px solid var(--hair)}
+ .archive h2{font:700 18px/1.2 'Space Grotesk',sans-serif;letter-spacing:-.01em;color:var(--navy);margin:0 0 4px}
+ .archive .sub{font:400 14px/1.5 'IBM Plex Sans';color:var(--slate);margin:0 0 14px}
+ .issue{display:block;padding:15px 0;border-bottom:1px solid var(--hair);text-decoration:none;color:inherit}
+ .issue:first-of-type{border-top:1px solid var(--hair)}
+ .issue-date{font:600 11px/1 'IBM Plex Mono',monospace;letter-spacing:.1em;text-transform:uppercase;color:var(--slate2);margin-bottom:6px}
+ .issue-title{font:600 16px/1.4 'Space Grotesk',sans-serif;color:var(--navy)}
+ .issue:hover .issue-title{color:var(--blue)}
+ .foot{margin-top:34px;padding-top:18px;border-top:1px solid var(--hair);font:400 13px/1.7 'IBM Plex Sans';color:var(--slate2)}
+ .foot a{color:var(--slate);text-decoration:none;font-weight:600}
+ .foot a:hover{color:var(--blue)}
 </style></head><body>
 <div class="bar"><span>WEEKLY &middot; SUNDAYS</span><span>SIGNAL OVER NOISE</span></div>
 <div class="wrap">
- <div class="brand">
-  <svg width="30" height="30" viewBox="0 0 30 30"><g fill="none" stroke="#1B57F0" stroke-width="1.6"><circle cx="15" cy="15" r="13.2"/><circle cx="15" cy="15" r="8.6"/><circle cx="15" cy="15" r="4"/></g><circle cx="15" cy="15" r="2.4" fill="#1B57F0"/></svg>
-  <span class="wm">AI ABOVE THE CUT</span>
+ <div class="top">
+  <div class="brand">
+   <svg width="30" height="30" viewBox="0 0 30 30"><g fill="none" stroke="#1B57F0" stroke-width="1.6"><circle cx="15" cy="15" r="13.2"/><circle cx="15" cy="15" r="8.6"/><circle cx="15" cy="15" r="4"/></g><circle cx="15" cy="15" r="2.4" fill="#1B57F0"/></svg>
+   <span class="wm">AI ABOVE THE CUT</span>
+  </div>
+  <nav class="nav"><a href="#archive">Every issue</a><a href="about.html">About</a></nav>
  </div>
  <div class="tag">Tracking the top minds in AI — a weekly brief for executives.</div>
+ <a class="latest" href="2026-06-28.html">
+  <span class="lbl">Latest issue · Jun 28</span>
+  <span class="lt">The economics arrived — and Washington put a gate on GPT-5.6</span>
+  <span class="arr">&rarr;</span>
+ </a>
  <div class="chips">
   <span class="on">Frontier</span><span class="on">Labs</span><span class="on">Enterprise</span><span class="on">Policy</span><span class="on">Healthcare</span>
  </div>
@@ -61,4 +79,34 @@ ml('account', '2488958');
   <div class="ml-embedded" data-form="cgeGZU"></div>
  </div>
  <small>Free · Weekly · Sundays · No spam</small>
-</div></body></html>
+
+ <section class="archive" id="archive">
+  <h2>Every issue</h2>
+  <p class="sub">Read the archive. A new edition lands every Sunday morning.</p>
+  <a class="issue" href="2026-06-28.html">
+   <div class="issue-date">Issue 002 · June 28, 2026 · 14 min read</div>
+   <div class="issue-title">The economics arrived — and Washington put a gate on GPT-5.6</div>
+  </a>
+  <a class="issue" href="2026-06-21.html">
+   <div class="issue-date">Issue 001 · June 21, 2026 · 10 min read</div>
+   <div class="issue-title">The minds are moving — and the map they're drawing</div>
+  </a>
+ </section>
+
+ <div class="foot">
+  <a href="about.html">About</a> &nbsp;·&nbsp; <a href="#archive">Every issue</a> &nbsp;·&nbsp; <a href="#">Subscribe</a><br>
+  AI Above the Cut — a weekly AI brief for executives.
+ </div>
+</div>
+<style>
+ /* Make the MailerLite embedded form match the Radar look */
+ .ml-form-embedContainer,.ml-form-embedWrapper{max-width:none!important;background:transparent!important;border:0!important;box-shadow:none!important}
+ .ml-form-embedWrapper .ml-form-embedContent,.ml-form-embedWrapper .ml-form-embedContent h4,.ml-form-embedWrapper .ml-form-embedContent p{display:none!important}
+ .ml-form-embedBody{padding:0!important;border:0!important}
+ .ml-form-embedWrapper .ml-form-formContent{margin:0!important}
+ .ml-form-embedWrapper input.form-control{padding:13px 14px!important;border:1px solid #E8ECF1!important;border-radius:8px!important;font:400 15px 'IBM Plex Sans'!important;height:auto!important}
+ .ml-form-embedWrapper .ml-form-embedSubmit button,.ml-form-embedWrapper .ml-form-embedSubmit button.primary,.ml-form-embedWrapper button.primary{background-color:#1B57F0!important;background:#1B57F0!important;color:#fff!important;border:0!important;border-radius:8px!important;padding:13px 22px!important;font:600 14px 'Space Grotesk'!important;box-shadow:none!important}
+ .ml-form-embedWrapper .ml-form-embedSubmit button:hover,.ml-form-embedWrapper button.primary:hover{background-color:#1543c7!important;background:#1543c7!important}
+ .ml-form-successBody h4,.ml-form-successBody p{color:#0A1422!important;font-family:'IBM Plex Sans'!important}
+</style>
+</body></html>
