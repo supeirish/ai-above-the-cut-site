@@ -1,0 +1,51 @@
+{
+  "date": "2026-07-26",
+  "pdf": "2026-07-26_tracker.pdf",
+  "slides": [
+    {
+      "file": "2026-07-26_tracker_01.png",
+      "slide": 1,
+      "alt": "Cover slide. The Margin-Proof Tracker. Headline: eleven companies say AI is paying off, none can prove it. A five-rung evidence ladder is shown, with the top two rungs unfilled."
+    },
+    {
+      "file": "2026-07-26_tracker_02.png",
+      "slide": 2,
+      "alt": "The evidence ladder, five rungs: 0 narrative, 1 operational, 2 financial claim, 3 P and L attributed, 4 sustained. Rungs 3 and 4 are shown unfilled. Note: nobody we track is above rung 2."
+    },
+    {
+      "file": "2026-07-26_tracker_03.png",
+      "slide": 3,
+      "alt": "Scoreboard. Eleven companies each plotted on the 0 to 4 ladder: S&P Global 2, Ecolab 2, Equifax 2, Infosys 2, Alphabet 2, IBM 2, ServiceNow 2, Bank of America 2, Klarna 2, Duolingo 2, JPMorgan 1. The Stage 4 column is highlighted and completely empty. S&P Global and Ecolab are marked with a down arrow."
+    },
+    {
+      "file": "2026-07-26_tracker_04.png",
+      "slide": 4,
+      "alt": "Ten of eleven companies sit at Stage 2. Bar chart: Stage 0 to 1 has one company, Stage 2 has ten, Stage 3 has zero, Stage 4 has zero."
+    },
+    {
+      "file": "2026-07-26_tracker_05.png",
+      "slide": 5,
+      "alt": "What Stage 2 means: a claim asserted, never reconciled. Three examples. IBM: gen-AI is about half of Consulting signings, but signings are not revenue. ServiceNow: AI crossed one billion dollars in annual contract value, but that is contracted, not booked. Equifax: AI cost target doubled to 150 million dollars, but it sized the saving and put no number on the upside."
+    },
+    {
+      "file": "2026-07-26_tracker_06.png",
+      "slide": 6,
+      "alt": "This issue's correction. Issue 005 graded S&P Global and Ecolab at Stage 3; both are Stage 2. Stage 3 requires AI isolated in reported results, and the claim traced to a bank's review rather than the companies' own filings. Both rows marked down. They report Tuesday."
+    },
+    {
+      "file": "2026-07-26_tracker_07.png",
+      "slide": 7,
+      "alt": "Why the top rung is empty. Stage 4 requires an AI-attributed margin gain that holds four straight quarters in reported results. Nothing in the disclosure regime requires a company to produce that. AI costs land in audited lines; AI revenue lands in signings, backlog and contract value, which never touch an audited statement."
+    },
+    {
+      "file": "2026-07-26_tracker_08.png",
+      "slide": 8,
+      "alt": "Four questions to run on your own AI spend. One: can a rival buy it tomorrow? Two: does it run on something only you have? Three: is it tied to your operations specifically? Four: will it still be scarce in three years? Mostly anyone-can-buy-it means you are funding a cost line; mostly only-us is where advantage forms."
+    },
+    {
+      "file": "2026-07-26_tracker_09.png",
+      "slide": 9,
+      "alt": "What moves a row next. Tuesday July 28: S&P Global and Ecolab report. Wednesday August 5: Duolingo. Tuesday August 18: Klarna. The ladder publishes every Sunday, free, at aiabovethecut.com."
+    }
+  ]
+}
