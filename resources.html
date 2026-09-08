@@ -101,6 +101,16 @@
  ol.path li:first-child{border-top:1px solid var(--hair)}
  ol.path li::before{content:counter(p);position:absolute;left:0;top:15px;width:28px;height:28px;border-radius:8px;background:var(--blue);color:#fff;font:700 13.5px/28px 'IBM Plex Mono',monospace;text-align:center}
  ol.path .do{display:block;font:600 17px/1.4 'Space Grotesk',sans-serif;color:var(--navy);margin-bottom:4px}
+ /* Audience and effort on every step. Added 2026-09-07: twelve links spanning courses,
+    developer docs, research papers and risk frameworks read as homework when nothing
+    told you who each one was for or what it would cost you. */
+ ol.path .meta{display:block;margin-top:8px;font:600 11px/1.5 'IBM Plex Mono',monospace;letter-spacing:.07em;text-transform:uppercase;color:#8A96A3}
+ ol.path .meta span{display:inline-block;margin-right:16px}
+ ol.path .meta b{color:var(--blue);font-weight:600}
+ .pathgroup{margin:26px 0 0}
+ .pathgroup h3{font:700 19px/1.3 'Space Grotesk',sans-serif;color:var(--navy);margin:0 0 4px;display:flex;align-items:baseline;gap:11px}
+ .pathgroup h3 .gn{font:700 11px/1 'IBM Plex Mono',monospace;letter-spacing:.12em;text-transform:uppercase;color:var(--blue);flex:none}
+ .pathgroup .gsub{font-size:16px;line-height:1.55;color:var(--slate);margin:0 0 12px}
 
  /* ---- compact link groups ---- */
  .group{border:1px solid var(--hair);border-radius:12px;overflow:hidden;margin:0 0 16px}
@@ -180,7 +190,7 @@
   <p class="toc-h">The Library</p>
   <ol id="tocList">
    <li><a href="getting-started.html">Brand-new to AI? Start here →</a></li>
-   <li><a href="#start-here"><span class="n">Start</span>The 12-link learning path</a></li>
+   <li><a href="#start-here"><span class="n">Start</span>The learning path, in 3 stages</a></li>
    <li><a href="#labels">How to read the labels</a></li>
    <li><a href="#assistants"><span class="n">Section 1</span>Choose and try an assistant</a></li>
    <li><a href="#practical"><span class="n">Section 2</span>Learn practical AI use</a></li>
@@ -218,23 +228,55 @@
     <span class="go">Your first AI chat →</span>
    </a>
 
-   <h2>Start here: a 12-link learning path</h2>
-   <p>If you do not want sixty-eight choices, use these twelve in order.</p>
+   <h2>Start here: the learning path</h2>
+   <p>Sixty-eight links is a library, not a plan. This is the plan. It runs in three stages, and the first stage is the one that changes how you work. Each step says who it is for and roughly what it will cost you, so you can skip what does not apply.</p>
 
-   <ol class="path">
-    <li><span class="do">Learn the basic mental model.</span> The University of Helsinki's <a href="https://www.elementsofai.com/" rel="noopener">Elements of AI</a> is a free, approachable introduction for nontechnical learners. <span class="tag t-uni">Free course</span></li>
-    <li><span class="do">See what a modern assistant can do.</span> OpenAI Academy's <a href="https://openai.com/academy/getting-started/" rel="noopener">Getting Started with ChatGPT</a> covers the interface, first prompts, and common uses. <span class="tag t-off">Official guide</span></li>
-    <li><span class="do">Learn to brief the work.</span> Anthropic's <a href="https://docs.anthropic.com/en/docs/build-with-claude/prompt-engineering/prompt-templates-and-variables" rel="noopener">prompting best practices</a> emphasize clarity, context, examples, and structure. The principles travel across products. <span class="tag t-off">Official guide</span></li>
-    <li><span class="do">Try the same real task in two tools.</span> Use <a href="https://chatgpt.com/" rel="noopener">ChatGPT</a>, <a href="https://claude.ai/" rel="noopener">Claude</a>, or <a href="https://gemini.google.com/" rel="noopener">Gemini</a> and compare the returns. Do not stage a trivia contest; use work you understand well enough to judge.</li>
-    <li><span class="do">Learn the central limitation.</span> Read the field guide's sections on <a href="field-guide.html#brain-in-jar">plausibility and context</a> and <a href="field-guide.html#part-5">verification</a>, then use the <a href="https://nvlpubs.nist.gov/nistpubs/ai/NIST.AI.600-1.pdf" rel="noopener">NIST Generative AI Profile</a> to see how those risks appear at system level. <span class="tag t-gov">Government guidance</span></li>
-    <li><span class="do">Study one strong productivity result carefully.</span> <a href="https://www.nber.org/papers/w31161" rel="noopener">Generative AI at Work</a> reports an average productivity gain in a particular customer-support setting and shows that gains varied by worker experience. <span class="tag t-acad">Working paper</span></li>
-    <li><span class="do">Study the boundary of competence.</span> The <a href="https://www.hbs.edu/ris/download.aspx?name=24-013.pdf" rel="noopener">Jagged Technological Frontier study</a> shows why performance can improve on tasks inside a model's capabilities and deteriorate outside them. <span class="tag t-acad">Field experiment</span></li>
-    <li><span class="do">Study the human side of verification.</span> Microsoft's <a href="https://www.microsoft.com/en-us/research/wp-content/uploads/2025/01/lee_2025_ai_critical_thinking_survey.pdf" rel="noopener">Critical Thinking in AI-Assisted Knowledge Work</a> examines how knowledge workers say AI changes where they apply critical thinking. Treat it as self-reported evidence, not proof that AI makes people less intelligent. <span class="tag t-vend">Vendor research</span></li>
-    <li><span class="do">See the broader field.</span> The <a href="https://hai.stanford.edu/ai-index/2026-ai-index-report" rel="noopener">Stanford AI Index 2026</a> assembles data on capabilities, economics, adoption, policy, education, and public opinion. <span class="tag">Independent index</span></li>
-    <li><span class="do">Put workforce claims in perspective.</span> The ILO's <a href="https://www.ilo.org/publications/generative-ai-and-jobs-refined-global-index-occupational-exposure" rel="noopener">Generative AI and Jobs</a> distinguishes occupational exposure from inevitable job loss and emphasizes transformation as well as automation. <span class="tag t-gov">Intergovernmental</span></li>
-    <li><span class="do">Adopt a risk vocabulary.</span> The <a href="https://www.nist.gov/itl/ai-risk-management-framework" rel="noopener">NIST AI Risk Management Framework</a> organizes responsible practice around governing, mapping, measuring, and managing risk. <span class="tag t-gov">Government framework</span></li>
-    <li><span class="do">Keep learning without chasing everything.</span> Subscribe to one thoughtful digest, such as Stanford HAI's <a href="https://hai.stanford.edu/subscribe-hai-mailing-list" rel="noopener">research and policy updates</a>, and revisit this library quarterly.</li>
-   </ol>
+   <div class="pathgroup">
+    <h3><span class="gn">Stage 1</span>Try this today</h3>
+    <p class="gsub">Five things you can actually do, each in one sitting. Do these before you read a single study. Reading about AI is a poor substitute for using it badly once and noticing why.</p>
+    <ol class="path">
+     <li><span class="do">Send your first message.</span> If you have never used a chat tool, our <a href="getting-started.html">Your first AI chat</a> walks you through picking one, sending a message, improving the answer, and checking it before you use it.
+      <span class="meta"><span>For <b>complete beginners</b></span><span>About <b>10 minutes</b></span></span></li>
+     <li><span class="do">See what a modern assistant can do.</span> OpenAI Academy's <a href="https://openai.com/academy/getting-started/" rel="noopener">Getting Started with ChatGPT</a> covers the interface, first prompts, and common uses. <span class="tag t-off">Official guide</span>
+      <span class="meta"><span>For <b>new users</b></span><span>About <b>30 minutes</b></span></span></li>
+     <li><span class="do">Learn to brief the work.</span> Anthropic's <a href="https://docs.anthropic.com/en/docs/build-with-claude/prompt-engineering/prompt-templates-and-variables" rel="noopener">prompting best practices</a> emphasize clarity, context, examples, and structure. The principles travel across products. <span class="tag t-off">Official guide</span>
+      <span class="meta"><span>For <b>anyone already using AI</b></span><span>About <b>20 minutes</b></span></span></li>
+     <li><span class="do">Run one real task in two tools.</span> Use <a href="https://chatgpt.com/" rel="noopener">ChatGPT</a>, <a href="https://claude.ai/" rel="noopener">Claude</a>, or <a href="https://gemini.google.com/" rel="noopener">Gemini</a> and compare the returns. Do not stage a trivia contest; use work you understand well enough to judge.
+      <span class="meta"><span>For <b>anyone already using AI</b></span><span>About <b>30 minutes</b></span></span></li>
+     <li><span class="do">Learn where it breaks, before it costs you.</span> The field guide on <a href="field-guide.html#brain-in-jar">why fluent answers can be wrong</a>, <a href="field-guide.html#part-6">the failure modes by name</a>, and <a href="field-guide.html#part-5">deciding what has earned your trust</a>.
+      <span class="meta"><span>For <b>anyone already using AI</b></span><span>About <b>25 minutes</b></span></span></li>
+    </ol>
+   </div>
+
+   <div class="pathgroup">
+    <h3><span class="gn">Stage 2</span>Understand the evidence</h3>
+    <p class="gsub">Now the reading. These are the studies people cite at you in meetings, and each is narrower than the headline suggests. You do not need all five. Take the ones that match the claims you are being asked to believe.</p>
+    <ol class="path">
+     <li><span class="do">Build the underlying mental model.</span> The University of Helsinki's <a href="https://www.elementsofai.com/" rel="noopener">Elements of AI</a> is a free, approachable introduction for nontechnical learners. <span class="tag t-uni">Free course</span>
+      <span class="meta"><span>For <b>anyone new to the concepts</b></span><span>Roughly <b>6 hours, self-paced</b></span></span></li>
+     <li><span class="do">Study one strong productivity result carefully.</span> <a href="https://www.nber.org/papers/w31161" rel="noopener">Generative AI at Work</a> reports an average productivity gain in one customer-support setting, with gains that varied by worker experience. <span class="tag t-acad">Working paper</span>
+      <span class="meta"><span>For <b>anyone quoting productivity numbers</b></span><span><b>30 minute</b> skim</span></span></li>
+     <li><span class="do">Study the boundary of competence.</span> The <a href="https://www.hbs.edu/ris/download.aspx?name=24-013.pdf" rel="noopener">Jagged Technological Frontier study</a> shows why performance improves on tasks inside a model's capabilities and gets worse outside them. <span class="tag t-acad">Field experiment</span>
+      <span class="meta"><span>For <b>anyone assigning AI work</b></span><span><b>30 minute</b> skim</span></span></li>
+     <li><span class="do">Study the human side of verification.</span> Microsoft's <a href="https://www.microsoft.com/en-us/research/wp-content/uploads/2025/01/lee_2025_ai_critical_thinking_survey.pdf" rel="noopener">Critical Thinking in AI-Assisted Knowledge Work</a> examines how knowledge workers say AI changes where they apply critical thinking. Self-reported evidence, not proof that AI makes people less intelligent. <span class="tag t-vend">Vendor research</span>
+      <span class="meta"><span>For <b>managers of AI-assisted teams</b></span><span><b>30 minute</b> skim</span></span></li>
+     <li><span class="do">See the whole field in data.</span> The <a href="https://hai.stanford.edu/ai-index/2026-ai-index-report" rel="noopener">Stanford AI Index 2026</a> assembles capabilities, economics, adoption, policy, education, and public opinion. <span class="tag">Independent index</span>
+      <span class="meta"><span>For <b>anyone needing a number</b></span><span><b>Reference</b>, dip in as needed</span></span></li>
+    </ol>
+   </div>
+
+   <div class="pathgroup">
+    <h3><span class="gn">Stage 3</span>Set policy, and keep going</h3>
+    <p class="gsub">Only relevant if you are responsible for how other people use AI, or for what your organization commits to publicly. Skip this stage otherwise.</p>
+    <ol class="path">
+     <li><span class="do">Put workforce claims in perspective.</span> The ILO's <a href="https://www.ilo.org/publications/generative-ai-and-jobs-refined-global-index-occupational-exposure" rel="noopener">Generative AI and Jobs</a> separates occupational exposure from inevitable job loss, and stresses transformation as well as automation. <span class="tag t-gov">Intergovernmental</span>
+      <span class="meta"><span>For <b>anyone briefing on jobs</b></span><span>About <b>40 minutes</b></span></span></li>
+     <li><span class="do">Adopt a risk vocabulary.</span> The <a href="https://www.nist.gov/itl/ai-risk-management-framework" rel="noopener">NIST AI Risk Management Framework</a> organizes practice around governing, mapping, measuring, and managing risk. Its <a href="https://nvlpubs.nist.gov/nistpubs/ai/NIST.AI.600-1.pdf" rel="noopener">Generative AI Profile</a> shows how confabulation, privacy, bias, and overreliance appear at system level. <span class="tag t-gov">Government framework</span>
+      <span class="meta"><span>For <b>anyone setting policy</b></span><span><b>Reference</b>, skim the risk list first</span></span></li>
+     <li><span class="do">Keep learning without chasing everything.</span> Subscribe to one thoughtful digest, such as Stanford HAI's <a href="https://hai.stanford.edu/subscribe-hai-mailing-list" rel="noopener">research and policy updates</a>, and revisit this library quarterly.
+      <span class="meta"><span>For <b>everyone</b></span><span><b>2 minutes</b> to set up</span></span></li>
+    </ol>
+   </div>
   </section>
 
   <section class="part" id="labels">

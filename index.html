@@ -61,6 +61,21 @@ ml('account', '2488958');
  .subscribe h2{font:700 23px/1.2 'Space Grotesk',sans-serif;letter-spacing:-.01em;color:var(--navy);margin:0 0 6px}
  .subscribe .sub-p{font-size:15.5px;line-height:1.55;color:var(--body);margin:0 0 16px}
  .subscribe .fineprint{font:600 12px/1.5 'IBM Plex Mono',monospace;letter-spacing:.04em;text-transform:uppercase;color:var(--slate);margin:14px 0 0}
+ /* three routes into the site. Added 2026-09-07: the homepage was a newsletter and an
+    archive, so a visitor could miss the field guide and the beginner page entirely. */
+ .routes{max-width:1060px;margin:36px 0 0;padding-top:32px;border-top:1px solid var(--hair)}
+ .routes h2{font:700 22px/1.2 'Space Grotesk',sans-serif;letter-spacing:-.01em;color:var(--navy);margin:0 0 4px}
+ .routes .rsub{font:400 16px/1.5 'IBM Plex Sans',sans-serif;color:var(--slate);margin:0 0 20px}
+ .rgrid{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}
+ .route{display:flex;flex-direction:column;border:1.5px solid var(--hair);border-radius:14px;padding:22px 22px 20px;text-decoration:none;color:inherit;background:#fff}
+ .route:hover{border-color:var(--blue);background:#FAFCFF}
+ .route .rwho{font:700 11.5px/1 'IBM Plex Mono',monospace;letter-spacing:.12em;text-transform:uppercase;color:var(--blue);margin:0 0 10px}
+ .route .rname{font:700 20px/1.25 'Space Grotesk',sans-serif;color:var(--navy);margin:0 0 8px}
+ .route .rdesc{font-size:16px;line-height:1.55;color:var(--body);margin:0 0 16px;flex:1}
+ .route .rgo{font:700 15px 'Space Grotesk',sans-serif;color:var(--blue)}
+ @media(max-width:860px){.rgrid{grid-template-columns:1fr}}
+ .formfall{font:400 14.5px/1.6 'IBM Plex Sans',sans-serif;color:var(--slate);margin:10px 0 0}
+ .formfall a{font-weight:600}
  .archive{max-width:780px;margin:14px 0 0;padding-top:30px;border-top:1px solid var(--hair)}
  .archive h2{font:700 22px/1.2 'Space Grotesk',sans-serif;letter-spacing:-.01em;color:var(--navy);margin:0 0 4px}
  .archive .asub{font:400 16px/1.5 'IBM Plex Sans',sans-serif;color:var(--slate);margin:0 0 14px}
@@ -107,8 +122,8 @@ ml('account', '2488958');
  <section class="hero container">
   <div class="hero-left">
    <p class="eyebrow">AI Above the Cut · A weekly brief for executives</p>
-   <h1>The week in AI &mdash; the news that <span class="hl">matters for business leaders.</span></h1>
-   <p class="intro">Every Sunday, a fast skim of what the field's top minds actually said this week — then a longer brief that connects the moves, takes a position, and links to the primary work. Signal over hype. Free.</p>
+   <h1>What changed in AI, what the evidence supports, and <span class="hl">who keeps the money it makes.</span></h1>
+   <p class="intro">Most AI coverage tells you what was announced. Every Sunday this brief reads the primary sources, separates what is proven from what is merely reported, and names the decisions worth making this week. Written for executives. Free.</p>
    <div class="chips" aria-label="Coverage areas">
     <span>Frontier</span><span>Labs</span><span>Enterprise</span><span>Policy</span><span>Healthcare</span>
    </div>
@@ -122,12 +137,39 @@ ml('account', '2488958');
     <h2 id="sub-h">Get the Sunday brief</h2>
     <p class="sub-p">Free, every Sunday morning. A fast skim of what the field's top minds actually said this week — signal over hype.</p>
     <div class="ml-embedded" data-form="cgeGZU"></div>
+    <p class="formfall" id="formfall">Loading the signup form. <a href="/subscribe">Use the signup page instead &rarr;</a></p>
+    <noscript><p class="formfall">The signup form needs JavaScript. <a href="/subscribe">Open the signup page &rarr;</a></p></noscript>
     <p class="fineprint">Free · Weekly · Sundays · No spam · Unsubscribe anytime</p>
    </section>
   </aside>
  </section>
 
  <section class="container">
+  <section class="routes" aria-labelledby="routes-h">
+   <h2 id="routes-h">Three ways in</h2>
+   <p class="rsub">The Sunday brief is one part of this. Pick the door that matches where you are.</p>
+   <div class="rgrid">
+    <a class="route" href="getting-started.html">
+     <p class="rwho">New to AI</p>
+     <p class="rname">Start here</p>
+     <p class="rdesc">Never used a chat tool. Pick one, send a first message, and learn what to do with the answer. No experience needed, about ten minutes.</p>
+     <span class="rgo">Your first AI chat &rarr;</span>
+    </a>
+    <a class="route" href="field-guide.html">
+     <p class="rwho">Improve your work</p>
+     <p class="rname">The Field Guide</p>
+     <p class="rdesc">You use AI already and want better results. How to brief the work, spot the failures that hide under a polished answer, and decide what has earned your trust.</p>
+     <span class="rgo">Read the field guide &rarr;</span>
+    </a>
+    <a class="route" href="/current">
+     <p class="rwho">Keep up</p>
+     <p class="rname">The latest issue</p>
+     <p class="rdesc">This week's brief. What changed, what the evidence actually supports, three moves to make, and who captures the value.</p>
+     <span class="rgo">Read this week &rarr;</span>
+    </a>
+   </div>
+  </section>
+
   <section class="archive" id="archive" aria-labelledby="arch-h">
    <h2 id="arch-h">Every issue</h2>
    <p class="asub">Read the archive. A new edition lands every Sunday morning.</p>
@@ -190,5 +232,12 @@ ml('account', '2488958');
 </footer>
 <script>
 (function(){function fix(){document.querySelectorAll('.ml-embedded button, .ml-form-embedSubmit button').forEach(function(b){b.style.setProperty('background-color','#1B57F0','important');b.style.setProperty('color','#fff','important');});}var n=0,t=setInterval(function(){fix();if(++n>40)clearInterval(t);},250);if(document.readyState!=='loading')fix();else document.addEventListener('DOMContentLoaded',fix);})();
+/* The MailerLite embed renders an empty box until its script lands, so a reader can
+   see a subscribe panel with no email field. Show a fallback link, and remove it the
+   moment a real input appears. If the script never loads, the link stays. */
+(function(){var f=document.getElementById('formfall');if(!f)return;var n=0,t=setInterval(function(){
+ if(document.querySelector('.ml-embedded input')){f.style.display='none';clearInterval(t);}
+ else if(++n>60){f.textContent='The signup form did not load. ';var a=document.createElement('a');a.href='/subscribe';a.textContent='Open the signup page →';f.appendChild(a);clearInterval(t);}
+},250);})();
 </script>
 </body></html>
