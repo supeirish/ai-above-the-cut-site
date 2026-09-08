@@ -1,0 +1,371 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Lexicon — the words we use and what we mean by them | AI Above the Cut</title>
+<meta name="description" content="Plain-English definitions of every recurring term in AI Above the Cut: how we label evidence, whether value was created, who keeps it, and how the work gets built.">
+<link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'><rect width='32' height='32' rx='7' fill='%231B57F0'/><g fill='none' stroke='%23ffffff' stroke-width='2'><circle cx='16' cy='16' r='10'/><circle cx='16' cy='16' r='6'/></g><circle cx='16' cy='16' r='2.6' fill='%23ffffff'/></svg>">
+<link rel="icon" href="/favicon.svg" sizes="any">
+<link rel="canonical" href="https://aiabovethecut.com/lexicon.html">
+<meta property="og:type" content="article">
+<meta property="og:site_name" content="AI Above the Cut">
+<meta property="og:title" content="Lexicon — AI Above the Cut">
+<meta property="og:description" content="If a term is doing real work in an argument, you should be able to check what it means rather than infer it.">
+<meta property="og:url" content="https://aiabovethecut.com/lexicon.html">
+<meta property="og:image" content="https://aiabovethecut.com/og-image.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Lexicon — AI Above the Cut">
+<meta name="twitter:description" content="The words we use, and exactly what we mean by them.">
+<meta name="twitter:image" content="https://aiabovethecut.com/og-image.png">
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&family=IBM+Plex+Sans:wght@400;500;600&family=IBM+Plex+Mono:wght@500;600&display=swap" rel="stylesheet">
+<style>
+ :root{--blue:#1B57F0;--blue-dk:#1543c7;--navy:#0A1422;--body:#37444F;--slate:#566573;--chipblue:#EAF1FF;--hair:#E3E8EE;--wash:#F7F9FC}
+ *{box-sizing:border-box}
+ html{scroll-behavior:smooth}
+ body{margin:0;font-family:'IBM Plex Sans',sans-serif;color:var(--body);background:#fff;font-size:17px;line-height:1.65}
+ a{color:var(--blue)}
+ :focus-visible{outline:3px solid #7aa2ff;outline-offset:2px;border-radius:4px}
+ .skip{position:absolute;left:-999px;top:0;background:#fff;color:var(--blue);padding:10px 16px;font-weight:600;z-index:60}
+ .skip:focus{left:8px;top:8px}
+ .container{max-width:1200px;margin:0 auto;padding:0 32px}
+
+ .sitenav{position:sticky;top:0;z-index:40;background:var(--navy)}
+ .sitenav .container{display:flex;align-items:center;gap:16px;min-height:66px;flex-wrap:wrap}
+ .sitenav .brand{display:inline-flex;align-items:center;gap:11px;text-decoration:none;color:#fff;font:700 20px/1 'Space Grotesk',sans-serif;letter-spacing:-.01em}
+ .sitenav .menu{margin-left:auto;display:flex;align-items:center;gap:6px;flex-wrap:wrap}
+ .sitenav .menu a{color:#e7edf6;text-decoration:none;font:600 15.5px/1 'IBM Plex Sans',sans-serif;padding:11px 12px;border-radius:8px;display:inline-flex;align-items:center;min-height:44px}
+ .sitenav .menu a:hover{color:#fff;background:rgba(255,255,255,.10)}
+ .sitenav .menu a[aria-current="page"]{color:#fff;box-shadow:inset 0 -2px 0 var(--blue)}
+ .sitenav .menu a.sub{background:var(--blue);color:#fff;font-weight:700;padding:11px 16px}
+ .sitenav .menu a.sub:hover{background:#3a6cff}
+
+ .docs{display:grid;grid-template-columns:262px minmax(0,1fr);gap:52px;align-items:start;padding-bottom:20px}
+ .toc{position:sticky;top:86px;max-height:calc(100vh - 108px);overflow-y:auto;padding:28px 0;border-right:1px solid var(--hair)}
+ .toc-h{font:700 12px/1 'IBM Plex Mono',monospace;letter-spacing:.14em;text-transform:uppercase;color:var(--slate);margin:0 0 14px;padding-right:22px}
+ .toc ol{list-style:none;margin:0;padding:0 22px 0 0}
+ .toc a{display:block;text-decoration:none;color:var(--slate);font:500 15px/1.4 'IBM Plex Sans',sans-serif;padding:8px 12px 8px 14px;border-left:2px solid var(--hair);border-radius:0 7px 7px 0}
+ .toc a:hover{color:var(--navy);background:var(--wash)}
+ .toc a .n{font:600 11.5px/1 'IBM Plex Mono',monospace;letter-spacing:.06em;color:#93a1b0;display:block;margin-bottom:3px}
+ .toc a.on{color:var(--blue);background:var(--chipblue);border-left-color:var(--blue);font-weight:600}
+ .toc a.on .n{color:var(--blue)}
+ .toc-foot{margin:20px 22px 0 14px;padding-top:16px;border-top:1px solid var(--hair);font:400 13.5px/1.55 'IBM Plex Sans',sans-serif;color:var(--slate)}
+ .toc-foot a{font-weight:600;text-decoration:none}
+
+ .article{max-width:790px;padding:34px 0 60px;min-width:0}
+ .kicker{font:700 13px/1 'IBM Plex Mono',monospace;letter-spacing:.14em;text-transform:uppercase;color:var(--blue);margin:0 0 14px}
+ h1{font:700 clamp(32px,3.7vw,46px)/1.1 'Space Grotesk',sans-serif;letter-spacing:-.025em;color:var(--navy);margin:0 0 16px}
+ .deck{font-size:20.5px;line-height:1.55;color:var(--navy);margin:0 0 18px;font-weight:500}
+ .article p{font-size:17.5px;line-height:1.75;margin:0 0 17px}
+ .article h2{font:700 clamp(23px,2.4vw,29px)/1.2 'Space Grotesk',sans-serif;letter-spacing:-.02em;color:var(--navy);margin:0 0 6px}
+ section.part{padding:34px 0 8px;border-top:1px solid var(--hair);margin-top:26px;scroll-margin-top:86px}
+ section.part:first-of-type{border-top:0;margin-top:0;padding-top:6px}
+ .partno{font:700 12px/1 'IBM Plex Mono',monospace;letter-spacing:.14em;text-transform:uppercase;color:var(--blue);margin:0 0 10px}
+ .secnote{font-size:16.5px;line-height:1.65;color:var(--slate);margin:0 0 20px;max-width:62em}
+ .lede-box{border:2px solid var(--blue);background:#F2F6FF;border-radius:14px;padding:22px 24px;margin:0 0 22px}
+ .lede-box p{margin:0;font-size:18px;line-height:1.6}
+
+ /* term entries */
+ .terms{border:1px solid var(--hair);border-radius:12px;overflow:hidden}
+ .term{padding:20px 22px;border-bottom:1px solid var(--hair)}
+ .term:last-child{border-bottom:0}
+ .term:nth-child(even){background:#FBFCFE}
+ .thead{display:flex;flex-wrap:wrap;align-items:baseline;gap:6px 11px;margin:0 0 8px}
+ .tname{font:700 19px/1.25 'Space Grotesk',sans-serif;color:var(--navy);margin:0}
+ .src{display:inline-block;font:600 10.5px/1 'IBM Plex Mono',monospace;letter-spacing:.08em;text-transform:uppercase;padding:5px 8px;border-radius:5px;background:#F1EBFB;color:#5B3AA6;vertical-align:1px}
+ .src.own{background:#E7F0FF;color:#1543c7}
+ .term p{margin:0 0 10px;font-size:16.5px;line-height:1.65}
+ .term p:last-child{margin-bottom:0}
+ .test{border-left:3px solid var(--blue);background:var(--wash);border-radius:0 8px 8px 0;padding:11px 16px;margin:11px 0 0}
+ .test p{margin:0;font-size:16px;line-height:1.6}
+ .test .lbl{display:block;font:600 10.5px/1 'IBM Plex Mono',monospace;letter-spacing:.1em;text-transform:uppercase;color:var(--blue);margin:0 0 6px}
+ .warn{border-left:3px solid #C98A2E;background:#FFF8F0;border-radius:0 8px 8px 0;padding:11px 16px;margin:11px 0 0}
+ .warn p{margin:0;font-size:16px;line-height:1.6}
+ .warn .lbl{display:block;font:600 10.5px/1 'IBM Plex Mono',monospace;letter-spacing:.1em;text-transform:uppercase;color:#9A5410;margin:0 0 6px}
+
+ /* the two-step test block */
+ .steps{counter-reset:s;list-style:none;padding:0;margin:16px 0 0}
+ .steps li{counter-increment:s;position:relative;padding:14px 0 14px 46px;border-bottom:1px solid var(--hair);font-size:16.5px;line-height:1.62}
+ .steps li:first-child{border-top:1px solid var(--hair)}
+ .steps li::before{content:counter(s);position:absolute;left:0;top:15px;width:28px;height:28px;border-radius:8px;background:var(--blue);color:#fff;font:700 13.5px/28px 'IBM Plex Mono',monospace;text-align:center}
+ .steps .q{display:block;font:600 17px/1.4 'Space Grotesk',sans-serif;color:var(--navy);margin-bottom:4px}
+ .steps .fail{display:block;margin-top:6px;font-size:15.5px;color:var(--slate)}
+
+ .xlink{display:block;border:2px solid var(--blue);background:#F2F6FF;border-radius:14px;padding:22px 24px;margin:30px 0 0;text-decoration:none;color:inherit}
+ .xlink:hover{background:#E8F0FF}
+ .xlink .t{font:700 20px/1.25 'Space Grotesk',sans-serif;color:var(--navy);margin:0 0 6px}
+ .xlink p{margin:0;font-size:16.5px;line-height:1.6;color:var(--body)}
+ .xlink .go{display:inline-block;margin-top:10px;font:700 15.5px 'Space Grotesk',sans-serif;color:var(--blue)}
+
+ .foot{border-top:1px solid var(--hair)}
+ .foot .container{padding-top:24px;padding-bottom:46px;font:400 14.5px/1.7 'IBM Plex Sans',sans-serif;color:var(--slate)}
+ .foot a{color:var(--slate);text-decoration:underline;font-weight:600}
+ .foot a:hover{color:var(--blue)}
+
+ .toc-toggle{display:none}
+ @media(max-width:1000px){
+  .container{padding:0 20px}
+  .docs{grid-template-columns:1fr;gap:0}
+  .toc{position:static;max-height:none;border-right:0;border-bottom:1px solid var(--hair);padding:0 0 18px;margin-top:18px}
+  .toc-toggle{display:block;width:100%;text-align:left;background:var(--wash);border:1px solid var(--hair);border-radius:10px;padding:14px 18px;font:600 16px 'Space Grotesk',sans-serif;color:var(--navy);cursor:pointer;min-height:48px}
+  .toc-toggle::after{content:"▾";float:right;color:var(--blue)}
+  .toc-toggle[aria-expanded="true"]::after{content:"▴"}
+  .toc-h{display:none}
+  .toc ol{padding:12px 0 0;max-height:60vh;overflow-y:auto}
+  .toc[data-collapsed="true"] ol,.toc[data-collapsed="true"] .toc-foot{display:none}
+  .article{padding-top:24px}
+ }
+ @media(min-width:1001px){.toc ol{display:block!important}}
+</style></head><body>
+<a class="skip" href="#main">Skip to content</a>
+<header class="sitenav">
+ <div class="container">
+  <a class="brand" href="index.html">
+   <svg width="27" height="27" viewBox="0 0 30 30" aria-hidden="true" focusable="false"><g fill="none" stroke="#1B57F0" stroke-width="1.8"><circle cx="15" cy="15" r="13.2"/><circle cx="15" cy="15" r="8.6"/><circle cx="15" cy="15" r="4"/></g><circle cx="15" cy="15" r="2.4" fill="#1B57F0"/></svg>
+   AI ABOVE THE CUT
+  </a>
+  <nav class="menu" aria-label="Main">
+   <a href="index.html">Home</a>
+   <a href="/current">Current issue</a>
+   <a href="field-guide.html">Field Guide</a>
+   <a href="resources.html">Resources</a>
+   <a href="lexicon.html" aria-current="page">Lexicon</a>
+   <a href="about.html">About</a>
+   <a class="sub" href="index.html#subscribe">Subscribe</a>
+  </nav>
+ </div>
+</header>
+
+<div class="container">
+<div class="docs">
+
+ <nav class="toc" id="toc" aria-label="Lexicon contents" data-collapsed="true">
+  <button class="toc-toggle" id="tocToggle" aria-expanded="false" aria-controls="tocList">Contents</button>
+  <p class="toc-h">The Lexicon</p>
+  <ol id="tocList">
+   <li><a href="#judging"><span class="n">Part 1</span>How we judge a claim</a></li>
+   <li><a href="#two-step"><span class="n">Part 2</span>The two-step value test</a></li>
+   <li><a href="#created"><span class="n">Part 3</span>Was value created?</a></li>
+   <li><a href="#kept"><span class="n">Part 4</span>Who keeps it?</a></li>
+   <li><a href="#built"><span class="n">Part 5</span>How the work gets built</a></li>
+  </ol>
+  <p class="toc-foot">Terms marked <span class="src">Book</span> come from <em>Who Holds the Pen?</em>, and are used here with the same meaning.</p>
+ </nav>
+
+ <main class="article" id="main">
+  <p class="kicker">Lexicon</p>
+  <h1>The words we use</h1>
+  <p class="deck">And exactly what we mean by them.</p>
+
+  <div class="lede-box">
+   <p>If a term is doing real work in an argument, you should be able to check what it means rather than infer it from context.</p>
+  </div>
+
+  <p>This brief uses a small, deliberate vocabulary. Some of it is ordinary economics used precisely. Some comes from <em>Who Holds the Pen?</em>, and those entries are marked. Nothing here is jargon for its own sake: each term exists because the plain-English version takes a paragraph and we would rather spend those words on evidence.</p>
+
+  <section class="part" id="judging">
+   <p class="partno">Part 1</p>
+   <h2>How we judge a claim</h2>
+   <p class="secnote">These govern what can appear in an issue and how it is labeled. They are publication rules, not opinions.</p>
+
+   <div class="terms">
+    <div class="term">
+     <div class="thead"><p class="tname">Above the cut</p><span class="src own">Ours</span></div>
+     <p>What would change a decision, as opposed to what merely happened. Most AI news is real and still below the cut, because knowing it would not alter what a reader does on Monday.</p>
+    </div>
+
+    <div class="term">
+     <div class="thead"><p class="tname">Primary, Corroborated, Reported</p><span class="src own">Ours</span></div>
+     <p>The three labels every event in an issue carries. <strong>Primary</strong> means the lab, paper, regulator, or filing said it first-hand. <strong>Corroborated</strong> means an independent source confirmed it. <strong>Reported</strong> means someone said it and we have not been able to confirm it, so the wording stays hedged and attributed.</p>
+     <div class="warn"><span class="lbl">The rule this protects</span><p>Our reading of what an event means is labeled separately as <strong>our Analysis</strong>. Inference never inherits a primary label. An event can be Primary while the conclusion drawn from it is contested.</p></div>
+    </div>
+
+    <div class="term">
+     <div class="thead"><p class="tname">The link-and-claim standard</p><span class="src own">Ours</span></div>
+     <p>No link ships unverified. Every external URL is opened before send and confirmed to load and to contain the specific fact cited, not merely to be about the topic. The check runs as a mechanical gate that blocks the issue, and we link the deepest primary artifact rather than coverage about it. Aggregators and search-results pages are never cited.</p>
+    </div>
+
+    <div class="term">
+     <div class="thead"><p class="tname">The measurement gap</p><span class="src own">Ours</span></div>
+     <p>A claim of AI value made without a number a reader could underwrite. It is the most common shape of AI announcement: real activity, real spend, and nothing an outsider could check or a CFO could book.</p>
+    </div>
+   </div>
+  </section>
+
+  <section class="part" id="two-step">
+   <p class="partno">Part 2</p>
+   <h2>The two-step value test</h2>
+   <p class="secnote">Most arguments about AI value collapse two separate questions into one. We keep them apart, because a company can pass the first and fail the second, and that failure is invisible if you only ask whether the technology worked.</p>
+
+   <ol class="steps">
+    <li><span class="q">Was value actually created?</span>
+     Measured as <a href="#ai-yield">AI Yield</a>: release plus expansion, netted against the whole AI investment, both sides read against a baseline recorded <em>before</em> the change. Freed hours are capacity, not money. Capacity becomes a saving only when a position, contract, or licence actually stops.
+     <span class="fail">Fails when: the claim is activity, adoption, freed time, or a pilot count rather than a recognised result.</span></li>
+    <li><span class="q">Does the creator keep it?</span>
+     Measured as <a href="#rent">rent</a>: excess returns that persist after competitors deploy the same capability. This cannot be tested until later, so it has to be argued before the capital is committed.
+     <span class="fail">Fails when: the gain is real but every rival gets it too, and it lands with customers as lower prices rather than with the company as margin.</span></li>
+   </ol>
+
+   <p style="margin-top:20px">Both must pass before we describe something as durable advantage. Step one alone is an efficiency story. Step two alone is a strategy assertion with nothing under it. The Margin-Proof Tracker exists to run both against named claims, in public, over time.</p>
+  </section>
+
+  <section class="part" id="created">
+   <p class="partno">Part 3</p>
+   <h2>Was value created?</h2>
+
+   <div class="terms">
+    <div class="term" id="ai-yield">
+     <div class="thead"><p class="tname">AI Yield</p><span class="src">Book</span></div>
+     <p>The account for what an AI investment actually produced, and where the value went. It answers two things at once: what value AI created, and who partakes in it.</p>
+     <p><strong>Gross AI Yield = release + expansion.</strong> The two can be added only because both are money against the same baseline, for the same operation, in the same period. <strong>Net AI Yield = Gross AI Yield less the whole AI investment</strong> assigned to that same operation and period.</p>
+     <p>The <strong>whole AI investment</strong> is not the model bill. It is technology and compute, data, integration, evaluation, controls, change effort, and transition.</p>
+     <div class="test"><span class="lbl">A result, not a rate</span><p>AI Yield is a periodic enterprise account in money and native units, never a percentage return. If you need a ratio, divide Net AI Yield by the investment. A negative first statement is information, not failure: it says the investment has not produced a recognised return yet.</p></div>
+    </div>
+
+    <div class="term" id="release-expansion">
+     <div class="thead"><p class="tname">Release and expansion</p><span class="src">Book</span></div>
+     <p>The two halves of the yield, and they arrive on different clocks. <strong>Release</strong> is cost that stopped: a position leaves the plan, a vacancy stays unfilled, a contract ends. It lands in next quarter's accounts and it is easy to prove. <strong>Expansion</strong> is a bet: the company keeps the capacity, points it at new or better work, and waits to see whether customers reward it. It may arrive late, or not at all.</p>
+     <p>Which one produced a company's number tells you more than the number does. A yield built almost entirely on release is a cost story. Expansion carries more uncertainty even when it creates the more valuable future.</p>
+    </div>
+
+    <div class="term" id="not-a-saving">
+     <div class="thead"><p class="tname">Capacity is not a saving</p><span class="src">Book</span></div>
+     <p>A freed hour is capacity, not cash. When AI improves existing work, management then chooses: <strong>release</strong> the capacity, so the position, contract, or licence actually stops, or <strong>redeploy</strong> it, giving the time another job.</p>
+     <div class="warn"><span class="lbl">The test we apply</span><p>If nobody decides, the freed hours stay on payroll while the target quietly rises. That capacity is <strong>unresolved</strong>. <strong>It never becomes a saving by default.</strong> A company announcing that AI freed a third of its agents' time has reported capacity, not value, and we say so.</p></div>
+    </div>
+
+    <div class="term" id="recorded-observed">
+     <div class="thead"><p class="tname">Recorded and observed</p><span class="src">Book</span></div>
+     <p>Not every part of the account is knowable the same way. Investment, capacity choices, and release can be <strong>recorded</strong>: a company knows what it spent, what it decided, and which costs stopped. Expansion and the overall result can only be <strong>observed</strong> against a baseline, because demand, pricing, competitors, and the wider market move at the same time. Attribution to AI is then a stated judgment, not a measurement.</p>
+     <div class="test"><span class="lbl">The baseline rule</span><p>The baseline is what the operation <em>was</em>, recorded while the old operation still existed. It is not a story about what would have happened without AI. An audit three years later finds vanished contracts, absorbed hours, and explanations written after everyone knew the ending.</p></div>
+    </div>
+
+    <div class="term" id="distribution">
+     <div class="thead"><p class="tname">Distribution</p><span class="src">Book</span></div>
+     <p>The other half of the question, and the half a single financial number hides. Who received the gain, who carried the cost, and how fast did either arrive. When release drives most of a yield, the money tends to reach the enterprise, its owners, and the leaders rewarded for delivering it.</p>
+     <p>Customers benefit only if the company decides to lower prices or improve service. <strong>Pass-through is a decision, not a trickle.</strong> Workers receive a share only if someone designates one. If nobody names another destination, the result stays in earnings.</p>
+     <div class="warn"><span class="lbl">Why we track it beside the money</span><p>The financial number can improve while the human result gets worse, on the same page, in the same period. One number cannot be the answer, so the people record travels with it: roles ended, people redeployed, transition support, service quality, time.</p></div>
+    </div>
+
+    <div class="term">
+     <div class="thead"><p class="tname">Shipped is not value</p><span class="src own">Ours</span></div>
+     <p>A pilot running in production with no effect on the P&amp;L. Deployment is evidence that something works, not evidence that it paid.</p>
+    </div>
+
+    <div class="term">
+     <div class="thead"><p class="tname">The trust wall</p><span class="src own">Ours</span></div>
+     <p>Progress gated by reliability and control rather than by capability. When a system is good enough to be useful but not dependable enough to be relied on unsupervised, the binding constraint is trust, and more capability does not move it.</p>
+    </div>
+   </div>
+  </section>
+
+  <section class="part" id="kept">
+   <p class="partno">Part 4</p>
+   <h2>Who keeps it?</h2>
+   <p class="secnote">This is the standing question of the brief. Reliability and control are table stakes. Defensibility is the strategy.</p>
+
+   <div class="terms">
+    <div class="term" id="rent">
+     <div class="thead"><p class="tname">Rent</p><span class="src own">Ours</span></div>
+     <p>Excess returns that <strong>persist after competition catches up</strong>. The everyday sense of the word is irrelevant here; this is the economic sense. The test is whether the underlying advantage is <em>excludable</em>, meaning rivals cannot simply acquire it, rather than whether it is scarce today.</p>
+    </div>
+
+    <div class="term">
+     <div class="thead"><p class="tname">Competed-away advantage</p><span class="src own">Ours</span></div>
+     <p>A real AI gain that never reaches the P&amp;L because every rival deploys the same capability and the benefit passes through to customers. The technology worked exactly as promised and the company is no better off than before.</p>
+    </div>
+
+    <div class="term">
+     <div class="thead"><p class="tname">Table stakes, not a moat</p><span class="src own">Ours</span></div>
+     <p>AI spending undertaken to stay in the game rather than to get ahead of it. Necessary, unavoidable, and not a source of advantage. Where durable advantage exists, it usually lives in scarce complementary assets a rival cannot copy, such as proprietary data, distribution, regulatory position, or workflow lock-in, rather than in the model itself.</p>
+    </div>
+
+    <div class="term">
+     <div class="thead"><p class="tname">Test reliability, argue defensibility, judge it later</p><span class="src own">Ours</span></div>
+     <p>The order diligence has to run in. Verify that a system works and is controlled before scaling it, because that is testable now. Reason about whether the advantage survives competition before committing capital, because it cannot be tested until later. Then judge the result against what was argued.</p>
+    </div>
+   </div>
+  </section>
+
+  <section class="part" id="built">
+   <p class="partno">Part 5</p>
+   <h2>How the work gets built</h2>
+   <p class="secnote">These describe the operating side. They come from <em>Who Holds the Pen?</em> and are used here with the same meaning. The <a href="field-guide.html">Field Guide</a> covers the individual-level ones in depth.</p>
+
+   <div class="terms">
+    <div class="term" id="synthetic-team">
+     <div class="thead"><p class="tname">Synthetic Team</p><span class="src">Book</span></div>
+     <p>A human-led, reconfigurable way of organizing people, AI, software, data, rules, tools, memory, checks, and judgment around a responsibility or mission. It may be standing or temporary, and it can be nested inside another.</p>
+     <p>It is not several AI personas sitting side by side. It is a picture of the work rather than a headcount of software: the roles the work actually needs, each built with the simplest thing that does its job reliably, whether that is a separate agent, an instruction, a rule, or a person.</p>
+     <div class="test"><span class="lbl">When the word is earned</span><p>The word <em>team</em> applies when a person is authoring and managing an organization of work, not merely requesting output. Responsibilities, handoffs, checks, and visible human decisions are the signals. Humans keep purpose, authority, judgment, and accountability. Synthetic roles hold no pen.</p></div>
+     <div class="warn"><span class="lbl">The rule that keeps it honest</span><p><strong>The team cannot grade its own homework.</strong> An AI that writes the work and then judges its own draft is author and referee at once, and will tend to bless what it just produced. At least one check has to be independent of the seat that produced the work. The team prepares. The human owns.</p></div>
+    </div>
+
+    <div class="term">
+     <div class="thead"><p class="tname">The Delegation Tax</p><span class="src">Book</span></div>
+     <p>The attention it costs to hand work to AI responsibly: framing the task, assembling context, steering, inspecting the return, correcting it, and being able to explain why the result deserves confidence. The handoff is cheap. Accountability is not. When the tax is not paid by the sender, it is simply transferred to the recipient.</p>
+    </div>
+
+    <div class="term">
+     <div class="thead"><p class="tname">The Verification Boundary</p><span class="src">Book</span></div>
+     <p>The point at which work has earned its next level of reliance. Work crosses it by one of three routes: a credible person can grade it, evidence or a test can expose the important failure, or reality can answer while the stakes stay small and reversible. Absent all three, the output may still be useful for exploration, but it has not earned the status of an answer.</p>
+    </div>
+
+    <div class="term">
+     <div class="thead"><p class="tname">The Personal Ceiling</p><span class="src">Book</span></div>
+     <p>The point where further gains stop depending on how well one person uses AI and start depending on whether the work around that person changes. It is the signal that the next problem is shared context, workflow, standards, review, decision rights, or team design. My work gets better before our work gets different.</p>
+    </div>
+
+    <div class="term">
+     <div class="thead"><p class="tname">The wisdom gap</p><span class="src">Book</span></div>
+     <p>AI is smart but far from wise. Left unsupervised it invents facts, agrees with a false premise, drops the detail buried on page forty, and quietly applies an incomplete standard, fluently and at scale. A sharper model makes the fluent answer more fluent, not more accountable, which is why quality has to be designed for rather than waited out.</p>
+    </div>
+   </div>
+
+   <a class="xlink" href="field-guide.html">
+    <p class="t">These have a longer treatment</p>
+    <p>The Field Guide works through the individual-level ideas with worked examples: how to brief a task, how to recognise the failures that hide under a polished answer, and how to decide what has earned your trust.</p>
+    <span class="go">Read the Field Guide →</span>
+   </a>
+  </section>
+
+ </main>
+</div>
+</div>
+
+<footer class="foot">
+ <div class="container">
+  <a href="index.html">Home</a> &nbsp;·&nbsp; <a href="/current">Current issue</a> &nbsp;·&nbsp; <a href="getting-started.html">Start here</a> &nbsp;·&nbsp; <a href="field-guide.html">Field Guide</a> &nbsp;·&nbsp; <a href="resources.html">Resources</a> &nbsp;·&nbsp; <a href="lexicon.html">Lexicon</a> &nbsp;·&nbsp; <a href="about.html">About</a> &nbsp;·&nbsp; <a href="index.html#subscribe">Subscribe</a><br>
+  AI Above the Cut — a weekly AI brief for executives.
+ </div>
+</footer>
+
+<script>
+(function(){
+ var toc=document.getElementById('toc'),btn=document.getElementById('tocToggle');
+ if(btn){btn.addEventListener('click',function(){
+  var open=toc.getAttribute('data-collapsed')==='true';
+  toc.setAttribute('data-collapsed',open?'false':'true');
+  btn.setAttribute('aria-expanded',open?'true':'false');
+ });}
+ var links=[].slice.call(document.querySelectorAll('#tocList a[href^="#"]'));
+ var targets=links.map(function(a){return document.getElementById(a.getAttribute('href').slice(1));}).filter(Boolean);
+ if(!targets.length)return;
+ function mark(id){links.forEach(function(a){a.classList.toggle('on',a.getAttribute('href')==='#'+id);});}
+ function onScroll(){var best=targets[0],y=window.scrollY+120;targets.forEach(function(t){if(t.offsetTop<=y)best=t;});mark(best.id);}
+ if('IntersectionObserver' in window){
+  var seen={};
+  var io=new IntersectionObserver(function(es){
+   es.forEach(function(e){seen[e.target.id]=e.isIntersecting;});
+   for(var i=0;i<targets.length;i++){if(seen[targets[i].id]){mark(targets[i].id);return;}}
+   onScroll();
+  },{rootMargin:'-80px 0px -70% 0px'});
+  targets.forEach(function(t){io.observe(t);});
+ }
+ window.addEventListener('scroll',onScroll,{passive:true});
+ onScroll();
+ links.forEach(function(a){a.addEventListener('click',function(){
+  if(window.innerWidth<=1000&&btn){toc.setAttribute('data-collapsed','true');btn.setAttribute('aria-expanded','false');}
+ });});
+})();
+</script>
+</body></html>
