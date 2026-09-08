@@ -1,0 +1,1058 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Get to Know AI — a practical field guide | AI Above the Cut</title>
+<meta name="description" content="A practical field guide to working with AI: what it is doing, where it is strong, where the same strengths turn into weaknesses, how to brief the work, and how to decide whether a result has earned your trust.">
+<link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'><rect width='32' height='32' rx='7' fill='%231B57F0'/><g fill='none' stroke='%23ffffff' stroke-width='2'><circle cx='16' cy='16' r='10'/><circle cx='16' cy='16' r='6'/></g><circle cx='16' cy='16' r='2.6' fill='%23ffffff'/></svg>">
+<link rel="icon" href="/favicon.svg" sizes="any">
+<link rel="canonical" href="https://aiabovethecut.com/field-guide.html">
+<meta property="og:type" content="article">
+<meta property="og:site_name" content="AI Above the Cut">
+<meta property="og:title" content="Get to Know AI — a practical field guide">
+<meta property="og:description" content="AI becomes more useful when you stop treating it like a search box and start managing the working relationship.">
+<meta property="og:url" content="https://aiabovethecut.com/field-guide.html">
+<meta property="og:image" content="https://aiabovethecut.com/og-image.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Get to Know AI — a practical field guide">
+<meta name="twitter:description" content="What AI is doing, where it is strong, where it fails, and how to decide whether a result has earned your trust.">
+<meta name="twitter:image" content="https://aiabovethecut.com/og-image.png">
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&family=IBM+Plex+Sans:wght@400;500;600&family=IBM+Plex+Mono:wght@500;600&display=swap" rel="stylesheet">
+<style>
+ :root{--blue:#1B57F0;--blue-dk:#1543c7;--navy:#0A1422;--body:#37444F;--slate:#566573;--chipblue:#EAF1FF;--hair:#E3E8EE;--wash:#F7F9FC}
+ *{box-sizing:border-box}
+ html{scroll-behavior:smooth}
+ body{margin:0;font-family:'IBM Plex Sans',sans-serif;color:var(--body);background:#fff;font-size:17px;line-height:1.65}
+ a{color:var(--blue)}
+ :focus-visible{outline:3px solid #7aa2ff;outline-offset:2px;border-radius:4px}
+ .skip{position:absolute;left:-999px;top:0;background:#fff;color:var(--blue);padding:10px 16px;font-weight:600;z-index:60}
+ .skip:focus{left:8px;top:8px}
+ .container{max-width:1200px;margin:0 auto;padding:0 32px}
+
+ /* ---- site chrome (matches index.html / about.html) ---- */
+ .sitenav{position:sticky;top:0;z-index:40;background:var(--navy)}
+ .sitenav .container{display:flex;align-items:center;gap:16px;min-height:66px;flex-wrap:wrap}
+ .sitenav .brand{display:inline-flex;align-items:center;gap:11px;text-decoration:none;color:#fff;font:700 20px/1 'Space Grotesk',sans-serif;letter-spacing:-.01em}
+ .sitenav .menu{margin-left:auto;display:flex;align-items:center;gap:8px;flex-wrap:wrap}
+ .sitenav .menu a{color:#e7edf6;text-decoration:none;font:600 16px/1 'IBM Plex Sans',sans-serif;padding:11px 14px;border-radius:8px;display:inline-flex;align-items:center;min-height:44px}
+ .sitenav .menu a:hover{color:#fff;background:rgba(255,255,255,.10)}
+ .sitenav .menu a[aria-current="page"]{color:#fff;box-shadow:inset 0 -2px 0 var(--blue)}
+ .sitenav .menu a.sub{background:var(--blue);color:#fff;font-weight:700;padding:11px 18px}
+ .sitenav .menu a.sub:hover{background:#3a6cff}
+
+ /* ---- docs layout ---- */
+ .docs{display:grid;grid-template-columns:266px minmax(0,1fr);gap:52px;align-items:start;padding-bottom:20px}
+ .toc{position:sticky;top:86px;max-height:calc(100vh - 108px);overflow-y:auto;padding:28px 0 28px;border-right:1px solid var(--hair)}
+ .toc-h{font:700 12px/1 'IBM Plex Mono',monospace;letter-spacing:.14em;text-transform:uppercase;color:var(--slate);margin:0 0 14px;padding-right:22px}
+ .toc ol{list-style:none;margin:0;padding:0 22px 0 0}
+ .toc li{margin:0}
+ .toc a{display:block;text-decoration:none;color:var(--slate);font:500 15px/1.4 'IBM Plex Sans',sans-serif;padding:8px 12px 8px 14px;border-left:2px solid var(--hair);border-radius:0 7px 7px 0}
+ .toc a:hover{color:var(--navy);background:var(--wash)}
+ .toc a .n{font:600 11.5px/1 'IBM Plex Mono',monospace;letter-spacing:.06em;color:#93a1b0;display:block;margin-bottom:3px}
+ .toc a.on{color:var(--blue);background:var(--chipblue);border-left-color:var(--blue);font-weight:600}
+ .toc a.on .n{color:var(--blue)}
+ .toc-foot{margin:20px 22px 0 14px;padding-top:16px;border-top:1px solid var(--hair);font:400 13.5px/1.55 'IBM Plex Sans',sans-serif;color:var(--slate)}
+ .toc-foot a{font-weight:600;text-decoration:none}
+ .toc-foot a:hover{text-decoration:underline}
+
+ .article{max-width:760px;padding:34px 0 60px;min-width:0}
+ .kicker{font:700 13px/1 'IBM Plex Mono',monospace;letter-spacing:.14em;text-transform:uppercase;color:var(--blue);margin:0 0 14px}
+ h1{font:700 clamp(32px,3.7vw,46px)/1.1 'Space Grotesk',sans-serif;letter-spacing:-.025em;color:var(--navy);margin:0 0 16px}
+ .deck{font-size:20.5px;line-height:1.55;color:var(--navy);margin:0 0 8px;font-weight:500}
+ .article h2{font:700 clamp(24px,2.5vw,30px)/1.2 'Space Grotesk',sans-serif;letter-spacing:-.02em;color:var(--navy);margin:0 0 10px}
+ .article h3{font:700 20.5px/1.3 'Space Grotesk',sans-serif;letter-spacing:-.01em;color:var(--navy);margin:32px 0 8px}
+ .article h4{font:600 17.5px/1.35 'Space Grotesk',sans-serif;color:var(--navy);margin:24px 0 6px}
+ .article p{font-size:17.5px;line-height:1.75;margin:0 0 17px}
+ .article ul,.article ol{font-size:17.5px;line-height:1.72;padding-left:22px;margin:0 0 18px}
+ .article li{margin:0 0 8px}
+ .article strong{color:var(--navy)}
+
+ /* section shells */
+ section.part{padding:34px 0 8px;border-top:1px solid var(--hair);margin-top:26px;scroll-margin-top:86px}
+ section.part:first-of-type{border-top:0;margin-top:0;padding-top:8px}
+ .partno{font:700 12px/1 'IBM Plex Mono',monospace;letter-spacing:.14em;text-transform:uppercase;color:var(--blue);margin:0 0 10px}
+ .sub{scroll-margin-top:86px}
+
+ /* callouts */
+ .lede-box{border:2px solid var(--blue);background:#F2F6FF;border-radius:14px;padding:22px 24px;margin:0 0 26px}
+ .lede-box p{margin:0;font-size:18px;line-height:1.65}
+ .lede-box p+p{margin-top:12px}
+ .rule{border-left:3px solid var(--blue);background:var(--wash);border-radius:0 10px 10px 0;padding:16px 20px;margin:22px 0}
+ .rule p{margin:0;font-size:18px;line-height:1.6;color:var(--navy);font-weight:500}
+ .note{background:var(--wash);border:1px solid var(--hair);border-radius:12px;padding:18px 22px;margin:22px 0}
+ .note p{margin:0;font-size:16.5px}
+ .note p+p{margin-top:10px}
+ .snap{font:600 19px/1.5 'Space Grotesk',sans-serif;color:var(--navy);margin:22px 0 22px;padding:0 0 0 18px;border-left:4px solid var(--blue)}
+
+ /* numbered brief */
+ ol.brief{list-style:none;counter-reset:b;padding:0;margin:0 0 20px}
+ ol.brief li{counter-increment:b;position:relative;padding:12px 0 12px 46px;border-bottom:1px solid var(--hair);font-size:17px;margin:0}
+ ol.brief li:first-child{border-top:1px solid var(--hair)}
+ ol.brief li::before{content:counter(b);position:absolute;left:0;top:12px;width:28px;height:28px;border-radius:8px;background:var(--chipblue);color:var(--blue);font:700 14px/28px 'IBM Plex Mono',monospace;text-align:center}
+
+ /* prompt blocks */
+ .prompt{background:#0E1B2E;color:#DCE6F5;border-radius:12px;padding:20px 22px;margin:18px 0;font:400 15.5px/1.7 'IBM Plex Mono',monospace;overflow-x:auto}
+ .prompt .lbl{display:block;font:600 11px/1 'IBM Plex Mono',monospace;letter-spacing:.14em;text-transform:uppercase;color:#7FA5F5;margin:0 0 12px}
+ .prompt b{color:#fff;font-weight:600}
+ .prompt p{margin:0 0 12px;font-size:15.5px;line-height:1.7;color:#DCE6F5}
+ .prompt p:last-child{margin-bottom:0}
+ .after{font-size:16px;color:var(--slate);margin:-6px 0 26px;font-style:italic}
+
+ /* tables */
+ .tw{overflow-x:auto;margin:20px 0 24px;border:1px solid var(--hair);border-radius:12px}
+ table{border-collapse:collapse;width:100%;min-width:600px;font-size:15.5px}
+ th{background:var(--wash);text-align:left;font:600 12.5px/1.3 'IBM Plex Mono',monospace;letter-spacing:.07em;text-transform:uppercase;color:var(--slate);padding:13px 16px;border-bottom:1px solid var(--hair);vertical-align:bottom}
+ td{padding:14px 16px;border-bottom:1px solid var(--hair);vertical-align:top;line-height:1.55}
+ tr:last-child td{border-bottom:0}
+ td strong{color:var(--navy)}
+
+ /* failure-mode cards */
+ .fm{border:1px solid var(--hair);border-radius:12px;padding:20px 22px;margin:0 0 16px;background:#fff}
+ .fm h3{margin:0 0 12px;font:700 19px/1.3 'Space Grotesk',sans-serif;color:var(--navy)}
+ .fm dl{margin:0;display:grid;grid-template-columns:auto 1fr;gap:9px 14px;align-items:baseline}
+ .fm dt{font:600 11px/1.5 'IBM Plex Mono',monospace;letter-spacing:.08em;text-transform:uppercase;color:var(--blue);white-space:nowrap}
+ .fm dd{margin:0;font-size:16.5px;line-height:1.6}
+
+ /* symptom-first failure heading: the technical term sits under the symptom */
+ .fm h3 .term{display:block;font:600 21px/1.3 'IBM Plex Mono',monospace;letter-spacing:.03em;text-transform:uppercase;color:var(--blue);margin-top:9px}
+
+ /* worked exchange */
+ .xchg{border:1px solid var(--hair);border-radius:12px;overflow:hidden;margin:22px 0}
+ .xchg .turn{padding:17px 21px;border-bottom:1px solid var(--hair)}
+ .xchg .turn:last-child{border-bottom:0}
+ .xchg .who{font:600 11px/1 'IBM Plex Mono',monospace;letter-spacing:.1em;text-transform:uppercase;color:var(--blue);margin:0 0 9px}
+ .xchg .turn.ai{background:var(--wash)}
+ .xchg .turn.ai .who{color:var(--slate)}
+ .xchg .turn.note{background:#FFF8F0}
+ .xchg .turn.note .who{color:#9A5410}
+ .xchg p{margin:0 0 11px;font-size:16.5px;line-height:1.65}
+ .xchg p:last-child{margin-bottom:0}
+ .xchg .said{font:400 15.5px/1.72 'IBM Plex Mono',monospace;color:var(--navy);white-space:pre-wrap}
+ .xchg ul{margin:0;padding-left:20px;font-size:16.5px;line-height:1.6}
+ .xchg li{margin:0 0 7px}
+ .xchg li:last-child{margin-bottom:0}
+
+ /* filled-in brief */
+ .filled{border:1px solid var(--hair);border-radius:12px;overflow:hidden;margin:20px 0}
+ .filled .row{display:grid;grid-template-columns:132px minmax(0,1fr);gap:0 16px;padding:14px 20px;border-bottom:1px solid var(--hair)}
+ .filled .row:last-child{border-bottom:0}
+ .filled .row:nth-child(odd){background:#FBFCFE}
+ .filled dt{font:600 11px/1.5 'IBM Plex Mono',monospace;letter-spacing:.08em;text-transform:uppercase;color:var(--blue);margin:2px 0 0}
+ .filled dd{margin:0;font-size:16.5px;line-height:1.6}
+
+ /* checklist */
+ .check{border:1px solid var(--hair);border-radius:12px;overflow:hidden;margin:0 0 14px}
+ .check h3{margin:0;padding:13px 20px;background:var(--wash);border-bottom:1px solid var(--hair);font:700 16px/1.3 'Space Grotesk',sans-serif;color:var(--navy)}
+ .check ul{list-style:none;padding:14px 20px 16px;margin:0;font-size:16.5px}
+ .check li{position:relative;padding-left:26px;margin:0 0 9px;line-height:1.6}
+ .check li:last-child{margin-bottom:0}
+ .check li::before{content:"";position:absolute;left:0;top:6px;width:13px;height:13px;border:2px solid var(--blue);border-radius:4px}
+
+ /* day / week grid */
+ .days{display:grid;grid-template-columns:repeat(auto-fill,minmax(228px,1fr));gap:12px;margin:0 0 24px}
+ .day{border:1px solid var(--hair);border-radius:12px;padding:16px 18px}
+ .day .t{font:700 11px/1 'IBM Plex Mono',monospace;letter-spacing:.1em;text-transform:uppercase;color:var(--blue);margin:0 0 7px}
+ .day h4{margin:0 0 6px;font:600 16.5px/1.3 'Space Grotesk',sans-serif;color:var(--navy)}
+ .day p{margin:0;font-size:15.5px;line-height:1.55}
+
+ /* sources */
+ .srcs{list-style:none;padding:0;margin:0}
+ .srcs li{padding:13px 0;border-bottom:1px solid var(--hair);font-size:16px;line-height:1.6}
+ .srcs li:first-child{border-top:1px solid var(--hair)}
+
+ /* cross-link card */
+ .xlink{display:block;border:2px solid var(--blue);background:#F2F6FF;border-radius:14px;padding:22px 24px;margin:30px 0 0;text-decoration:none;color:inherit}
+ .xlink:hover{background:#E8F0FF}
+ .xlink .t{font:700 20px/1.25 'Space Grotesk',sans-serif;color:var(--navy);margin:0 0 6px}
+ .xlink p{margin:0;font-size:16.5px;line-height:1.6;color:var(--body)}
+ .xlink .go{display:inline-block;margin-top:10px;font:700 15.5px 'Space Grotesk',sans-serif;color:var(--blue)}
+
+ .cta{display:inline-block;margin:26px 0 0;background:var(--blue);color:#fff;text-decoration:none;font:700 16px 'Space Grotesk',sans-serif;padding:15px 26px;border-radius:9px;min-height:48px}
+ .cta:hover{background:var(--blue-dk)}
+
+ .foot{border-top:1px solid var(--hair)}
+ .foot .container{padding-top:24px;padding-bottom:46px;font:400 14.5px/1.7 'IBM Plex Sans',sans-serif;color:var(--slate)}
+ .foot a{color:var(--slate);text-decoration:underline;font-weight:600}
+ .foot a:hover{color:var(--blue)}
+
+ /* mobile TOC */
+ .toc-toggle{display:none}
+ @media(max-width:1000px){
+  .container{padding:0 20px}
+  .docs{grid-template-columns:1fr;gap:0}
+  .toc{position:static;max-height:none;border-right:0;border-bottom:1px solid var(--hair);padding:0 0 18px;margin-top:18px}
+  .toc-toggle{display:block;width:100%;text-align:left;background:var(--wash);border:1px solid var(--hair);border-radius:10px;padding:14px 18px;font:600 16px 'Space Grotesk',sans-serif;color:var(--navy);cursor:pointer;min-height:48px}
+  .toc-toggle::after{content:"▾";float:right;color:var(--blue)}
+  .toc-toggle[aria-expanded="true"]::after{content:"▴"}
+  .toc-h{display:none}
+  .toc ol{padding:12px 0 0;max-height:60vh;overflow-y:auto}
+  .toc[data-collapsed="true"] ol,.toc[data-collapsed="true"] .toc-foot{display:none}
+  .article{padding-top:24px}
+  .fm dl{grid-template-columns:1fr;gap:3px 0}
+  .fm dd{margin-bottom:9px}
+  .fm h3 .term{font-size:20px;letter-spacing:0}
+ }
+ @media(min-width:1001px){.toc ol{display:block!important}}
+</style></head><body>
+<a class="skip" href="#main">Skip to content</a>
+<header class="sitenav">
+ <div class="container">
+  <a class="brand" href="index.html">
+   <svg width="27" height="27" viewBox="0 0 30 30" aria-hidden="true" focusable="false"><g fill="none" stroke="#1B57F0" stroke-width="1.8"><circle cx="15" cy="15" r="13.2"/><circle cx="15" cy="15" r="8.6"/><circle cx="15" cy="15" r="4"/></g><circle cx="15" cy="15" r="2.4" fill="#1B57F0"/></svg>
+   AI ABOVE THE CUT
+  </a>
+  <nav class="menu" aria-label="Main">
+   <a href="index.html">Home</a>
+   <a href="/current">Current issue</a>
+   <a href="field-guide.html" aria-current="page">Field Guide</a>
+   <a href="resources.html">Resources</a>
+   <a href="about.html">About</a>
+   <a class="sub" href="index.html#subscribe">Subscribe</a>
+  </nav>
+ </div>
+</header>
+
+<div class="container">
+<div class="docs">
+
+ <nav class="toc" id="toc" aria-label="Guide contents" data-collapsed="true">
+  <button class="toc-toggle" id="tocToggle" aria-expanded="false" aria-controls="tocList">Contents</button>
+  <p class="toc-h">The Field Guide</p>
+  <ol id="tocList">
+   <li><a href="getting-started.html">Brand-new to AI? Start here →</a></li>
+   <li><a href="#start">Start here</a></li>
+   <li><a href="#part-1"><span class="n">Part I</span>What you are working with</a></li>
+   <li><a href="#part-2"><span class="n">Part II</span>Choose the work before the prompt</a></li>
+   <li><a href="#part-3"><span class="n">Part III</span>Brief the work</a></li>
+   <li><a href="#part-4"><span class="n">Part IV</span>Work the relationship</a></li>
+   <li><a href="#part-5"><span class="n">Part V</span>Verify before you rely</a></li>
+   <li><a href="#part-6"><span class="n">Part VI</span>Manage the weaknesses by name</a></li>
+   <li><a href="#part-7"><span class="n">Part VII</span>Useful ways to work with AI</a></li>
+   <li><a href="#part-8"><span class="n">Part VIII</span>From private use to shared work</a></li>
+   <li><a href="#part-9"><span class="n">Part IX</span>Build your practice</a></li>
+   <li><a href="#part-10"><span class="n">Part X</span>The before-you-send checklist</a></li>
+   <li><a href="#long-view">The long view</a></li>
+   <li><a href="#sources">Sources and further reading</a></li>
+  </ol>
+  <p class="toc-foot">Want to keep going? The <a href="resources.html">Resources</a> page is the companion library of tools, courses, studies, and risk guidance.</p>
+ </nav>
+
+ <main class="article" id="main">
+
+  <p class="kicker">Field Guide</p>
+  <h1>Get to Know AI</h1>
+  <p class="deck">A practical field guide to working with a fast, fluent, uneven teammate.</p>
+
+
+  <a class="xlink" href="getting-started.html" style="margin:22px 0 28px">
+   <p class="t">Brand-new to AI? Start here.</p>
+   <p>Pick a free chat tool, try your first message, and learn what to do with the answer. No experience needed.</p>
+   <span class="go">Your first AI chat →</span>
+  </a>
+
+  <section class="part" id="start">
+   <div class="lede-box">
+    <p>AI is easy to try and surprisingly hard to know.</p>
+    <p>You can type one question into a chat window and get a useful answer in seconds. You can also get an answer that is polished, persuasive, and wrong.</p>
+   </div>
+
+   <p>The same system can help you see a problem from five angles, then bury the decision under ten pages nobody needs. It can make you faster, expand what you can take on, and improve the quality of your work. It can also move unfinished thinking to someone else's desk.</p>
+
+   <p>That range is why people often form an opinion too quickly. One remarkable result and AI becomes magic. One bad result and it becomes a toy. Both reactions mistake one possession for the scouting report.</p>
+
+   <p>The better approach is to get to know it.</p>
+
+   <p>This guide is for someone who wants to move beyond casual prompting without becoming an AI engineer. It explains what generative AI is doing, where it tends to be strong, where the same strengths can turn into weaknesses, how to give it work, how to keep your judgment active, and how to decide whether the result has earned your trust.</p>
+
+   <div class="rule"><p>AI becomes more useful when you stop treating it like a search box and start managing the working relationship.</p></div>
+
+   <p>There is no person behind the interface, and the system has no judgment, standing, or accountability of its own. But the habits of good delegation still apply. Give the work a purpose. Supply the context. Set the boundary. Inspect what comes back. Correct it. Decide what happens next.</p>
+
+   <p>That is the path from getting an impressive answer to doing better work.</p>
+
+   <h3 class="sub" id="fast-start">The fast start</h3>
+   <p>If you want to begin before reading the whole guide, choose one real task you already understand. Pick something useful enough to matter and safe enough to get wrong. Give AI this five-line brief:</p>
+
+   <ol class="brief">
+    <li><strong>Job:</strong> What should come back?</li>
+    <li><strong>Context:</strong> What does AI need to know that it cannot guess?</li>
+    <li><strong>Audience and use:</strong> Who will use the result, and for what?</li>
+    <li><strong>Boundary:</strong> What must it not assume, disclose, promise, change, or decide?</li>
+    <li><strong>Done:</strong> What would make the return useful and ready for your review?</li>
+   </ol>
+
+   <p>Then add three instructions:</p>
+   <ul>
+    <li>State the important assumptions you made.</li>
+    <li>Point me to the evidence behind consequential claims.</li>
+    <li>Tell me which part of the answer is most likely to be wrong or incomplete.</li>
+   </ul>
+
+   <p>When the answer arrives, do not ask only whether it looks good. Ask whether you can explain it, judge it, and trace the parts that matter. Correct one thing and run the task again. The second run often teaches you more than the first.</p>
+
+   <p>That is enough to start. The rest of this guide explains why it works.</p>
+  </section>
+
+  <section class="part" id="part-1">
+   <p class="partno">Part I</p>
+   <h2>What you are working with</h2>
+
+   <h3 class="sub" id="produces-an-answer">AI produces an answer. It does not arrive knowing the answer.</h3>
+   <p>The language models most people use are trained on enormous amounts of text and, increasingly, images and sound. The material is broken into small encoded units called tokens. During training, the model learns patterns that help it predict what token is likely to come next. It is then trained further to follow instructions, behave helpfully, use tools, and solve problems with answers that can be checked.</p>
+   <p>When you use a model, it reads your prompt and the context available in that interaction. It chooses a likely next token, adds it to the sequence, and does it again. Engineers call that use-time process inference.</p>
+   <p>This modest-sounding mechanism can produce extraordinary behavior. A model can summarize, compare, translate, draft, classify, explain, write software, reason through a problem, use tools, and revise its own work. Those capabilities are real. So is the underlying fact that the system is generating a response from learned patterns and assembled context.</p>
+   <p>That explains two things that otherwise seem contradictory.</p>
+   <p>First, AI can connect clues and fields that no one person could hold at once. Where the learned patterns and supplied context are rich, it can find structure, offer possibilities, and produce useful work at remarkable speed.</p>
+   <p>Second, AI can fill a gap no one noticed. A missing fact and a missing sentence can look similar to a system built to continue the pattern. The result may sound complete even when the evidence is not.</p>
+   <p class="snap">The practical question is not whether the answer sounds intelligent. Ask: what produced this answer, and what, if anything, certifies it?</p>
+
+   <h3 class="sub" id="brain-in-jar">The brain in the jar</h3>
+   <p>A useful way to picture AI is as a brain in a clear glass jar. It has three defining qualities.</p>
+
+   <h4>It is widely read, up to a date</h4>
+   <p>AI can work across more fields than any one person can carry. It can compare documents, explain unfamiliar material, organize evidence, translate specialist language, and give a blank page its first shape. This breadth is one of its greatest strengths.</p>
+   <p>It is not the same as having every source open in front of it. A model keeps learned patterns, not a perfect library of the pages it encountered. Its training also has a time boundary. Unless the product searches current sources or you supply them, it may not know what changed yesterday, last month, or after its training period.</p>
+   <p>Use its breadth to map a field. Do not confuse the map with current, local, or accountable expertise.</p>
+
+   <h4>It is plausible before it is true</h4>
+   <p>AI is very good at producing a response that fits. Often the plausible answer and the true answer overlap. Sometimes they do not, and the language may not warn you.</p>
+   <p>A fabricated citation can look like a real citation. A weak assumption can appear in the middle of a beautiful analysis. A number can fit the shape of the argument while coming from no authoritative source. The model's tone may remain calm and certain throughout.</p>
+   <div class="rule"><p>Confidence is a style, not a signal.</p></div>
+
+   <h4>It is personally blank</h4>
+   <p>AI does not naturally know your customer, your team's history, the project that failed three years ago, the standard your best reviewer applies, or the concern everyone in the room understands but nobody wrote down. It may remember information you or the product supplied, but that is still assembled context. It is not lived experience.</p>
+   <p>A person brings relationships, consequences, commitments, purpose, and a history that can surface when a decision requires it. AI brings learned patterns plus the context available now.</p>
+   <p>A useful shorthand is:</p>
+   <p class="snap">AI answer ≈ learned capability × assembled context</p>
+   <p>A stronger model changes the first term. A better brief, better sources, better examples, and better tools change the second. Both matter. Neither gives the system a stake in what happens after the answer is used.</p>
+
+   <h3 class="sub" id="five-profiles">Five practical profiles</h3>
+   <p>AI does not have one stable personality, but five profiles help make its working patterns visible. Each profile has a move, a tell, and the human coverage it needs.</p>
+
+   <div class="tw"><table>
+    <thead><tr><th>Profile</th><th>The move</th><th>The tell</th><th>Human coverage</th></tr></thead>
+    <tbody>
+     <tr><td><strong>Wide Reader</strong></td><td>Maps a field, compares sources, crosses disciplines</td><td>Broad coverage can miss the local constraint or current reality</td><td>Accountable expertise close to the work</td></tr>
+     <tr><td><strong>Fluent Improviser</strong></td><td>Gives rough thinking a coherent first form</td><td>Truth, error, and invention can arrive in the same voice</td><td>Verification against sources, calculations, tests, or an expert answer key</td></tr>
+     <tr><td><strong>Frame Follower</strong></td><td>Adapts quickly to your instructions, examples, and supplied material</td><td>It may complete the frame you gave it, including your bias and omissions</td><td>An explicit evidence standard and a challenge to the frame</td></tr>
+     <tr><td><strong>Creative Engine</strong></td><td>Produces options, combinations, and variations at unusual speed</td><td>Volume can masquerade as originality or progress</td><td>Human taste, selection, and a stopping condition</td></tr>
+     <tr><td><strong>Role Player</strong></td><td>Simulates a perspective and helps you test how an argument may land</td><td>A performed role has no standing, lived experience, or independent authority</td><td>Real people where legitimacy, consent, or consequential judgment matters</td></tr>
+    </tbody>
+   </table></div>
+
+   <p>These are not model classes. They are ways to watch the work.</p>
+   <p>The deeper pattern is that AI can become more researched, complete, and convincing without becoming more correct. Its greatest strengths produce the normal signs of quality before the evidence has necessarily earned them.</p>
+   <div class="rule"><p>That is the hidden quality gap.</p></div>
+
+   <h3 class="sub" id="stays-with-people">What stays with people</h3>
+   <p>Good AI use does not depend on pretending people have one mysterious quality called judgment. It helps to separate the human contribution into parts.</p>
+   <p><strong>Absorption</strong> is understanding the return well enough to use and explain it. AI can generate fifty pages. It cannot create fifty pages of attention in your day. If you cannot carry the argument, identify the assumptions, or answer questions about the result, the work has outrun you.</p>
+   <p><strong>Judgment</strong> is deciding what to believe, recommend, reject, prioritize, or own. It draws on evidence, expertise, nuance, relationships, consequences, values, and wisdom. AI can organize those ingredients. It cannot take responsibility for the choice.</p>
+   <p><strong>Alignment</strong> is the human work of turning different understandings, interests, obligations, and authorities into a shared commitment about what happens next. AI can clarify positions and record a decision. It cannot make the commitment on behalf of the people who must live with it.</p>
+   <div class="rule"><p>The machine is probabilistic. The person is accountable.</p></div>
+  </section>
+
+  <section class="part" id="part-2">
+   <p class="partno">Part II</p>
+   <h2>Choose the work before you choose the prompt</h2>
+
+   <h3 class="sub" id="what-would-you-delegate">Ask what you would delegate</h3>
+   <p>The chat window invites the wrong opening question: what can AI do?</p>
+   <p>That question produces feature lists and demonstrations. A better question wakes up instincts you already have: <strong>what would I delegate?</strong></p>
+   <p>You know that a useful handoff needs context. You know that a new analyst needs a different brief from a trusted veteran. You know that some work can be reviewed against a clear standard and some work depends on taste, local understanding, or authority. You know that handing off the task does not hand off your responsibility for the result.</p>
+   <p>Those instincts carry surprisingly far.</p>
+   <p>Start with work that has four qualities:</p>
+   <ul>
+    <li>You understand the task well enough to notice a bad return.</li>
+    <li>A useful result has a recognizable shape.</li>
+    <li>The mistake is cheap to find and reverse.</li>
+    <li>The task happens often enough for the learning to matter.</li>
+   </ul>
+   <p><strong>Good first tasks</strong> include summarizing a document you have read, comparing two versions of a policy, generating options for a presentation you own, reorganizing rough notes, drafting questions for a meeting, finding inconsistencies in a spreadsheet you can check, or challenging an argument you already understand.</p>
+   <p><strong>Poor first tasks</strong> include decisions involving health, rights, employment, legal obligations, material financial consequences, or confidential information you are not authorized to place in the tool. They may eventually benefit from AI, but they require stronger systems, specialist review, and explicit authority.</p>
+
+   <h3 class="sub" id="delegate-collaborate-decide">Delegate, collaborate, or decide</h3>
+   <p>Not every useful interaction is a delegation.</p>
+   <p><strong>Delegate</strong> when the return can be defined and judged. Examples include extracting fields from a document, converting notes into a draft, comparing two lists, applying a rule you have already chosen, or preparing a first analysis against a known standard.</p>
+   <p><strong>Collaborate</strong> when you are still forming the question or the standard. Examples include exploring an unfamiliar problem, developing an argument, considering several strategies, or testing how different people might react. Stay close to the work. Treat the exchange as a thinking process, not an answer service.</p>
+   <p><strong>Decide</strong> when the work reaches a choice no person has made. AI can organize the evidence, state the trade-offs, generate alternatives, and challenge your preference. It cannot decide what your team values, which risk you should accept, whose interests should prevail, or what commitment you are willing to make.</p>
+   <div class="rule"><p>AI can carry settled judgment inside a boundary. When the judgment is still being formed, it comes back to you.</p></div>
+
+   <h3 class="sub" id="name-the-dividend">Name the dividend you want</h3>
+   <p>Individual AI tends to produce one of three dividends:</p>
+   <ul>
+    <li><strong>Better:</strong> more evidence, more angles, stronger criticism, or a clearer result.</li>
+    <li><strong>More:</strong> additional tasks, options, analyses, or versions.</li>
+    <li><strong>Time:</strong> the same useful work completed with less elapsed effort.</li>
+   </ul>
+   <p>All three are real. They are not interchangeable.</p>
+   <p>If you want a better decision, another ten pages may not help. If you want time back, producing three new deliverables does not create it. If you want more reach, speeding up a task that was never the constraint may not change the outcome.</p>
+   <p>Before starting, finish this sentence:</p>
+   <p class="snap">I am using AI here to make this work better / more extensive / faster, and I will know it helped if __________.</p>
+   <p>Then ask the harder question: what is the outcome actually waiting on?</p>
+   <p>If your work is the constraint, the gain can travel through. If the next step depends on another person's review, a scheduled meeting, a missing decision, or an unavailable source, AI may only help you reach that constraint sooner.</p>
+
+   <h3 class="sub" id="when-not-to-use-it">Know when not to use it</h3>
+   <p>Cheap generation creates an unusual temptation: doing work because it can now be done.</p>
+   <p>Another analysis, a fourth draft, and a larger set of options can feel productive. Sometimes they are. Sometimes they postpone the decision, consume review time, or create a burden for somebody else.</p>
+   <p>Skip the handoff when:</p>
+   <ul>
+    <li>The answer has no clear use.</li>
+    <li>You cannot make time to read or judge the return.</li>
+    <li>Writing the brief and checking the result will cost more than doing the task.</li>
+    <li>The task is primarily the practice you need in order to retain a skill.</li>
+    <li>The tool is not approved for the information involved.</li>
+    <li>Nobody has the expertise, evidence, or safe test needed to catch the important failure.</li>
+    <li>The work would decide something that requires human authority, consent, or standing.</li>
+   </ul>
+   <div class="rule"><p>The cheapest delegation is the one you do not need.</p></div>
+  </section>
+
+  <section class="part" id="part-3">
+   <p class="partno">Part III</p>
+   <h2>Brief the work</h2>
+
+   <h3 class="sub" id="prompting-is-briefing">Prompting is briefing</h3>
+   <p>Prompting often sounds like a technical art built from secret phrases. The useful part is more familiar. You are describing work clearly enough for something else to carry it.</p>
+   <p>Short prompts are not bad. They are appropriate when the task is small, the stakes are low, and the missing context does not matter. Longer prompts are not automatically better. A five-page instruction can contain three competing goals and bury the one decision that matters.</p>
+   <div class="rule"><p>The standard is not length. It is clarity.</p></div>
+
+   <h3 class="sub" id="five-line-handoff">The five-line handoff</h3>
+
+   <h4>1. Job</h4>
+   <p>Name the return, not merely the topic.</p>
+   <p><strong>Weak:</strong> “Tell me about this market.”</p>
+   <p><strong>Stronger:</strong> “Give me a one-page map of this market that identifies the main customer groups, buying criteria, incumbent approaches, and the three uncertainties that could change whether we enter.”</p>
+   <p>The second request gives the exploration a job.</p>
+
+   <h4>2. Context</h4>
+   <p>Supply what the system cannot guess. Useful context may include:</p>
+   <ul>
+    <li>The decision or situation behind the task.</li>
+    <li>Relevant history.</li>
+    <li>Definitions used by your team.</li>
+    <li>Approved source material.</li>
+    <li>Previous attempts and why they failed.</li>
+    <li>Examples of good work.</li>
+    <li>Facts you already know.</li>
+    <li>Assumptions you want held open.</li>
+   </ul>
+   <p>Label the material honestly. A marketing page is advocacy, not independent evidence. A draft policy is not an approved policy. A customer's opinion is not a market fact. AI will often accept the world you assemble for it.</p>
+
+   <h4>3. Audience and use</h4>
+   <p>Who will receive the result? What will they do with it?</p>
+   <p>A note for your own exploration can remain provisional. A recommendation for an investment committee needs traceable evidence, stated assumptions, and a much tighter review. A draft customer email needs the customer's situation and the relationship you are protecting.</p>
+   <p>The use determines the standard.</p>
+
+   <h4>4. Boundary</h4>
+   <p>State what the system must not do. Examples:</p>
+   <ul>
+    <li>Do not invent facts, quotes, citations, customer details, or numbers.</li>
+    <li>Do not use information outside the attached sources.</li>
+    <li>Do not make a legal, medical, employment, or financial decision.</li>
+    <li>Do not send, publish, update, delete, purchase, or commit anything without approval.</li>
+    <li>Do not treat estimates as actuals.</li>
+    <li>Do not name confidential organizations or people.</li>
+    <li>Stop and ask when an assumption would materially change the result.</li>
+   </ul>
+   <p>Boundaries become more important when AI can use tools or take actions. An answer can be corrected. A sent message, changed record, or external commitment may have to be undone.</p>
+
+   <h4>5. Done</h4>
+   <p>Describe what good looks like. You might specify:</p>
+   <ul>
+    <li>Length and format.</li>
+    <li>Required sections or fields.</li>
+    <li>Evidence standard.</li>
+    <li>Tone and reading level.</li>
+    <li>What must be included or excluded.</li>
+    <li>The decision the result should make easier.</li>
+    <li>The checks that must pass.</li>
+   </ul>
+   <p>A definition of done saves rounds because it turns your private expectation into part of the assignment.</p>
+
+   <h4 id="handoff-example">What the five lines look like filled in</h4>
+   <p>Here is the whole brief written out for one real task: comparing two shortlisted payroll vendors before an operating review.</p>
+   <div class="filled">
+    <div class="row"><dt>Job</dt><dd>Give me a one-page comparison of the two attached payroll proposals against the five criteria below, ending with the questions I still need answered before I can recommend one.</dd></div>
+    <div class="row"><dt>Context</dt><dd>We are 240 people across three states. Our current contract ends March 31 and auto-renews unless we give 60 days' notice. The last vendor change failed because nobody checked multi-state tax filing. Attached: both proposals and our current contract. Our five criteria are cost, multi-state filing, integration with our HRIS, support response times, and exit terms.</dd></div>
+    <div class="row"><dt>Audience<br>and use</dt><dd>My CFO and our head of People, at Thursday's operating review. They will decide whether to move one vendor to a paid pilot.</dd></div>
+    <div class="row"><dt>Boundary</dt><dd>Use only the attached documents. Do not estimate any cost that is not stated. Do not recommend a vendor. Where a proposal is silent on a criterion, say so rather than filling the gap.</dd></div>
+    <div class="row"><dt>Done</dt><dd>One page. A table against the five criteria, then a short paragraph on where the evidence is thin. Label every number as quoted, calculated, or missing.</dd></div>
+   </div>
+   <p>Notice how much of that is history and constraint the system had no way to know. The boundary line is doing the most work: without it, the silence in a proposal comes back as a confident sentence.</p>
+   <div class="note"><p><strong>This is structure, not paperwork.</strong> You do not need five lines to ask what a word means or to reword a sentence. Reach for the full brief when the answer will travel, when someone else will rely on it, or when a wrong return would be expensive to catch. For most quick questions, one clear sentence is the whole brief.</p></div>
+
+   <h3 class="sub" id="master-prompt">A reusable master prompt</h3>
+   <p>Copy this and shorten it for the task in front of you.</p>
+   <div class="prompt">
+    <span class="lbl">Master prompt</span>
+    <p><b>Job:</b> [Describe the result you want.]<br>
+    <b>Context:</b> [Explain the situation, relevant history, and supplied material.]<br>
+    <b>Audience and use:</b> [Name who will use it and the decision or action it supports.]<br>
+    <b>Boundary:</b> [State what must not be assumed, invented, disclosed, decided, or changed.]<br>
+    <b>Done:</b> [Describe the format and quality standard.]</p>
+    <p>Before doing the work, identify any missing context that would materially change the result. If none is required, proceed. Distinguish supplied facts from your inferences. Make consequential claims traceable to a source or label them for verification. End with the strongest objection, the most important uncertainty, and the next human decision.</p>
+   </div>
+
+   <h3 class="sub" id="process-not-theater">Ask for the process you need, not theater</h3>
+   <p>It can be useful to ask AI to show assumptions, calculations, source links, or an outline of its approach. Those artifacts help you inspect the work.</p>
+   <p>Do not confuse a fluent explanation of its reasoning with direct access to a private mental process or proof that the answer is right. A model can produce a tidy explanation of its own mistake just as it can produce a tidy wrong answer.</p>
+   <p>Ask for things you can use:</p>
+   <ul>
+    <li>The facts taken directly from each supplied source.</li>
+    <li>The assumptions introduced beyond those facts.</li>
+    <li>The calculation, with inputs shown.</li>
+    <li>The passages that support each material claim.</li>
+    <li>The test cases used.</li>
+    <li>The unresolved questions.</li>
+    <li>A change log between two versions.</li>
+   </ul>
+   <div class="rule"><p>Inspectable work is more useful than performative certainty.</p></div>
+  </section>
+
+  <section class="part" id="part-4">
+   <p class="partno">Part IV</p>
+   <h2>Work the relationship</h2>
+
+   <h3 class="sub" id="start-wide">Start wide, then choose depth</h3>
+   <p>AI is often most valuable at the start of unfamiliar work. Let it scout the terrain, surface competing frames, identify likely authorities, and show what is known and unknown.</p>
+   <p>Then stop and choose what matters.</p>
+   <p>Decide which uncertainty deserves depth, which source could settle it, whose expertise is required, and what question the work is trying to answer. Return to AI with a narrower assignment.</p>
+   <p>This sequence is more effective than asking for a comprehensive report and hoping the important point announces itself:</p>
+   <ol>
+    <li>Scout the terrain.</li>
+    <li>Identify the questions that could change the decision.</li>
+    <li>Choose the evidence or expertise needed for those questions.</li>
+    <li>Investigate them one at a time.</li>
+    <li>Synthesize toward the decision.</li>
+   </ol>
+   <div class="rule"><p>Scout widely. Decide what matters. Go deep where the decision requires it.</p></div>
+
+   <h3 class="sub" id="stages">Break ambiguous work into stages</h3>
+   <p>AI handles complex work better when the stages have distinct jobs. A research assignment might become:</p>
+   <ol>
+    <li>Define the question and important terms.</li>
+    <li>Map competing explanations.</li>
+    <li>Identify authoritative sources.</li>
+    <li>Extract the evidence.</li>
+    <li>Test the evidence against the explanations.</li>
+    <li>Draft the conclusion with uncertainties visible.</li>
+    <li>Review the conclusion against the original decision.</li>
+   </ol>
+   <p>This is not about turning every task into a bureaucracy. It is about keeping discovery, verification, and judgment from collapsing into one polished return.</p>
+   <p>For simple work, ask once. For consequential work, create review points before the answer is finished.</p>
+
+   <h3 class="sub" id="challenge">Use AI to challenge, not only complete</h3>
+   <p>The easiest way to use AI is to ask it to finish your thought. That is useful and dangerous. The framing inside your question can become the framing inside the answer, and an agreeable system can make your preferred idea feel independently validated.</p>
+   <p>Build challenge into the interaction:</p>
+   <ul>
+    <li>“Make the strongest case against my current conclusion.”</li>
+    <li>“What would a skeptical customer, operator, regulator, or competitor question?”</li>
+    <li>“Which assumption is doing the most work?”</li>
+    <li>“What evidence would change the recommendation?”</li>
+    <li>“Assume this failed one year from now. What most likely caused the failure?”</li>
+    <li>“What am I treating as a fact that is actually an inference?”</li>
+    <li>“Offer two genuinely different approaches, including one that rejects my frame.”</li>
+   </ul>
+   <p>Several AI roles agreeing with each other do not create independent evidence. They may share the same model, sources, prompt, and blind spot. Simulated perspectives are useful for generating questions. Real stakeholders are still required where lived experience, standing, or consent matters.</p>
+
+   <h3 class="sub" id="correct-and-preserve">Correct the work and preserve what you learned</h3>
+   <p>Most people use AI as if every interaction were the first. They correct the same tendency repeatedly, restate the same definitions, and rebuild the same context.</p>
+   <p>A stronger practice treats correction as an asset. When a result misses:</p>
+   <ol class="brief">
+    <li>Name the failure precisely.</li>
+    <li>Explain why it matters.</li>
+    <li>Provide the corrected source, example, rule, or decision.</li>
+    <li>Ask for a new version that shows what changed.</li>
+    <li>Save the useful instruction, example, or checklist for the next run.</li>
+   </ol>
+   <p>The goal is not one perfect prompt. It is a working method that improves.</p>
+
+   <h4 id="worked-example">What that looks like in one conversation</h4>
+   <p>Most guidance about AI describes the correction. It rarely shows one. Here is a short exchange in full.</p>
+
+   <div class="xchg">
+    <div class="turn">
+     <p class="who">1 · What I asked</p>
+     <p class="said">Write a note to my team explaining that we're delaying the Q4 launch.</p>
+    </div>
+    <div class="turn ai">
+     <p class="who">2 · What came back</p>
+     <p class="said">Team,
+
+I wanted to share an important update. After careful evaluation, we have made the difficult decision to delay our Q4 launch due to unforeseen technical challenges. This was not a decision we took lightly.
+
+We remain confident in the product and are targeting an early Q1 release. I want to thank each of you for your tireless dedication and hard work. Your commitment has not gone unnoticed, and I am confident that this additional time will allow us to deliver the exceptional experience our customers deserve.
+
+Please reach out with any questions.</p>
+     <p>Fluent, calm, and ready to send. It is also wrong in three ways that are easy to miss because nothing about the writing signals a problem.</p>
+    </div>
+    <div class="turn note">
+     <p class="who">3 · What was actually wrong</p>
+     <ul>
+      <li><strong>It invented the reason.</strong> "Unforeseen technical challenges" is a guess. I never said what happened.</li>
+      <li><strong>It committed me to a date.</strong> "Targeting an early Q1 release" is a promise I have not made and cannot yet keep.</li>
+      <li><strong>It wrote to the wrong readers.</strong> This is addressed to a general audience. My actual readers are eight engineers who already know why the launch slipped and want to know what happens to the work they have in flight.</li>
+     </ul>
+    </div>
+    <div class="turn">
+     <p class="who">4 · The correction I sent</p>
+     <p class="said">Two problems: you invented the reason, and you promised a date I never gave you.
+
+The real reason: the payment integration failed load testing at 40% of expected volume. The team already knows this, so state it plainly and do not explain it.
+
+There is no new date. Do not imply one.
+
+Audience: the eight engineers on the platform team, not the whole company. What they need to know is what happens to the work already in flight this sprint.
+
+Rewrite it. Under 150 words. Add no facts I have not given you. End with what I am asking them to do this week.</p>
+    </div>
+    <div class="turn ai">
+     <p class="who">5 · The second answer</p>
+     <p class="said">Team,
+
+We're holding the Q4 launch. Payment integration failed load testing at 40% of expected volume, which you already know about from Thursday.
+
+I don't have a new date yet, and I'm not going to invent one. I'll have a real answer after we know whether this is a config problem or an architecture problem.
+
+Work already in flight: keep going on everything except the checkout path. Nothing there is wasted. If you're blocked on checkout, come find me rather than picking up something new.
+
+This week I need two things: the load-test results written up somewhere I can read them, and your honest estimate of which of the two problems we're looking at.</p>
+    </div>
+    <div class="turn note">
+     <p class="who">6 · What actually changed</p>
+     <p>The model did not get better between those two answers. The brief did. Three of the five lines were missing from my first request: <strong>context</strong> (what actually happened), <strong>audience and use</strong> (who reads it and what they need), and <strong>boundary</strong> (do not invent facts or dates).</p>
+      <p>That is the ordinary shape of useful AI work. The first answer is rarely the product. It is the thing that shows you which part of the brief you left out.</p>
+    </div>
+   </div>
+
+   <p>Two habits are worth taking from that exchange. Name the failure specifically, because "make it better" gives the system nothing to act on. And say what must not happen, because the invented reason and the invented date were the two most damaging parts of the first answer and neither would have appeared with a boundary line in place.</p>
+   <p>Project spaces, saved instructions, reusable templates, and documented examples can all carry learning forward. Use the simplest mechanism your approved tool provides. Keep an authoritative source of truth outside the conversation when the information matters.</p>
+
+   <h3 class="sub" id="learn-the-tool">Learn the tool as well as the task</h3>
+   <p>Working well with AI is a real skill. The entrance is easy and the depth is real, much like a spreadsheet. Almost anyone can type into a cell. Far fewer can build a model other people rely on.</p>
+   <p>You need two kinds of fluency.</p>
+   <p><strong>Work fluency</strong> is the ability to frame a problem, break it into parts, state assumptions, recognize the evidence needed, judge the result, and connect it to a decision.</p>
+   <p><strong>Tool fluency</strong> is knowing what your AI product can see and do. Can it search current sources? Read attachments? Work across a project? Use a calculator or code tool? Connect to email or files? Preserve memory? Take actions? Show citations? Respect an access boundary?</p>
+   <p>The first kind determines whether the work is well directed. The second determines which parts the system can carry safely and efficiently.</p>
+   <div class="note">
+    <p><strong>Features will change. The management questions last longer:</strong></p>
+    <p>What can the system see? What can it do? What context is actually available now? What record will remain? What requires approval? How can a consequential error be caught?</p>
+   </div>
+
+   <h3 class="sub" id="frontier-moves">Expect the frontier to move</h3>
+   <p>AI performance is uneven across tasks and changes over time. A task that fails today may work after a model or product update. A task that worked reliably may change when the model, tool, prompt, sources, or context changes.</p>
+   <p>Map the frontier against work you understand. Take a completed task for which you hold the answer key and ask AI to do it fresh. Compare:</p>
+   <ul>
+    <li>Where did it match your work?</li>
+    <li>Where did it beat you?</li>
+    <li>Where did it confidently miss?</li>
+    <li>What did it need from you?</li>
+    <li>How much review did it require?</li>
+    <li>Did the final result improve the outcome, or only produce more material?</li>
+   </ul>
+   <div class="rule"><p>Repeat the test. One brilliant answer proves possibility, not reliability.</p></div>
+  </section>
+
+  <section class="part" id="part-5">
+   <p class="partno">Part V</p>
+   <h2>Verify before you rely</h2>
+
+   <h3 class="sub" id="verification-boundary">The Verification Boundary</h3>
+   <p>The Verification Boundary is the point at which work has earned its next level of reliance.</p>
+   <p>Human delegation already works this way. A manager considers who did the work, reviews the underlying analysis, checks important numbers, and watches how someone performs across repeated assignments. Trust grows locally around demonstrated work.</p>
+   <p>AI deserves the same quality standard with different assumptions. The system may not know what it does not know. It may not flag uncertainty. Its account of why it made a mistake may itself be an inference. Its speed can produce far more material than anyone can responsibly review.</p>
+   <p>Work earns reliance through at least one of three routes:</p>
+   <ol class="brief">
+    <li><strong>A credible person can grade it.</strong> Someone with the relevant expertise and authority can tell whether the result meets the standard.</li>
+    <li><strong>Evidence or a test can expose the important failure.</strong> A source can be opened, a number recalculated, code run, a rule checked, or the cases most likely to break the answer tested.</li>
+    <li><strong>Reality can answer while the stakes remain small and reversible.</strong> A pilot, experiment, draft, or contained trial can reveal whether the idea works before it travels farther.</li>
+   </ol>
+   <p>If none of those routes exists, the work may still be useful for exploration. It has not earned the status of an answer.</p>
+   <div class="rule"><p>Recognition is not verification. Relief is a bad reviewer.</p></div>
+
+   <h3 class="sub" id="check-in-proportion">Check in proportion to reliance</h3>
+   <p>Not every output deserves the same review.</p>
+   <div class="tw"><table>
+    <thead><tr><th>Intended use</th><th>Appropriate posture</th><th>Minimum check</th></tr></thead>
+    <tbody>
+     <tr><td><strong>Private brainstorming</strong></td><td>Exploratory</td><td>Look for framing bias and useful alternatives</td></tr>
+     <tr><td><strong>First draft you will rewrite</strong></td><td>Provisional</td><td>Confirm the argument, facts, and fit before keeping</td></tr>
+     <tr><td><strong>Internal working analysis</strong></td><td>Reviewable</td><td>Trace material claims, calculations, and assumptions</td></tr>
+     <tr><td><strong>Recommendation to others</strong></td><td>Accountable</td><td>Expert review, authoritative sources, and explicit uncertainty</td></tr>
+     <tr><td><strong>External publication</strong></td><td>Publication-ready</td><td>Fact check, citation check, quote check, permissions, and final human edit</td></tr>
+     <tr><td><strong>Action in a system</strong></td><td>Controlled</td><td>Test, logging, access limits, rollback, and human approval appropriate to impact</td></tr>
+     <tr><td><strong>High-consequence decision</strong></td><td>Specialist-led</td><td>Qualified human authority, governed process, and independent evidence</td></tr>
+    </tbody>
+   </table></div>
+   <div class="rule"><p>The farther the work will travel and the harder it is to reverse, the stronger the verification must be.</p></div>
+
+   <h3 class="sub" id="verification-routine">A practical verification routine</h3>
+
+   <div class="check"><h3>Claims</h3><ul>
+    <li>List the claims that could change the decision.</li>
+    <li>Label each as supplied fact, sourced fact, estimate, inference, prediction, opinion, or anecdote.</li>
+    <li>Open the authoritative source for the claims that matter.</li>
+    <li>Confirm that the source supports the exact claim, not merely the topic.</li>
+   </ul></div>
+
+   <div class="check"><h3>Numbers</h3><ul>
+    <li>Show the inputs, units, and formula.</li>
+    <li>Recalculate independently.</li>
+    <li>Test the edge cases.</li>
+    <li>Reconcile totals to the source of truth.</li>
+    <li>Check that actuals, estimates, benchmarks, and scenarios remain distinct.</li>
+   </ul></div>
+
+   <div class="check"><h3>Citations and quotations</h3><ul>
+    <li>Open every consequential citation.</li>
+    <li>Confirm the title, author, date, and link.</li>
+    <li>Locate the passage that supports the claim.</li>
+    <li>Verify every quotation word for word and preserve its context.</li>
+    <li>Remove citations you cannot verify.</li>
+   </ul></div>
+
+   <div class="check"><h3>Summaries</h3><ul>
+    <li>Compare the summary with the source, not with your memory of it.</li>
+    <li>Check what was omitted, not only what was included.</li>
+    <li>Look for softened uncertainty, invented causality, and collapsed disagreement.</li>
+   </ul></div>
+
+   <div class="check"><h3>Lists and reconciliations</h3><ul>
+    <li>Check duplicates, near-matches, missing rows, and merged identities.</li>
+    <li>Confirm a sample from the beginning, middle, and end.</li>
+    <li>Inspect exceptions rather than only the clean total.</li>
+   </ul></div>
+
+   <div class="check"><h3>Code, formulas, and automations</h3><ul>
+    <li>Run the work.</li>
+    <li>Test normal, empty, boundary, and failure cases.</li>
+    <li>Review changes before they are applied.</li>
+    <li>Keep permissions narrow.</li>
+    <li>Require approval before external sends, destructive changes, purchases, or commitments.</li>
+    <li>Make rollback possible.</li>
+   </ul></div>
+
+   <h3 class="sub" id="same-confidence">Do not outsource verification to the same confidence</h3>
+   <p>Asking the model “Are you sure?” is not a verification method. It may reconsider and catch an error. It may also restate the same answer with greater confidence.</p>
+   <p>Useful second passes change something material:</p>
+   <ul>
+    <li>Use an authoritative source the first pass did not have.</li>
+    <li>Ask a qualified person who holds a real answer key.</li>
+    <li>Run a deterministic calculation or test.</li>
+    <li>Start a fresh review with the original sources and explicit failure criteria.</li>
+    <li>Ask a different method to reproduce the result.</li>
+   </ul>
+   <p>A second model can help surface issues, but two models may share training patterns, retrieved sources, and common blind spots. Agreement is evidence of consistency, not proof of truth.</p>
+  </section>
+
+  <section class="part" id="part-6">
+   <p class="partno">Part VI</p>
+   <h2>Manage the weaknesses by name</h2>
+   <p>General warnings such as “be careful with AI” rarely change behavior. Name the failure mode and attach a response.</p>
+   <p>Each one below leads with what you actually notice, because that is what you will recognize first. The technical name sits underneath, so you have a word for it when you need to explain the problem to someone else.</p>
+
+   <div class="fm"><h3>It made something up<span class="term">Confabulation or hallucination</span></h3><dl>
+    <dt>Looks like</dt><dd>A false fact, citation, quote, event, capability, or explanation presented fluently.</dd>
+    <dt>Why</dt><dd>The system completes a plausible pattern even when the evidence is missing.</dd>
+    <dt>Do this</dt><dd>Supply authoritative sources, require traceability, open the sources, recalculate consequential numbers, and label unresolved claims. Never treat citation-shaped text as a citation until you have opened it.</dd>
+   </dl></div>
+
+   <div class="fm"><h3>It keeps agreeing with me<span class="term">Sycophancy</span></h3><dl>
+    <dt>Looks like</dt><dd>The answer follows your preference, validates your premise, or tells you what your framing suggests you want to hear.</dd>
+    <dt>Why it matters</dt><dd>A supportive tone can feel like independent judgment when it is actually adaptation to the user.</dd>
+    <dt>Do this</dt><dd>Form your own preliminary view when independence matters. Ask for the strongest countercase, evidence that would reverse the conclusion, and an alternative that rejects your frame.</dd>
+   </dl></div>
+
+   <div class="fm"><h3>It sounds neutral but leans one way<span class="term">Bias and missing perspectives</span></h3><dl>
+    <dt>Looks like</dt><dd>A supposedly neutral answer carries assumptions or exclusions from training patterns, selected sources, examples, wording, or omitted context.</dd>
+    <dt>Why it matters</dt><dd>More context can deepen the original tilt if all the added material comes from the same point of view.</dd>
+    <dt>Do this</dt><dd>Label source types, diversify evidence, ask which perspective is missing, test who benefits and who bears the cost, and bring real people into decisions that affect them.</dd>
+   </dl></div>
+
+   <div class="fm"><h3>It gave me far more than I can use<span class="term">Sprawl</span></h3><dl>
+    <dt>Looks like</dt><dd>Too many sections, options, analyses, frameworks, or next steps.</dd>
+    <dt>Why</dt><dd>Producing more is easy, and a broad question is an invitation to continue.</dd>
+    <dt>Do this</dt><dd>Define the decision, length, priority, and stopping condition. Ask for the three things that matter, not everything that could be said. Require a recommendation and what was deliberately left out.</dd>
+   </dl></div>
+
+   <div class="fm"><h3>It did excellent work on the wrong question<span class="term">Rabbit holes</span></h3><dl>
+    <dt>Looks like</dt><dd>Excellent progress on the wrong question.</dd>
+    <dt>Why it matters</dt><dd>The output can be genuinely good while the direction is useless.</dd>
+    <dt>Do this</dt><dd>Set a review point before beginning. After the first map, ask whether the work is closer to a decision. Stop if another round would only add detail.</dd>
+   </dl></div>
+
+   <div class="fm"><h3>The later rounds stopped helping<span class="term">The Dip</span></h3><dl>
+    <dt>Looks like</dt><dd>Early rounds produce large gains. Later rounds produce more output while usefulness falls. You become a full-time evaluator of work that no longer moves the decision.</dd>
+    <dt>Do this</dt><dd>Change modes. Stop leading with AI. Absorb what has returned. Decide what you think. Then bring AI back to sharpen, challenge, or finish thinking whose ownership you have taken back.</dd>
+   </dl></div>
+
+   <div class="fm"><h3>I ended up arguing its first idea<span class="term">Anchoring</span></h3><dl>
+    <dt>Looks like</dt><dd>The first AI framing shapes the alternatives you consider and the opinion you eventually express.</dd>
+    <dt>Do this</dt><dd>Write your own initial view before asking when independence matters. Request multiple frames before a recommendation. Separate divergent exploration from convergent decision work.</dd>
+   </dl></div>
+
+   <div class="fm"><h3>Everything we produce sounds the same<span class="term">Homogenization</span></h3><dl>
+    <dt>Looks like</dt><dd>One person's output improves while everybody's output begins to sound and think alike.</dd>
+    <dt>Do this</dt><dd>Bring distinct human examples, tastes, sources, and viewpoints into the work. Generate alternatives from genuinely different premises. Do not mistake five variations of one frame for five ideas.</dd>
+   </dl></div>
+
+   <div class="fm"><h3>I cannot explain my own work<span class="term">Skill atrophy</span></h3><dl>
+    <dt>Looks like</dt><dd>You can produce the result with AI but cannot explain, defend, or reproduce the underlying work yourself.</dd>
+    <dt>Do this</dt><dd>Preserve unassisted practice for capabilities you still need to own. Alternate assisted and unassisted work. Teach the result back. Rebuild one important part yourself. Use AI to coach and test you, not only to complete the task.</dd>
+   </dl></div>
+
+   <div class="fm"><h3>My colleague inherited my unfinished work<span class="term">Workslop</span></h3><dl>
+    <dt>Looks like</dt><dd>Polished AI-assisted material is shared before the sender has done the refinement, synthesis, and checking needed to make it useful. The sender experiences speed. The recipient inherits the work.</dd>
+    <dt>Do this</dt><dd>Refine before sharing. Send the smallest useful artifact. State the decision or action it supports. Make the evidence and assumptions visible. Remove the material the recipient does not need. Say who stands behind the result.</dd>
+   </dl>
+   <p style="margin:14px 0 0;font-size:16.5px"><em>Workslop is not defined by whether AI touched the work. It is defined by where the unfinished work lands.</em></p>
+   </div>
+
+   <div class="fm"><h3>Nobody can tell who checked this<span class="term">Concealment and weak ownership</span></h3><dl>
+    <dt>Looks like</dt><dd>People hide AI involvement because they expect to be judged as lazy or less capable. Reviewers cannot tell what was checked or who owns the result.</dd>
+    <dt>Do this</dt><dd>Follow the disclosure standard appropriate to your organization and audience. At minimum, never use AI involvement to blur authorship, responsibility, evidence, or a consequential decision. Be able to say what the system did, what you did, what was checked, and what you stand behind.</dd>
+   </dl></div>
+
+   <div class="fm"><h3>It saw or did something it should not have<span class="term">Privacy, security, and unintended action</span></h3><dl>
+    <dt>Looks like</dt><dd>Sensitive material enters an unapproved tool, untrusted instructions inside a source redirect the system, or a connected assistant takes an action beyond what the user intended.</dd>
+    <dt>Do this</dt><dd>Use approved tools, know the data rules, minimize what you share, treat retrieved content as untrusted input, keep permissions narrow, separate drafting from acting, and require explicit approval before consequential external actions.</dd>
+   </dl></div>
+  </section>
+
+  <section class="part" id="part-7">
+   <p class="partno">Part VII</p>
+   <h2>Useful ways to work with AI</h2>
+   <p>The examples below are patterns, not magic prompts. Adapt them to the work and supply the sources needed.</p>
+
+   <h3 class="sub" id="pattern-learn">Learn a subject</h3>
+   <div class="prompt"><p>I am entering [field] to make [decision]. Give me a first map: the important terms, major schools of thought, areas of agreement, live disagreements, and the authoritative sources a practitioner would expect me to read. Separate established knowledge from emerging claims. End with the five questions I should be able to answer before making the decision.</p></div>
+   <p class="after">Use the return to choose what to investigate. Do not treat the first map as expertise.</p>
+
+   <h3 class="sub" id="pattern-read">Read a document deeply</h3>
+   <div class="prompt"><p>Using only the attached document, explain its central claim, the evidence supporting it, the assumptions connecting the evidence to the conclusion, and the strongest limitation the author acknowledges. Quote only short passages with page references. Then list any important claim in your summary that cannot be traced directly to the document.</p></div>
+   <p class="after">Open the cited pages yourself.</p>
+
+   <h3 class="sub" id="pattern-draft">Turn rough thinking into a draft</h3>
+   <div class="prompt"><p>These notes are incomplete and may conflict. First identify the central idea, the intended reader, and the unresolved choices. Do not write the final draft yet. Propose an outline that preserves my distinctive points and flags gaps you would otherwise have to invent. After I choose the structure, draft in [tone and format].</p></div>
+   <p class="after">This keeps structural judgment visible before prose makes everything look settled.</p>
+
+   <h3 class="sub" id="pattern-edit">Improve a piece without losing the author</h3>
+   <div class="prompt"><p>Edit this for [specific goals]. Preserve my thesis, lived examples, factual claims, and any lines marked protected. Do not add new facts or examples. Show the three most meaningful changes you recommend and why. Then provide a clean revision and a short list of anything you could not resolve without my judgment.</p></div>
+   <p class="after">Review the changed meaning, not only the cleaner sentences.</p>
+
+   <h3 class="sub" id="pattern-compare">Compare options</h3>
+   <div class="prompt"><p>Compare these options against [decision criteria]. Keep facts, estimates, and judgments separate. State where the evidence is strong, where the choice depends on our priorities, and what new information could change the ranking. Do not recommend until after the comparison.</p></div>
+   <p class="after">Make sure the criteria reflect the real decision, not merely what is easiest to score.</p>
+
+   <h3 class="sub" id="pattern-challenge">Challenge a recommendation</h3>
+   <div class="prompt"><p>Assume this recommendation is wrong. Build the strongest evidence-based case against it. Identify the most vulnerable assumption, the stakeholder most likely to resist, the failure that would appear first, and the smallest test that could distinguish between the recommendation and the countercase.</p></div>
+   <p class="after">Then have a person decide whether the challenge changed the recommendation.</p>
+
+   <h3 class="sub" id="pattern-meeting">Prepare for a meeting</h3>
+   <div class="prompt"><p>I am meeting [audience] to accomplish [purpose]. Based on the attached material, give me: the three points they most need, the questions they are likely to ask, the strongest objection, the evidence I should have ready, and the decision or next step I should ask for. Keep the brief to one page.</p></div>
+   <p class="after">Do not arrive with ten steps when the meeting exists to settle the first one.</p>
+
+   <h3 class="sub" id="pattern-data">Analyze a dataset or spreadsheet</h3>
+   <div class="prompt"><p>Inspect this data for [business question]. Before drawing conclusions, report the row count, missing fields, duplicates, inconsistent labels, date range, units, and any reconciliation issue that could change the result. Then show the calculation method and produce the analysis. Keep actuals, estimates, and assumptions separate. Flag every transformation that changes a source value.</p></div>
+   <p class="after">Independently test the calculation and the exceptions.</p>
+
+   <h3 class="sub" id="pattern-workflow">Design a repeatable workflow</h3>
+   <div class="prompt"><p>Map this recurring task as: trigger, inputs, decisions, actions, outputs, checks, exceptions, and final human authority. Identify which steps are deterministic, which require judgment, and which could safely use AI. Propose a first version that stays low risk, keeps the final action human, and records what we need to learn from each run.</p></div>
+   <p class="after">The goal is not maximum automation. It is a useful learning loop.</p>
+  </section>
+
+  <section class="part" id="part-8">
+   <p class="partno">Part VIII</p>
+   <h2>From private use to shared work</h2>
+
+   <h3 class="sub" id="delegation-tax">The Delegation Tax</h3>
+   <p>Delegating to AI takes seconds. Doing it responsibly costs attention.</p>
+   <p>You have to frame the task, assemble context, steer the work, inspect the return, correct mistakes, integrate the useful parts, and explain the result. If the work travels, somebody must understand why it deserves confidence.</p>
+   <div class="rule"><p>That is the Delegation Tax. The handoff is cheap. Accountability is not.</p></div>
+   <p>The tax does not mean the delegation failed. Human managers pay it too. The question is whether the value of the assignment justifies the attention needed to direct and review it.</p>
+   <p>Watch three measures:</p>
+   <ul>
+    <li>How much useful work came back?</li>
+    <li>How much human attention did it take to make the result trustworthy?</li>
+    <li>Did the work move a real decision or outcome?</li>
+   </ul>
+   <p>Counting outputs while ignoring interventions and downstream review is a poor measure of productivity.</p>
+
+   <h3 class="sub" id="private-speed">Your private speed does not make the group faster</h3>
+   <p>Individual AI can make one person substantially more capable. The person still has to move the result into shared work.</p>
+   <p>That creates two crossings. First, the work travels from AI to you. You absorb it and apply judgment. Second, it travels from you to colleagues. They must absorb it in the context of their responsibilities, apply their different expertise and authority, and align on what happens next.</p>
+   <p>If five people normally expect a week of work to produce one recommendation, that rhythm gives them time to encounter the evidence, ask questions, and form a view. If one person arrives with ten recommendations and twenty next steps, the work can be excellent and still exceed the group's capacity to use it.</p>
+   <div class="rule"><p>The result can be better and less integrated at the same time.</p></div>
+
+   <h3 class="sub" id="refine-before-share">Refine before you share</h3>
+   <p>Before sending AI-assisted work to someone else, ask:</p>
+   <div class="check"><h3>Before it leaves your hands</h3><ul>
+    <li>What is the one job this artifact has for the recipient?</li>
+    <li>What can be removed without weakening that job?</li>
+    <li>Which claims or numbers need visible support?</li>
+    <li>Which assumptions must the recipient know?</li>
+    <li>What did AI contribute?</li>
+    <li>What did I verify?</li>
+    <li>What judgment is mine?</li>
+    <li>What decision or response am I asking for now?</li>
+   </ul></div>
+   <p>The test is not how much material appeared. It is whether the right people can reach a better decision sooner.</p>
+
+   <h3 class="sub" id="personal-ceiling">Recognize the Personal Ceiling</h3>
+   <p>At some point, the next gain depends less on how well one person uses AI and more on whether the work around that person changes.</p>
+   <p>You may still be copying context between disconnected tools, remembering why one source was trusted, reconciling versions, and translating a private AI exchange for everyone else. Your attention becomes the integration layer. More personal output creates more claims on that attention.</p>
+   <p>This is the <strong>Personal Ceiling</strong>. It is not a reason to stop learning. It is a signal that the next problem is shared context, workflow, standards, review, decision rights, or team design.</p>
+   <div class="rule"><p>My work gets better before our work gets different.</p></div>
+  </section>
+
+  <section class="part" id="part-9">
+   <p class="partno">Part IX</p>
+   <h2>Build your practice</h2>
+
+   <h3 class="sub" id="seven-day">A seven-day start</h3>
+   <div class="days">
+    <div class="day"><p class="t">Day 1</p><h4>Find the blank page</h4><p>Choose one low-risk task you already understand. Ask AI for a first shape, then compare it with what you would have done.</p></div>
+    <div class="day"><p class="t">Day 2</p><h4>Improve the brief</h4><p>Use the five-line handoff. Notice which missing piece of context changes the result most.</p></div>
+    <div class="day"><p class="t">Day 3</p><h4>Ask for challenge</h4><p>Write your own view first. Ask AI for the strongest countercase and the evidence that would change the answer.</p></div>
+    <div class="day"><p class="t">Day 4</p><h4>Work from sources</h4><p>Give AI one or two documents. Ask for a source-bound summary with traceable claims. Open every important reference.</p></div>
+    <div class="day"><p class="t">Day 5</p><h4>Test a completed task</h4><p>Choose work for which you hold the answer key. Run the task several times. Record where AI matches, beats, and misses you.</p></div>
+    <div class="day"><p class="t">Day 6</p><h4>Preserve a correction</h4><p>Turn one repeated correction into a reusable instruction, example, checklist, or template.</p></div>
+    <div class="day"><p class="t">Day 7</p><h4>Measure the full result</h4><p>Ask whether the work became better, more extensive, or faster. Count your review time. Decide whether it moved an outcome. Choose the next task based on what you learned.</p></div>
+   </div>
+
+   <h3 class="sub" id="thirty-day">A thirty-day progression</h3>
+   <div class="days">
+    <div class="day"><p class="t">Week 1</p><h4>Learn the shape</h4><p>Work on familiar, reversible tasks. Notice the five profiles and begin a simple scouting log.</p></div>
+    <div class="day"><p class="t">Week 2</p><h4>Improve delegation</h4><p>Practice the five-line handoff. Separate scouting, drafting, and deciding. Define done before the answer arrives.</p></div>
+    <div class="day"><p class="t">Week 3</p><h4>Strengthen verification</h4><p>Work from authoritative sources. Check numbers, citations, assumptions, omissions, and edge cases. Add explicit review routes to repeatable work.</p></div>
+    <div class="day"><p class="t">Week 4</p><h4>Build the second run</h4><p>Save context, examples, standards, and corrections. Repeat one useful workflow. Measure whether the second run needed less human intervention while maintaining or improving quality.</p></div>
+   </div>
+   <p>At the end of thirty days, do not ask only how often you used AI. Ask what you can now produce, verify, explain, and improve that you could not do before.</p>
+
+   <h3 class="sub" id="scouting-log">Keep a scouting log</h3>
+   <p>For recurring tasks, record:</p>
+   <div class="tw"><table>
+    <thead><tr><th>Task</th><th>Intended dividend</th><th>What AI did well</th><th>Where it missed</th><th>Context it needed</th><th>Verification used</th><th>Human time</th><th>Outcome moved?</th></tr></thead>
+    <tbody><tr><td>[Task]</td><td>Better / More / Time</td><td>[Move]</td><td>[Tell]</td><td>[Coverage]</td><td>Person / Evidence / Test</td><td>[Minutes]</td><td>Yes / No / Unclear</td></tr></tbody>
+   </table></div>
+   <p>This turns impressions into a practical map. It also reveals whether the tool is improving the work or merely producing more of it.</p>
+  </section>
+
+  <section class="part" id="part-10">
+   <p class="partno">Part X</p>
+   <h2>The before-you-send checklist</h2>
+   <p>Before AI-assisted work leaves your hands, check seven things.</p>
+
+   <div class="check"><h3>1. Purpose</h3><ul>
+    <li>Does this artifact have a clear job for the recipient?</li>
+    <li>Is it at the right level for the decision now?</li>
+   </ul></div>
+   <div class="check"><h3>2. Ownership</h3><ul>
+    <li>Do I understand and stand behind the result?</li>
+    <li>Is the remaining human decision explicit?</li>
+   </ul></div>
+   <div class="check"><h3>3. Evidence</h3><ul>
+    <li>Can I trace the important facts, numbers, quotations, and citations?</li>
+    <li>Are estimates, inferences, and predictions labeled?</li>
+   </ul></div>
+   <div class="check"><h3>4. Judgment</h3><ul>
+    <li>Did I form a view, or did I only accept the machine's framing?</li>
+    <li>Have I tested the strongest countercase?</li>
+   </ul></div>
+   <div class="check"><h3>5. Usefulness</h3><ul>
+    <li>Have I removed sprawl and synthesized what matters?</li>
+    <li>Am I sending a useful return or exporting my Delegation Tax?</li>
+   </ul></div>
+   <div class="check"><h3>6. Safety</h3><ul>
+    <li>Was the information appropriate for this tool?</li>
+    <li>Has any external action received the authority it requires?</li>
+   </ul></div>
+   <div class="check"><h3>7. Disclosure</h3><ul>
+    <li>Can the recipient tell what was checked, what remains uncertain, and who stands behind the work?</li>
+   </ul></div>
+
+   <div class="rule"><p>If you cannot answer those questions, the work may still be a useful draft. Keep it a draft.</p></div>
+  </section>
+
+  <section class="part" id="long-view">
+   <h2>The long view</h2>
+   <p>AI is experiential. You will not learn it from a page, including this one.</p>
+   <p>The people who become effective are not the ones who memorize the largest prompt library. They develop a feel for the work. They know when to let AI run and when to stay close. They recognize the Wide Reader, the Fluent Improviser, the Frame Follower, the Creative Engine, and the Role Player. They know which failures can hide beneath a polished surface. They can brief a task, create a useful review point, and stop when more output is no longer progress.</p>
+   <p>Most important, they retain intellectual ownership. They use AI to see more, try more, test more, and build more. They do not let production speed decide what matters or persuasive language substitute for evidence. They know that delegation transfers work, not accountability.</p>
+   <p>The way to begin is not dramatic. Choose one real task. Make the mistake cheap. Give the answer a job. Brief it clearly. Check what matters. Correct the work. Save what you learned. Try again.</p>
+   <p>That is how a tool becomes a practice.</p>
+   <div class="rule"><p>And it is how you keep hold of the pen.</p></div>
+
+   <a class="xlink" href="resources.html">
+    <p class="t">Keep going: AI Learning Resources</p>
+    <p>A curated path through current tools, practical courses, important studies, workforce reports, and responsible-AI guidance. Start with the twelve-link path, then go as deep as you need.</p>
+    <span class="go">Open the resources library →</span>
+   </a>
+  </section>
+
+  <section class="part" id="sources">
+   <h2>Sources and further reading</h2>
+   <p>This field guide synthesizes the current Chapters 3 and 4 of <em>Who Holds the Pen?</em>, the longer Chapter 4 working draft, and Mario Suarez's earlier AI teaching materials. The profiles and practice guidance are author-developed teaching models, not scientific classifications.</p>
+   <ul class="srcs">
+    <li>National Institute of Standards and Technology, <em>Artificial Intelligence Risk Management Framework: Generative Artificial Intelligence Profile</em>, NIST AI 600-1, 2024. <a href="https://doi.org/10.6028/NIST.AI.600-1" rel="noopener">doi.org/10.6028/NIST.AI.600-1</a></li>
+    <li>Fabrizio Dell'Acqua and colleagues, Harvard Business School Working Paper 24-013 on the jagged technological frontier, 2023. <a href="https://www.hbs.edu/ris/Publication%20Files/24-013_d9b45b68-9e74-42d6-a1c6-c72fb70c7282.pdf" rel="noopener">hbs.edu</a></li>
+    <li>Laura Weidinger and colleagues, “Ethical and social risks of harm from Language Models,” 2021. <a href="https://arxiv.org/abs/2112.04359" rel="noopener">arxiv.org/abs/2112.04359</a></li>
+    <li>Mirac Suzgun and colleagues, “Challenging BIG-Bench Tasks and Whether Chain-of-Thought Can Solve Them,” 2022. <a href="https://arxiv.org/abs/2210.09261" rel="noopener">arxiv.org/abs/2210.09261</a></li>
+    <li>Laura Jakesch and colleagues, “Co-Writing with Opinionated Language Models Affects Users' Views,” <em>CHI 2023</em>. <a href="https://doi.org/10.1145/3544548.3581196" rel="noopener">doi.org/10.1145/3544548.3581196</a></li>
+    <li>Anil R. Doshi and Oliver P. Hauser, “Generative AI enhances individual creativity but reduces the collective diversity of novel content,” <em>Science Advances</em>, 2024. <a href="https://doi.org/10.1126/sciadv.adn5290" rel="noopener">doi.org/10.1126/sciadv.adn5290</a></li>
+    <li>Hao-Ping Lee and colleagues, “The Impact of Generative AI on Critical Thinking,” <em>CHI 2025</em>. <a href="https://www.microsoft.com/en-us/research/publication/the-impact-of-generative-ai-on-critical-thinking-self-reported-reductions-in-cognitive-effort-and-confidence-effects-from-a-survey-of-knowledge-workers/" rel="noopener">microsoft.com</a></li>
+    <li>Judy Hanwen Shen and Alex Tamkin, “How AI assistance impacts the formation of coding skills,” Anthropic, 2026. <a href="https://www.anthropic.com/research/AI-assistance-coding-skills" rel="noopener">anthropic.com</a></li>
+    <li>Kate Niederhoffer and colleagues, “AI-Generated ‘Workslop’ Is Destroying Productivity,” <em>Harvard Business Review</em>, 2025. <a href="https://hbr.org/2025/09/ai-generated-workslop-is-destroying-productivity" rel="noopener">hbr.org</a></li>
+    <li>Jessica A. Reif, Richard P. Larrick, and Jack B. Soll, “Evidence of a social evaluation penalty for using AI,” <em>Proceedings of the National Academy of Sciences</em>, 2025. <a href="https://doi.org/10.1073/pnas.2426766122" rel="noopener">doi.org/10.1073/pnas.2426766122</a></li>
+   </ul>
+
+   <a class="cta" href="index.html#subscribe">Get the Sunday brief &rarr;</a>
+  </section>
+
+ </main>
+</div>
+</div>
+
+<footer class="foot">
+ <div class="container">
+  <a href="index.html">Home</a> &nbsp;·&nbsp; <a href="/current">Current issue</a> &nbsp;·&nbsp; <a href="field-guide.html">Field Guide</a> &nbsp;·&nbsp; <a href="resources.html">Resources</a> &nbsp;·&nbsp; <a href="about.html">About</a> &nbsp;·&nbsp; <a href="index.html#subscribe">Subscribe</a><br>
+  AI Above the Cut — a weekly AI brief for executives.
+ </div>
+</footer>
+
+<script>
+(function(){
+ var toc=document.getElementById('toc'),btn=document.getElementById('tocToggle');
+ if(btn){btn.addEventListener('click',function(){
+  var open=toc.getAttribute('data-collapsed')==='true';
+  toc.setAttribute('data-collapsed',open?'false':'true');
+  btn.setAttribute('aria-expanded',open?'true':'false');
+ });}
+ var links=[].slice.call(document.querySelectorAll('#tocList a[href^="#"]'));
+ var targets=links.map(function(a){return document.getElementById(a.getAttribute('href').slice(1));}).filter(Boolean);
+ if(!targets.length)return;
+ function mark(id){links.forEach(function(a){a.classList.toggle('on',a.getAttribute('href')==='#'+id);});}
+ function onScroll(){
+  var best=targets[0],y=window.scrollY+120;
+  targets.forEach(function(t){if(t.offsetTop<=y)best=t;});
+  mark(best.id);
+ }
+ if('IntersectionObserver' in window){
+  var seen={};
+  var io=new IntersectionObserver(function(es){
+   es.forEach(function(e){seen[e.target.id]=e.isIntersecting;});
+   for(var i=0;i<targets.length;i++){if(seen[targets[i].id]){mark(targets[i].id);return;}}
+   onScroll();
+  },{rootMargin:'-80px 0px -70% 0px'});
+  targets.forEach(function(t){io.observe(t);});
+ }
+ window.addEventListener('scroll',onScroll,{passive:true});
+ onScroll();
+ // close the mobile menu after a jump
+ links.forEach(function(a){a.addEventListener('click',function(){
+  if(window.innerWidth<=1000&&btn){toc.setAttribute('data-collapsed','true');btn.setAttribute('aria-expanded','false');}
+ });});
+})();
+</script>
+</body></html>

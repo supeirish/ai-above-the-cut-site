@@ -5,3 +5,9 @@
 
 # Subscribe page — serve the standalone page at the clean /subscribe path.
 /subscribe      /subscribe.html     200
+
+# Evergreen resource pages — clean paths for sharing and for email links.
+/start          /getting-started.html  200
+/getting-started /getting-started.html 200
+/field-guide    /field-guide.html   200
+/resources      /resources.html     200

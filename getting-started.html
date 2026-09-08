@@ -1,0 +1,228 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Your first AI chat — start here | AI Above the Cut</title>
+<meta name="description" content="Pick a free AI chat tool, send your first message, and try a follow-up. A simple starting point for complete beginners. No experience needed.">
+<link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'><rect width='32' height='32' rx='7' fill='%231B57F0'/><g fill='none' stroke='%23ffffff' stroke-width='2'><circle cx='16' cy='16' r='10'/><circle cx='16' cy='16' r='6'/></g><circle cx='16' cy='16' r='2.6' fill='%23ffffff'/></svg>">
+<link rel="icon" href="/favicon.svg" sizes="any">
+<link rel="canonical" href="https://aiabovethecut.com/getting-started.html">
+<meta property="og:type" content="article">
+<meta property="og:site_name" content="AI Above the Cut">
+<meta property="og:title" content="Your first AI chat">
+<meta property="og:description" content="You type a message. AI replies. A simple starting point for complete beginners.">
+<meta property="og:url" content="https://aiabovethecut.com/getting-started.html">
+<meta property="og:image" content="https://aiabovethecut.com/og-image.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Your first AI chat">
+<meta name="twitter:description" content="Pick a free tool, send your first message, and try a follow-up. No experience needed.">
+<meta name="twitter:image" content="https://aiabovethecut.com/og-image.png">
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&family=IBM+Plex+Sans:wght@400;500;600&family=IBM+Plex+Mono:wght@500;600&display=swap" rel="stylesheet">
+<style>
+ :root{--blue:#1B57F0;--blue-dk:#1543c7;--navy:#0A1422;--body:#37444F;--slate:#566573;--chipblue:#EAF1FF;--hair:#E3E8EE;--wash:#F7F9FC}
+ *{box-sizing:border-box}
+ html{scroll-behavior:smooth}
+ body{margin:0;font-family:'IBM Plex Sans',sans-serif;color:var(--body);background:#fff;font-size:17px;line-height:1.65}
+ a{color:var(--blue);text-underline-offset:3px}
+ :focus-visible{outline:3px solid #7aa2ff;outline-offset:2px;border-radius:4px}
+ .skip{position:absolute;left:-999px;top:0;background:#fff;color:var(--blue);padding:10px 16px;font-weight:600;z-index:60}
+ .skip:focus{left:8px;top:8px}
+ .container{max-width:1200px;margin:0 auto;padding:0 32px}
+
+ /* ---- site chrome (identical to the rest of the site) ---- */
+ .sitenav{position:sticky;top:0;z-index:40;background:var(--navy)}
+ .sitenav .container{display:flex;align-items:center;gap:16px;min-height:66px;flex-wrap:wrap}
+ .sitenav .brand{display:inline-flex;align-items:center;gap:11px;text-decoration:none;color:#fff;font:700 20px/1 'Space Grotesk',sans-serif;letter-spacing:-.01em}
+ .sitenav .menu{margin-left:auto;display:flex;align-items:center;gap:8px;flex-wrap:wrap}
+ .sitenav .menu a{color:#e7edf6;text-decoration:none;font:600 16px/1 'IBM Plex Sans',sans-serif;padding:11px 14px;border-radius:8px;display:inline-flex;align-items:center;min-height:44px}
+ .sitenav .menu a:hover{color:#fff;background:rgba(255,255,255,.10)}
+ .sitenav .menu a[aria-current="page"]{color:#fff;box-shadow:inset 0 -2px 0 var(--blue)}
+ .sitenav .menu a.sub{background:var(--blue);color:#fff;font-weight:700;padding:11px 18px}
+ .sitenav .menu a.sub:hover{background:#3a6cff}
+
+ .article{max-width:760px;margin:0 auto;padding:34px 32px 60px}
+ .kicker{font:700 13px/1 'IBM Plex Mono',monospace;letter-spacing:.14em;text-transform:uppercase;color:var(--blue);margin:0 0 14px}
+ h1{font:700 clamp(32px,3.7vw,46px)/1.1 'Space Grotesk',sans-serif;letter-spacing:-.025em;color:var(--navy);margin:0 0 16px}
+ .intro{font-size:20.5px;line-height:1.55;color:var(--navy);margin:0 0 14px;font-weight:500}
+ .article p{font-size:17.5px;line-height:1.75;margin:0 0 17px}
+ .article ul{font-size:17.5px;line-height:1.72;padding-left:22px;margin:0 0 18px}
+ .article li{margin:0 0 10px}
+ .article strong{color:var(--navy)}
+
+ /* numbered steps */
+ section.step{border-top:1px solid var(--hair);padding-top:30px;margin-top:32px;scroll-margin-top:86px}
+ section.step h2{font:700 clamp(23px,2.4vw,29px)/1.22 'Space Grotesk',sans-serif;letter-spacing:-.02em;color:var(--navy);margin:0 0 12px;display:flex;align-items:baseline;gap:13px}
+ section.step h2 .sn{flex:none;width:34px;height:34px;border-radius:9px;background:var(--blue);color:#fff;font:700 16px/34px 'IBM Plex Mono',monospace;text-align:center;align-self:center}
+
+ /* tool table */
+ .tw{overflow-x:auto;margin:16px 0 12px;border:1px solid var(--hair);border-radius:12px}
+ table{border-collapse:collapse;width:100%;min-width:480px;font-size:16px;table-layout:fixed}
+ caption{caption-side:top;text-align:left;font-size:14.5px;line-height:1.5;color:var(--slate);padding:14px 16px 10px}
+ th,td{text-align:left;vertical-align:top;padding:14px 16px;border-bottom:1px solid var(--hair);overflow-wrap:anywhere}
+ th{background:var(--wash);font:600 12.5px/1.3 'IBM Plex Mono',monospace;letter-spacing:.07em;text-transform:uppercase;color:var(--slate)}
+ tr:last-child td{border-bottom:0}
+ th:first-child{width:44%}
+ td a{font:600 17px 'Space Grotesk',sans-serif;text-decoration:none}
+ td a:hover{text-decoration:underline}
+ td small{display:block;font-size:14px;margin-top:6px;line-height:1.45}
+ td small a{font:500 14px 'IBM Plex Sans',sans-serif;color:var(--slate);text-decoration:underline}
+ td small a:hover{color:var(--blue)}
+ .small{font-size:15px;line-height:1.6;color:var(--slate);margin:0 0 18px}
+
+ .box{background:#F2F6FF;border:1px solid #cbdcff;border-radius:12px;padding:19px 22px;margin:20px 0}
+ .box p{margin:0;font-size:16.5px;line-height:1.65}
+
+ /* prompt block with copy button */
+ .prompt{background:#0E1B2E;color:#DCE6F5;border-radius:12px;padding:20px 22px;margin:18px 0}
+ .prompt p{margin:0 0 14px;font:400 15.5px/1.7 'IBM Plex Mono',monospace;color:#DCE6F5;white-space:pre-wrap}
+ .copy{background:#fff;color:var(--blue);border:0;border-radius:8px;font:600 15px 'IBM Plex Sans',sans-serif;padding:11px 16px;cursor:pointer;min-height:44px}
+ .copy:hover{background:#E8F0FF}
+ .status{font-size:14.5px;display:block;margin-top:9px;min-height:1.5em;color:#9FBBEC}
+
+ /* illustrative reply */
+ .chat{border-left:3px solid var(--blue);background:var(--wash);border-radius:0 10px 10px 0;padding:15px 20px;margin:18px 0}
+ .chat p{margin:0;font-size:17px;line-height:1.65;color:var(--navy)}
+
+ /* next-step card */
+ .next{display:block;background:var(--blue);color:#fff;text-decoration:none;border-radius:14px;padding:22px 26px;margin-top:28px}
+ .next:hover{background:var(--blue-dk)}
+ .next strong{display:block;font:700 21px/1.25 'Space Grotesk',sans-serif;margin-bottom:6px;color:#fff}
+ .next span{font-size:16.5px;line-height:1.6;color:#E4ECFF}
+ .alt{display:block;border:2px solid var(--hair);border-radius:14px;padding:20px 24px;margin-top:14px;text-decoration:none;color:inherit}
+ .alt:hover{border-color:var(--blue)}
+ .alt strong{display:block;font:700 19px/1.25 'Space Grotesk',sans-serif;color:var(--navy);margin-bottom:5px}
+ .alt span{font-size:16px;line-height:1.6;color:var(--body)}
+
+ .foot{border-top:1px solid var(--hair)}
+ .foot .container{padding-top:24px;padding-bottom:46px;font:400 14.5px/1.7 'IBM Plex Sans',sans-serif;color:var(--slate)}
+ .foot a{color:var(--slate);text-decoration:underline;font-weight:600}
+ .foot a:hover{color:var(--blue)}
+
+ @media(max-width:860px){
+  .container{padding:0 20px}
+  .article{padding:26px 20px 46px}
+  section.step h2{gap:10px}
+ }
+</style></head><body>
+<a class="skip" href="#main">Skip to content</a>
+<header class="sitenav">
+ <div class="container">
+  <a class="brand" href="index.html">
+   <svg width="27" height="27" viewBox="0 0 30 30" aria-hidden="true" focusable="false"><g fill="none" stroke="#1B57F0" stroke-width="1.8"><circle cx="15" cy="15" r="13.2"/><circle cx="15" cy="15" r="8.6"/><circle cx="15" cy="15" r="4"/></g><circle cx="15" cy="15" r="2.4" fill="#1B57F0"/></svg>
+   AI ABOVE THE CUT
+  </a>
+  <nav class="menu" aria-label="Main">
+   <a href="index.html">Home</a>
+   <a href="/current">Current issue</a>
+   <a href="field-guide.html">Field Guide</a>
+   <a href="resources.html">Resources</a>
+   <a href="about.html">About</a>
+   <a class="sub" href="index.html#subscribe">Subscribe</a>
+  </nav>
+ </div>
+</header>
+
+<main class="article" id="main">
+ <p class="kicker">Start here · No experience needed</p>
+ <h1>Your first AI chat</h1>
+ <p class="intro">You type a message. AI replies. You can ask another question, add a detail, or ask it to change something.</p>
+ <p>You do not need technical knowledge or a perfect question. Try one small thing and see what happens.</p>
+
+ <section class="step" id="choose" aria-labelledby="choose-h">
+  <h2 id="choose-h"><span class="sn" aria-hidden="true">1</span>Pick a place to try it</h2>
+  <p>Choose any one of these. You do not need to compare them all or sign up for several. If you already have access to one, start there.</p>
+  <div class="tw"><table>
+   <caption>Consumer chat access checked September 7, 2026. Click a name to open the tool.</caption>
+   <thead><tr><th scope="col">Open a tool</th><th scope="col">Free option?</th><th scope="col">Paid upgrade?</th></tr></thead>
+   <tbody>
+    <tr><td><a href="https://chatgpt.com/" target="_blank" rel="noopener">ChatGPT ↗</a><small><a href="https://learn.chatgpt.com/docs/pricing" target="_blank" rel="noopener">Official plan information</a></small></td><td>Yes</td><td>Yes</td></tr>
+    <tr><td><a href="https://claude.ai/" target="_blank" rel="noopener">Claude ↗</a><small><a href="https://support.claude.com/en/articles/11049762-choose-a-claude-plan" target="_blank" rel="noopener">Official plan information</a></small></td><td>Yes</td><td>Yes</td></tr>
+    <tr><td><a href="https://gemini.google.com/" target="_blank" rel="noopener">Gemini ↗</a><small><a href="https://gemini.google/subscriptions/" target="_blank" rel="noopener">Official plan information</a></small></td><td>Yes</td><td>Yes</td></tr>
+    <tr><td><a href="https://grok.com/" target="_blank" rel="noopener">Grok ↗</a><small><a href="https://x.ai/legal/faq" target="_blank" rel="noopener">Official access information</a></small></td><td>Yes, limited; location-dependent</td><td>Yes</td></tr>
+    <tr><td><a href="https://www.perplexity.ai/" target="_blank" rel="noopener">Perplexity ↗</a><small><a href="https://www.perplexity.ai/help-center/en/articles/11187416-which-perplexity-subscription-plan-is-right-for-you" target="_blank" rel="noopener">Official plan information</a></small></td><td>Yes</td><td>Yes</td></tr>
+   </tbody>
+  </table></div>
+  <p class="small">Links open in a new tab so you can keep this page beside your chat. Availability and limits can change and may depend on your country or account.</p>
+  <div class="box"><p><strong>Start free.</strong> You do not need an upgrade for this exercise. Free access has limits; paid plans generally offer more usage or features. Consider paying later if you regularly reach a limit or want a specific feature.</p></div>
+  <p>Open your choice and sign in or create an account if asked. Choose the free option. If you reach a paid offer or trial screen, look for the free route. You do not need a paid trial to begin.</p>
+ </section>
+
+ <section class="step" id="first" aria-labelledby="first-h">
+  <h2 id="first-h"><span class="sn" aria-hidden="true">2</span>Send one simple message</h2>
+  <p>Find the box where you can type a message. Type or paste the example below, then click the send button, often shown as an arrow. A message you give AI is sometimes called a <strong>prompt</strong>.</p>
+  <div class="prompt">
+   <p id="first-prompt">Turn these notes into a friendly text message: Saturday picnic, 12:30, Oak Park, bring your own lunch, I'll bring a ball. Keep it short and don't add other details.</p>
+   <button class="copy" type="button" data-copy="first-prompt">Copy this message</button>
+   <span class="status" role="status" aria-live="polite"></span>
+  </div>
+  <p>Wait for the answer. It might look something like this:</p>
+  <div class="chat"><p>Hi everyone! Let's meet at Oak Park on Saturday at 12:30 for a picnic. Bring your own lunch, and I'll bring a ball!</p></div>
+  <p class="small">This is an illustrative answer. Your tool may phrase it differently.</p>
+ </section>
+
+ <section class="step" id="follow" aria-labelledby="follow-h">
+  <h2 id="follow-h"><span class="sn" aria-hidden="true">3</span>Keep the conversation going</h2>
+  <p>In the same conversation, send:</p>
+  <div class="prompt">
+   <p id="follow-prompt">Add a question asking who can come. Otherwise keep it the same.</p>
+   <button class="copy" type="button" data-copy="follow-prompt">Copy this follow-up</button>
+   <span class="status" role="status" aria-live="polite"></span>
+  </div>
+  <p>You can keep adjusting it in ordinary language: “Make it shorter.” “That sounds too formal.” “You missed the time.” You do not have to start over each time.</p>
+  <p>If an answer misses the point, tell it what you wanted. You have not failed at using AI.</p>
+ </section>
+
+ <section class="step" id="check" aria-labelledby="check-h">
+  <h2 id="check-h"><span class="sn" aria-hidden="true">4</span>Read it before you use it</h2>
+  <p>For this message, check the place, time, and lunch details. Does it sound like you? Copy the version you like into your own text message when you are ready.</p>
+  <p>AI can make mistakes even when it sounds certain. For important facts, check a reliable source. Asking “Are you sure?” is not a substitute for checking.</p>
+  <p>Use made-up or non-sensitive details while learning. Do not paste passwords or confidential information. For work material, use a tool your organization approves.</p>
+ </section>
+
+ <section class="step" id="next" aria-labelledby="next-h">
+  <h2 id="next-h"><span class="sn" aria-hidden="true">5</span>Try something of your own</h2>
+  <p>Choose a small task you have today. Here are three ways to begin:</p>
+  <ul>
+   <li><strong>Understand something:</strong> “Explain this in plain English and give me one example.” Then paste the words you want explained.</li>
+   <li><strong>Organize your thoughts:</strong> “Turn these rough notes into a short checklist.” Then add your notes.</li>
+   <li><strong>Work out where to start:</strong> “Help me think this through. Ask me one question at a time.” Then describe your situation.</li>
+  </ul>
+  <p>Stay in the same chat for follow-ups on that task. Use “New chat,” or its equivalent, when you move to an unrelated topic. Supply the details the new conversation needs.</p>
+
+  <a class="next" href="field-guide.html#fast-start">
+   <strong>Ready to get better results?</strong>
+   <span>Continue to the field guide: give useful context, improve an answer, and decide what to trust →</span>
+  </a>
+  <a class="alt" href="resources.html#start-here">
+   <strong>Or browse the resources library</strong>
+   <span>A twelve-link learning path, then the full library of tools, courses, studies, and risk guidance →</span>
+  </a>
+ </section>
+</main>
+
+<footer class="foot">
+ <div class="container">
+  <a href="index.html">Home</a> &nbsp;·&nbsp; <a href="/current">Current issue</a> &nbsp;·&nbsp; <a href="getting-started.html">Start here</a> &nbsp;·&nbsp; <a href="field-guide.html">Field Guide</a> &nbsp;·&nbsp; <a href="resources.html">Resources</a> &nbsp;·&nbsp; <a href="about.html">About</a> &nbsp;·&nbsp; <a href="index.html#subscribe">Subscribe</a><br>
+  AI Above the Cut — a weekly AI brief for executives.
+ </div>
+</footer>
+
+<script>
+document.querySelectorAll('[data-copy]').forEach(function(button){
+ button.addEventListener('click',async function(){
+  var node=document.getElementById(button.dataset.copy);
+  var text=node.textContent;
+  var status=button.nextElementSibling;
+  try{
+   if(!navigator.clipboard)throw new Error('Clipboard unavailable');
+   await navigator.clipboard.writeText(text);
+   status.textContent='Copied. Paste it into your AI chat.';
+  }catch(error){
+   var range=document.createRange();range.selectNodeContents(node);
+   var sel=window.getSelection();sel.removeAllRanges();sel.addRange(range);
+   status.textContent='Text selected. Use your device’s Copy command, then paste it into your AI chat.';
+  }
+ });
+});
+</script>
+</body></html>

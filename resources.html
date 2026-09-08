@@ -1,0 +1,600 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>AI Learning Resources — tools, courses, studies, and guidance | AI Above the Cut</title>
+<meta name="description" content="A curated library of AI tools, practical courses, research studies, workforce reports, and responsible-AI guidance — starting with a twelve-link path for people who do not want sixty-eight choices.">
+<link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'><rect width='32' height='32' rx='7' fill='%231B57F0'/><g fill='none' stroke='%23ffffff' stroke-width='2'><circle cx='16' cy='16' r='10'/><circle cx='16' cy='16' r='6'/></g><circle cx='16' cy='16' r='2.6' fill='%23ffffff'/></svg>">
+<link rel="icon" href="/favicon.svg" sizes="any">
+<link rel="canonical" href="https://aiabovethecut.com/resources.html">
+<meta property="og:type" content="article">
+<meta property="og:site_name" content="AI Above the Cut">
+<meta property="og:title" content="AI Learning Resources">
+<meta property="og:description" content="The internet does not have an AI-information shortage. It has a sorting problem. A curated path through the tools, guides, studies, and reports worth knowing.">
+<meta property="og:url" content="https://aiabovethecut.com/resources.html">
+<meta property="og:image" content="https://aiabovethecut.com/og-image.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="AI Learning Resources">
+<meta name="twitter:description" content="A curated path through the tools, guides, studies, and reports worth knowing.">
+<meta name="twitter:image" content="https://aiabovethecut.com/og-image.png">
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&family=IBM+Plex+Sans:wght@400;500;600&family=IBM+Plex+Mono:wght@500;600&display=swap" rel="stylesheet">
+<style>
+ :root{--blue:#1B57F0;--blue-dk:#1543c7;--navy:#0A1422;--body:#37444F;--slate:#566573;--chipblue:#EAF1FF;--hair:#E3E8EE;--wash:#F7F9FC}
+ *{box-sizing:border-box}
+ html{scroll-behavior:smooth}
+ body{margin:0;font-family:'IBM Plex Sans',sans-serif;color:var(--body);background:#fff;font-size:17px;line-height:1.65}
+ a{color:var(--blue)}
+ :focus-visible{outline:3px solid #7aa2ff;outline-offset:2px;border-radius:4px}
+ .skip{position:absolute;left:-999px;top:0;background:#fff;color:var(--blue);padding:10px 16px;font-weight:600;z-index:60}
+ .skip:focus{left:8px;top:8px}
+ .container{max-width:1200px;margin:0 auto;padding:0 32px}
+
+ /* ---- site chrome ---- */
+ .sitenav{position:sticky;top:0;z-index:40;background:var(--navy)}
+ .sitenav .container{display:flex;align-items:center;gap:16px;min-height:66px;flex-wrap:wrap}
+ .sitenav .brand{display:inline-flex;align-items:center;gap:11px;text-decoration:none;color:#fff;font:700 20px/1 'Space Grotesk',sans-serif;letter-spacing:-.01em}
+ .sitenav .menu{margin-left:auto;display:flex;align-items:center;gap:8px;flex-wrap:wrap}
+ .sitenav .menu a{color:#e7edf6;text-decoration:none;font:600 16px/1 'IBM Plex Sans',sans-serif;padding:11px 14px;border-radius:8px;display:inline-flex;align-items:center;min-height:44px}
+ .sitenav .menu a:hover{color:#fff;background:rgba(255,255,255,.10)}
+ .sitenav .menu a[aria-current="page"]{color:#fff;box-shadow:inset 0 -2px 0 var(--blue)}
+ .sitenav .menu a.sub{background:var(--blue);color:#fff;font-weight:700;padding:11px 18px}
+ .sitenav .menu a.sub:hover{background:#3a6cff}
+
+ /* ---- docs layout ---- */
+ .docs{display:grid;grid-template-columns:266px minmax(0,1fr);gap:52px;align-items:start;padding-bottom:20px}
+ .toc{position:sticky;top:86px;max-height:calc(100vh - 108px);overflow-y:auto;padding:28px 0 28px;border-right:1px solid var(--hair)}
+ .toc-h{font:700 12px/1 'IBM Plex Mono',monospace;letter-spacing:.14em;text-transform:uppercase;color:var(--slate);margin:0 0 14px;padding-right:22px}
+ .toc ol{list-style:none;margin:0;padding:0 22px 0 0}
+ .toc a{display:block;text-decoration:none;color:var(--slate);font:500 15px/1.4 'IBM Plex Sans',sans-serif;padding:8px 12px 8px 14px;border-left:2px solid var(--hair);border-radius:0 7px 7px 0}
+ .toc a:hover{color:var(--navy);background:var(--wash)}
+ .toc a .n{font:600 11.5px/1 'IBM Plex Mono',monospace;letter-spacing:.06em;color:#93a1b0;display:block;margin-bottom:3px}
+ .toc a.on{color:var(--blue);background:var(--chipblue);border-left-color:var(--blue);font-weight:600}
+ .toc a.on .n{color:var(--blue)}
+ .toc-foot{margin:20px 22px 0 14px;padding-top:16px;border-top:1px solid var(--hair);font:400 13.5px/1.55 'IBM Plex Sans',sans-serif;color:var(--slate)}
+ .toc-foot a{font-weight:600;text-decoration:none}
+ .toc-foot a:hover{text-decoration:underline}
+
+ .article{max-width:790px;padding:34px 0 60px;min-width:0}
+ .kicker{font:700 13px/1 'IBM Plex Mono',monospace;letter-spacing:.14em;text-transform:uppercase;color:var(--blue);margin:0 0 14px}
+ h1{font:700 clamp(32px,3.7vw,46px)/1.1 'Space Grotesk',sans-serif;letter-spacing:-.025em;color:var(--navy);margin:0 0 16px}
+ .deck{font-size:20.5px;line-height:1.55;color:var(--navy);margin:0 0 18px;font-weight:500}
+ .article h2{font:700 clamp(23px,2.4vw,29px)/1.2 'Space Grotesk',sans-serif;letter-spacing:-.02em;color:var(--navy);margin:0 0 8px}
+ .article h3{font:700 20px/1.3 'Space Grotesk',sans-serif;letter-spacing:-.01em;color:var(--navy);margin:30px 0 8px}
+ .article p{font-size:17.5px;line-height:1.75;margin:0 0 17px}
+ .article ul.plain{font-size:17px;line-height:1.7;padding-left:20px;margin:0 0 18px}
+ .article ul.plain li{margin:0 0 9px}
+ .article strong{color:var(--navy)}
+
+ section.part{padding:34px 0 8px;border-top:1px solid var(--hair);margin-top:26px;scroll-margin-top:86px}
+ section.part:first-of-type{border-top:0;margin-top:0;padding-top:6px}
+ .partno{font:700 12px/1 'IBM Plex Mono',monospace;letter-spacing:.14em;text-transform:uppercase;color:var(--blue);margin:0 0 10px}
+ .secnote{font-size:16.5px;line-height:1.65;color:var(--slate);margin:0 0 18px;max-width:62em}
+
+ .lede-box{border:2px solid var(--blue);background:#F2F6FF;border-radius:14px;padding:22px 24px;margin:0 0 22px}
+ .lede-box p{margin:0;font-size:18px;line-height:1.6}
+ .lede-box p+p{margin-top:10px}
+ .rule{border-left:3px solid var(--blue);background:var(--wash);border-radius:0 10px 10px 0;padding:16px 20px;margin:22px 0}
+ .rule p{margin:0;font-size:18px;line-height:1.6;color:var(--navy);font-weight:500}
+ .reviewed{display:inline-flex;align-items:center;gap:9px;font:600 12.5px/1 'IBM Plex Mono',monospace;letter-spacing:.07em;text-transform:uppercase;color:var(--slate);background:var(--wash);border:1px solid var(--hair);border-radius:20px;padding:9px 15px;margin:0 0 20px}
+ .reviewed b{color:var(--navy);font-weight:600}
+
+ /* ---- source-type tags ---- */
+ .tag{display:inline-block;font:600 10.5px/1 'IBM Plex Mono',monospace;letter-spacing:.07em;text-transform:uppercase;padding:5px 8px;border-radius:5px;white-space:nowrap;vertical-align:1px;background:#EEF1F5;color:#5B6B7C}
+ .t-prod{background:#E7F0FF;color:#1543c7}
+ .t-off{background:#EAF6F1;color:#1E6E52}
+ .t-uni{background:#F1EBFB;color:#5B3AA6}
+ .t-acad{background:#FDF0E6;color:#9A5410}
+ .t-gov{background:#EDF1F7;color:#3C5573}
+ .t-vend{background:#FBECEF;color:#93304A}
+ .t-news{background:#EFF4E9;color:#4A6B2A}
+
+ /* ---- label legend ---- */
+ .legend{border:1px solid var(--hair);border-radius:12px;padding:6px 20px 8px;margin:0 0 8px;background:#fff}
+ .legend dl{margin:0}
+ .legend dt{margin:14px 0 4px}
+ .legend dd{margin:0 0 14px;font-size:16px;line-height:1.6;color:var(--body)}
+ .legend dd:last-of-type{margin-bottom:10px}
+
+ /* ---- start-here path ---- */
+ ol.path{list-style:none;counter-reset:p;padding:0;margin:0 0 8px}
+ ol.path li{counter-increment:p;position:relative;padding:14px 0 14px 46px;border-bottom:1px solid var(--hair);margin:0;font-size:16.5px;line-height:1.62}
+ ol.path li:first-child{border-top:1px solid var(--hair)}
+ ol.path li::before{content:counter(p);position:absolute;left:0;top:15px;width:28px;height:28px;border-radius:8px;background:var(--blue);color:#fff;font:700 13.5px/28px 'IBM Plex Mono',monospace;text-align:center}
+ ol.path .do{display:block;font:600 17px/1.4 'Space Grotesk',sans-serif;color:var(--navy);margin-bottom:4px}
+
+ /* ---- compact link groups ---- */
+ .group{border:1px solid var(--hair);border-radius:12px;overflow:hidden;margin:0 0 16px}
+ .group>ol{list-style:none;margin:0;padding:0;counter-reset:none}
+ .group>ol>li{display:grid;grid-template-columns:38px minmax(0,1fr);gap:0 12px;padding:13px 18px;border-bottom:1px solid var(--hair);align-items:baseline}
+ .group>ol>li:nth-child(even){background:#FBFCFE}
+ .group>ol>li:last-child{border-bottom:0}
+ .num{font:600 12.5px/1.5 'IBM Plex Mono',monospace;color:#9AA7B4;text-align:right}
+ .rhead{margin:0 0 2px;display:flex;flex-wrap:wrap;align-items:baseline;gap:6px 9px}
+ .rhead a{font:600 17px/1.35 'Space Grotesk',sans-serif;text-decoration:none;color:var(--blue)}
+ .rhead a:hover{text-decoration:underline;color:var(--blue-dk)}
+ .rdesc{margin:0;font-size:15.5px;line-height:1.55;color:var(--body)}
+ .rdesc em{color:var(--slate)}
+
+ /* ---- rules block ---- */
+ .rules{counter-reset:r;list-style:none;padding:0;margin:0}
+ .rules li{counter-increment:r;position:relative;border:1px solid var(--hair);border-radius:12px;padding:18px 22px 18px 22px;margin:0 0 12px}
+ .rules h3{margin:0 0 6px;font:700 18.5px/1.3 'Space Grotesk',sans-serif;color:var(--navy)}
+ .rules h3::before{content:counter(r) ". ";color:var(--blue)}
+ .rules p{margin:0;font-size:16.5px;line-height:1.65}
+
+ /* cross-link card */
+ .xlink{display:block;border:2px solid var(--blue);background:#F2F6FF;border-radius:14px;padding:22px 24px;margin:30px 0 0;text-decoration:none;color:inherit}
+ .xlink:hover{background:#E8F0FF}
+ .xlink .t{font:700 20px/1.25 'Space Grotesk',sans-serif;color:var(--navy);margin:0 0 6px}
+ .xlink p{margin:0;font-size:16.5px;line-height:1.6;color:var(--body)}
+ .xlink .go{display:inline-block;margin-top:10px;font:700 15.5px 'Space Grotesk',sans-serif;color:var(--blue)}
+
+ .cta{display:inline-block;margin:26px 0 0;background:var(--blue);color:#fff;text-decoration:none;font:700 16px 'Space Grotesk',sans-serif;padding:15px 26px;border-radius:9px;min-height:48px}
+ .cta:hover{background:var(--blue-dk)}
+
+ .foot{border-top:1px solid var(--hair)}
+ .foot .container{padding-top:24px;padding-bottom:46px;font:400 14.5px/1.7 'IBM Plex Sans',sans-serif;color:var(--slate)}
+ .foot a{color:var(--slate);text-decoration:underline;font-weight:600}
+ .foot a:hover{color:var(--blue)}
+
+ .toc-toggle{display:none}
+ @media(max-width:1000px){
+  .container{padding:0 20px}
+  .docs{grid-template-columns:1fr;gap:0}
+  .toc{position:static;max-height:none;border-right:0;border-bottom:1px solid var(--hair);padding:0 0 18px;margin-top:18px}
+  .toc-toggle{display:block;width:100%;text-align:left;background:var(--wash);border:1px solid var(--hair);border-radius:10px;padding:14px 18px;font:600 16px 'Space Grotesk',sans-serif;color:var(--navy);cursor:pointer;min-height:48px}
+  .toc-toggle::after{content:"▾";float:right;color:var(--blue)}
+  .toc-toggle[aria-expanded="true"]::after{content:"▴"}
+  .toc-h{display:none}
+  .toc ol{padding:12px 0 0;max-height:60vh;overflow-y:auto}
+  .toc[data-collapsed="true"] ol,.toc[data-collapsed="true"] .toc-foot{display:none}
+  .article{padding-top:24px}
+  .group>ol>li{grid-template-columns:1fr;padding:14px 16px}
+  .num{display:none}
+ }
+ @media(min-width:1001px){.toc ol{display:block!important}}
+</style></head><body>
+<a class="skip" href="#main">Skip to content</a>
+<header class="sitenav">
+ <div class="container">
+  <a class="brand" href="index.html">
+   <svg width="27" height="27" viewBox="0 0 30 30" aria-hidden="true" focusable="false"><g fill="none" stroke="#1B57F0" stroke-width="1.8"><circle cx="15" cy="15" r="13.2"/><circle cx="15" cy="15" r="8.6"/><circle cx="15" cy="15" r="4"/></g><circle cx="15" cy="15" r="2.4" fill="#1B57F0"/></svg>
+   AI ABOVE THE CUT
+  </a>
+  <nav class="menu" aria-label="Main">
+   <a href="index.html">Home</a>
+   <a href="/current">Current issue</a>
+   <a href="field-guide.html">Field Guide</a>
+   <a href="resources.html" aria-current="page">Resources</a>
+   <a href="about.html">About</a>
+   <a class="sub" href="index.html#subscribe">Subscribe</a>
+  </nav>
+ </div>
+</header>
+
+<div class="container">
+<div class="docs">
+
+ <nav class="toc" id="toc" aria-label="Library contents" data-collapsed="true">
+  <button class="toc-toggle" id="tocToggle" aria-expanded="false" aria-controls="tocList">Contents</button>
+  <p class="toc-h">The Library</p>
+  <ol id="tocList">
+   <li><a href="getting-started.html">Brand-new to AI? Start here →</a></li>
+   <li><a href="#start-here"><span class="n">Start</span>The 12-link learning path</a></li>
+   <li><a href="#labels">How to read the labels</a></li>
+   <li><a href="#assistants"><span class="n">Section 1</span>Choose and try an assistant</a></li>
+   <li><a href="#practical"><span class="n">Section 2</span>Learn practical AI use</a></li>
+   <li><a href="#under-the-hood"><span class="n">Section 3</span>What is under the hood</a></li>
+   <li><a href="#studies"><span class="n">Section 4</span>Productivity, judgment, creativity</a></li>
+   <li><a href="#work"><span class="n">Section 5</span>Work, organizations, economy</a></li>
+   <li><a href="#responsible"><span class="n">Section 6</span>Responsible use and risk</a></li>
+   <li><a href="#keep-up"><span class="n">Section 7</span>Keep up without drowning</a></li>
+   <li><a href="#four-rules">Four rules for this library</a></li>
+  </ol>
+  <p class="toc-foot">New to this? Read the <a href="field-guide.html">Field Guide</a> first. It teaches the way of working these resources support.</p>
+ </nav>
+
+ <main class="article" id="main">
+
+  <p class="kicker">Resources</p>
+  <h1>AI Learning Resources</h1>
+  <p class="deck">A curated path through the tools, guides, studies, and reports worth knowing.</p>
+  <p class="reviewed">Last reviewed <b>September 7, 2026</b></p>
+
+  <section class="part" id="start-here">
+   <div class="lede-box">
+    <p>The internet does not have an AI-information shortage. It has a sorting problem.</p>
+   </div>
+
+   <p>This collection is for people who want to become capable users of AI without following every product launch or mistaking every confident claim for settled evidence. It begins with a short learning path. The larger library then lets you go deeper into practical use, the mechanics of generative AI, research on how it changes work and thinking, workforce implications, and responsible use.</p>
+
+   <p>This is a companion to the <a href="field-guide.html">Get to Know AI field guide</a>. The field guide teaches a way of working. This page points outward to people and institutions that can help you keep learning.</p>
+
+   <p class="secnote">Product features, model names, prices, and usage limits change quickly. The product links below point to official pages rather than freezing those details here.</p>
+
+   <a class="xlink" href="getting-started.html" style="margin:22px 0 28px">
+    <p class="t">Brand-new to AI? Start here.</p>
+    <p>Pick a free chat tool, try your first message, and learn what to do with the answer. No experience needed.</p>
+    <span class="go">Your first AI chat →</span>
+   </a>
+
+   <h2>Start here: a 12-link learning path</h2>
+   <p>If you do not want sixty-eight choices, use these twelve in order.</p>
+
+   <ol class="path">
+    <li><span class="do">Learn the basic mental model.</span> The University of Helsinki's <a href="https://www.elementsofai.com/" rel="noopener">Elements of AI</a> is a free, approachable introduction for nontechnical learners. <span class="tag t-uni">Free course</span></li>
+    <li><span class="do">See what a modern assistant can do.</span> OpenAI Academy's <a href="https://openai.com/academy/getting-started/" rel="noopener">Getting Started with ChatGPT</a> covers the interface, first prompts, and common uses. <span class="tag t-off">Official guide</span></li>
+    <li><span class="do">Learn to brief the work.</span> Anthropic's <a href="https://docs.anthropic.com/en/docs/build-with-claude/prompt-engineering/prompt-templates-and-variables" rel="noopener">prompting best practices</a> emphasize clarity, context, examples, and structure. The principles travel across products. <span class="tag t-off">Official guide</span></li>
+    <li><span class="do">Try the same real task in two tools.</span> Use <a href="https://chatgpt.com/" rel="noopener">ChatGPT</a>, <a href="https://claude.ai/" rel="noopener">Claude</a>, or <a href="https://gemini.google.com/" rel="noopener">Gemini</a> and compare the returns. Do not stage a trivia contest; use work you understand well enough to judge.</li>
+    <li><span class="do">Learn the central limitation.</span> Read the field guide's sections on <a href="field-guide.html#brain-in-jar">plausibility and context</a> and <a href="field-guide.html#part-5">verification</a>, then use the <a href="https://nvlpubs.nist.gov/nistpubs/ai/NIST.AI.600-1.pdf" rel="noopener">NIST Generative AI Profile</a> to see how those risks appear at system level. <span class="tag t-gov">Government guidance</span></li>
+    <li><span class="do">Study one strong productivity result carefully.</span> <a href="https://www.nber.org/papers/w31161" rel="noopener">Generative AI at Work</a> reports an average productivity gain in a particular customer-support setting and shows that gains varied by worker experience. <span class="tag t-acad">Working paper</span></li>
+    <li><span class="do">Study the boundary of competence.</span> The <a href="https://www.hbs.edu/ris/download.aspx?name=24-013.pdf" rel="noopener">Jagged Technological Frontier study</a> shows why performance can improve on tasks inside a model's capabilities and deteriorate outside them. <span class="tag t-acad">Field experiment</span></li>
+    <li><span class="do">Study the human side of verification.</span> Microsoft's <a href="https://www.microsoft.com/en-us/research/wp-content/uploads/2025/01/lee_2025_ai_critical_thinking_survey.pdf" rel="noopener">Critical Thinking in AI-Assisted Knowledge Work</a> examines how knowledge workers say AI changes where they apply critical thinking. Treat it as self-reported evidence, not proof that AI makes people less intelligent. <span class="tag t-vend">Vendor research</span></li>
+    <li><span class="do">See the broader field.</span> The <a href="https://hai.stanford.edu/ai-index/2026-ai-index-report" rel="noopener">Stanford AI Index 2026</a> assembles data on capabilities, economics, adoption, policy, education, and public opinion. <span class="tag">Independent index</span></li>
+    <li><span class="do">Put workforce claims in perspective.</span> The ILO's <a href="https://www.ilo.org/publications/generative-ai-and-jobs-refined-global-index-occupational-exposure" rel="noopener">Generative AI and Jobs</a> distinguishes occupational exposure from inevitable job loss and emphasizes transformation as well as automation. <span class="tag t-gov">Intergovernmental</span></li>
+    <li><span class="do">Adopt a risk vocabulary.</span> The <a href="https://www.nist.gov/itl/ai-risk-management-framework" rel="noopener">NIST AI Risk Management Framework</a> organizes responsible practice around governing, mapping, measuring, and managing risk. <span class="tag t-gov">Government framework</span></li>
+    <li><span class="do">Keep learning without chasing everything.</span> Subscribe to one thoughtful digest, such as Stanford HAI's <a href="https://hai.stanford.edu/subscribe-hai-mailing-list" rel="noopener">research and policy updates</a>, and revisit this library quarterly.</li>
+   </ol>
+  </section>
+
+  <section class="part" id="labels">
+   <h2>How to read the labels</h2>
+   <p class="secnote">Every entry below carries a tag. The tag tells you what kind of claim the source can support, and what it cannot.</p>
+   <div class="legend"><dl>
+    <dt><span class="tag t-off">Official guide</span></dt>
+    <dd>The organization is explaining its own product or teaching material. It is the best source for how the product works today, but not a neutral comparison.</dd>
+    <dt><span class="tag t-acad">Academic study</span></dt>
+    <dd>A research paper or working paper with a defined method. Read the task, sample, model, and outcome before generalizing the finding.</dd>
+    <dt><span class="tag t-gov">Government or intergovernmental</span></dt>
+    <dd>Useful for risk, policy, and workforce framing. It may move more slowly than the products.</dd>
+    <dt><span class="tag t-vend">Vendor research</span></dt>
+    <dd>May contain strong data and careful analysis, but the publisher also has an interest in AI adoption or in its own product.</dd>
+    <dt><span class="tag">Consultancy survey</span></dt>
+    <dd>Useful for seeing what leaders report and how organizations are responding. It is not the same as observed performance.</dd>
+    <dt><span class="tag">Independent index or analysis</span></dt>
+    <dd>Synthesizes a field. Its value depends on transparent sources and definitions.</dd>
+   </dl></div>
+  </section>
+
+  <section class="part" id="assistants">
+   <p class="partno">Section 1</p>
+   <h2>Choose and try an AI assistant</h2>
+   <p class="secnote">These are starting points, not endorsements. Begin with a free account and a low-risk task you know well. Compare tools on usefulness, sources, privacy controls, workflow fit, and how easily you can inspect the work.</p>
+
+   <div class="group"><ol>
+    <li><span class="num">01</span><div>
+     <p class="rhead"><a href="https://chatgpt.com/" rel="noopener">ChatGPT</a> <span class="tag t-prod">Product</span></p>
+     <p class="rdesc">A general-purpose assistant for conversation, writing, analysis, files, images, research, and larger work.</p></div></li>
+    <li><span class="num">02</span><div>
+     <p class="rhead"><a href="https://openai.com/chatgpt/pricing" rel="noopener">ChatGPT plans</a> <span class="tag t-off">Official product info</span></p>
+     <p class="rdesc">The official comparison of individual and organizational plans. Check this page for current features and limits.</p></div></li>
+    <li><span class="num">03</span><div>
+     <p class="rhead"><a href="https://claude.ai/" rel="noopener">Claude</a> <span class="tag t-prod">Product</span></p>
+     <p class="rdesc">Anthropic's general-purpose assistant, often used for writing, analysis, documents, and coding.</p></div></li>
+    <li><span class="num">04</span><div>
+     <p class="rhead"><a href="https://support.anthropic.com/en/articles/11049762-choosing-a-claude-ai-plan" rel="noopener">Choosing a Claude plan</a> <span class="tag t-off">Official product info</span></p>
+     <p class="rdesc">Anthropic's current plan guide for individual and organizational users.</p></div></li>
+    <li><span class="num">05</span><div>
+     <p class="rhead"><a href="https://www.perplexity.ai/" rel="noopener">Perplexity</a> <span class="tag t-prod">Product</span></p>
+     <p class="rdesc">A research-oriented answer engine designed to return web-grounded answers with citations. Always open the cited sources; the presence of citations does not guarantee that a claim is supported.</p></div></li>
+    <li><span class="num">06</span><div>
+     <p class="rhead"><a href="https://www.perplexity.ai/help-center/en/articles/11187416-which-perplexity-subscription-plan-is-right-for-you" rel="noopener">Choosing a Perplexity plan</a> <span class="tag t-off">Official product info</span></p>
+     <p class="rdesc">The official overview of free, individual, education, enterprise, and developer options.</p></div></li>
+    <li><span class="num">07</span><div>
+     <p class="rhead"><a href="https://gemini.google.com/" rel="noopener">Gemini</a> <span class="tag t-prod">Product</span></p>
+     <p class="rdesc">Google's general-purpose AI assistant, with integrations across parts of the Google ecosystem.</p></div></li>
+    <li><span class="num">08</span><div>
+     <p class="rhead"><a href="https://gemini.google.com/advanced" rel="noopener">Google AI plans</a> <span class="tag t-off">Official product info</span></p>
+     <p class="rdesc">The current comparison of free and paid Google AI access, including Gemini and NotebookLM benefits.</p></div></li>
+    <li><span class="num">09</span><div>
+     <p class="rhead"><a href="https://copilot.microsoft.com/" rel="noopener">Microsoft Copilot</a> <span class="tag t-prod">Product</span></p>
+     <p class="rdesc">Microsoft's consumer AI assistant. Organizations using Microsoft 365 should separately review the product, license, data, and administrative terms that apply to their environment.</p></div></li>
+    <li><span class="num">10</span><div>
+     <p class="rhead"><a href="https://notebooklm.google.com/" rel="noopener">NotebookLM</a> <span class="tag t-prod">Product</span></p>
+     <p class="rdesc">A source-grounded research and learning tool that works from material you provide. It is especially useful for exploring a bounded document collection, but its synthesis still requires review.</p></div></li>
+   </ol></div>
+  </section>
+
+  <section class="part" id="practical">
+   <p class="partno">Section 2</p>
+   <h2>Learn practical AI use</h2>
+   <p class="secnote">Guides and courses that teach the craft: giving a model clear tasks, context, constraints, and examples, then judging what comes back.</p>
+
+   <div class="group"><ol>
+    <li><span class="num">11</span><div>
+     <p class="rhead"><a href="https://openai.com/academy/using-chatgpt/" rel="noopener">Using ChatGPT</a> <span class="tag t-off">Official guide</span></p>
+     <p class="rdesc">A navigable OpenAI Academy hub covering core skills, files, research, personalization, projects, and workflows.</p></div></li>
+    <li><span class="num">12</span><div>
+     <p class="rhead"><a href="https://help.openai.com/en/articles/20001270-openai-academy-courses" rel="noopener">OpenAI Academy courses</a> <span class="tag t-off">Course catalog</span></p>
+     <p class="rdesc">Free self-paced pathways in AI foundations, applied practice, and agents and workflows.</p></div></li>
+    <li><span class="num">13</span><div>
+     <p class="rhead"><a href="https://academy.openai.com/en/public/clubs/work-users-ynjqu/resources/prompting" rel="noopener">Prompting</a> <span class="tag t-off">Official guide</span></p>
+     <p class="rdesc">A practical OpenAI Academy introduction to giving a model clear tasks, context, constraints, and examples.</p></div></li>
+    <li><span class="num">14</span><div>
+     <p class="rhead"><a href="https://academy.openai.com/public/clubs/work-users-ynjqu/resources/chatgpt-101-webinar-resource-guide-interactive" rel="noopener">ChatGPT 101 resource guide</a> <span class="tag t-off">Official guide</span></p>
+     <p class="rdesc">A beginner-oriented collection of demonstrations and next steps.</p></div></li>
+    <li><span class="num">15</span><div>
+     <p class="rhead"><a href="https://www.anthropic.com/learn?subjects=claude&amp;type=product" rel="noopener">Anthropic Learn</a> <span class="tag t-off">Official guide</span></p>
+     <p class="rdesc">Anthropic's collection of guides and courses for using Claude.</p></div></li>
+    <li><span class="num">16</span><div>
+     <p class="rhead"><a href="https://www.anthropic.com/learn/claude-for-you" rel="noopener">AI Fluency</a> <span class="tag t-off">Official course</span></p>
+     <p class="rdesc">Anthropic's learning program for collaborating with AI more deliberately.</p></div></li>
+    <li><span class="num">17</span><div>
+     <p class="rhead"><a href="https://cloud.google.com/vertex-ai/generative-ai/docs/learn/prompts/prompt-design-strategies" rel="noopener">Prompt design strategies</a> <span class="tag t-off">Official guide</span></p>
+     <p class="rdesc">Google's concise guide to clear instructions, examples, context, structure, and iteration. It is written for Google's platform, but much of the advice is portable.</p></div></li>
+    <li><span class="num">18</span><div>
+     <p class="rhead"><a href="https://ai.google/literacy/" rel="noopener">Google AI literacy</a> <span class="tag t-off">Learning hub</span></p>
+     <p class="rdesc">Google's learning collection on understanding and using AI.</p></div></li>
+    <li><span class="num">19</span><div>
+     <p class="rhead"><a href="https://github.com/microsoft/generative-ai-for-beginners" rel="noopener">Generative AI for Beginners</a> <span class="tag t-off">Open course</span></p>
+     <p class="rdesc">A substantial open course from Microsoft with lessons and examples. Some modules are technical; nontechnical readers can use the conceptual sections.</p></div></li>
+    <li><span class="num">20</span><div>
+     <p class="rhead"><a href="https://github.com/microsoft/ai-for-beginners" rel="noopener">AI for Beginners</a> <span class="tag t-off">Open course</span></p>
+     <p class="rdesc">Microsoft's broader curriculum on artificial intelligence beyond generative chat tools.</p></div></li>
+    <li><span class="num">21</span><div>
+     <p class="rhead"><a href="https://learn.microsoft.com/en-us/training/modules/fundamentals-generative-ai/" rel="noopener">Introduction to generative AI and agents</a> <span class="tag t-off">Official course</span></p>
+     <p class="rdesc">A short Microsoft Learn module on language models, generative AI applications, and agents.</p></div></li>
+    <li><span class="num">22</span><div>
+     <p class="rhead"><a href="https://www.elementsofai.com/" rel="noopener">Elements of AI</a> <span class="tag t-uni">University course</span></p>
+     <p class="rdesc">A free course created by the University of Helsinki and MinnaLearn for people without a technical background.</p></div></li>
+    <li><span class="num">23</span><div>
+     <p class="rhead"><a href="https://buildingai.elementsofai.com/" rel="noopener">Building AI</a> <span class="tag t-uni">University course</span></p>
+     <p class="rdesc">A follow-on course that moves from AI concepts toward building and evaluating applications.</p></div></li>
+    <li><span class="num">24</span><div>
+     <p class="rhead"><a href="https://www.deeplearning.ai/courses/genai4e/" rel="noopener">Generative AI for Everyone</a> <span class="tag">Independent course</span></p>
+     <p class="rdesc">Andrew Ng's nontechnical course on capabilities, use cases, project lifecycles, and social implications.</p></div></li>
+   </ol></div>
+  </section>
+
+  <section class="part" id="under-the-hood">
+   <p class="partno">Section 3</p>
+   <h2>Understand what is under the hood</h2>
+   <p class="secnote">You do not need to become a machine-learning engineer. You do need enough of a mental model to understand why fluent output can be wrong, why context matters, and why one task can work brilliantly while a similar-looking task fails.</p>
+
+   <div class="group"><ol>
+    <li><span class="num">25</span><div>
+     <p class="rhead"><a href="https://www.futureofai.mit.edu/" rel="noopener">MIT: Foundation Models and Generative AI</a> <span class="tag t-uni">University course</span></p>
+     <p class="rdesc">A nontechnical lecture series covering the path to foundation models and their practical implications.</p></div></li>
+    <li><span class="num">26</span><div>
+     <p class="rhead"><a href="https://learn.mit.edu/courses/p/program-v1%3AUAI%2BB2C.4" rel="noopener">MIT: Fundamentals of Large Language Models</a> <span class="tag t-uni">University course</span></p>
+     <p class="rdesc">A deeper, paid self-paced course on LLMs, multimodality, prompting, limitations, and responsible use.</p></div></li>
+    <li><span class="num">27</span><div>
+     <p class="rhead"><a href="https://developers.google.com/machine-learning/resources/intro-llms" rel="noopener">What are large language models?</a> <span class="tag t-off">Technical primer</span></p>
+     <p class="rdesc">Google's compact explanation of tokens, parameters, prompting, and common model behavior.</p></div></li>
+    <li><span class="num">28</span><div>
+     <p class="rhead"><a href="https://developers.google.com/machine-learning/crash-course/llm" rel="noopener">Introduction to Large Language Models</a> <span class="tag t-off">Official course</span></p>
+     <p class="rdesc">A more structured Google Machine Learning Crash Course module.</p></div></li>
+    <li><span class="num">29</span><div>
+     <p class="rhead"><a href="https://arxiv.org/abs/1706.03762" rel="noopener">Attention Is All You Need</a> <span class="tag t-acad">Research paper</span></p>
+     <p class="rdesc">The foundational 2017 paper that introduced the Transformer architecture. This is primary technical literature, not a beginner guide.</p></div></li>
+    <li><span class="num">30</span><div>
+     <p class="rhead"><a href="https://jalammar.github.io/illustrated-transformer/" rel="noopener">The Illustrated Transformer</a> <span class="tag">Independent explainer</span></p>
+     <p class="rdesc">Jay Alammar's visual explanation of the Transformer. It remains one of the clearest bridges between a general mental model and the technical architecture.</p></div></li>
+    <li><span class="num">31</span><div>
+     <p class="rhead"><a href="https://jalammar.github.io/illustrated-gpt2/" rel="noopener">The Illustrated GPT-2</a> <span class="tag">Independent explainer</span></p>
+     <p class="rdesc">A visual explanation of autoregressive language generation: how a model builds a sequence one token at a time.</p></div></li>
+   </ol></div>
+  </section>
+
+  <section class="part" id="studies">
+   <p class="partno">Section 4</p>
+   <h2>Study AI, productivity, judgment, and creativity</h2>
+   <p class="secnote">This is where careful reading matters most. A study can be rigorous and still be narrow. Ask four questions every time: Who participated? What task did they perform? Which model and interface did they use? What outcome was actually measured?</p>
+
+   <div class="group"><ol>
+    <li><span class="num">32</span><div>
+     <p class="rhead"><a href="https://www.nber.org/papers/w31161" rel="noopener">Generative AI at Work</a> <span class="tag t-acad">Working paper</span></p>
+     <p class="rdesc">A study of 5,179 customer-support agents that reported higher productivity on average, with larger gains for less-experienced workers. Strong evidence for this setting; not a universal productivity number.</p></div></li>
+    <li><span class="num">33</span><div>
+     <p class="rhead"><a href="https://www.hbs.edu/ris/download.aspx?name=24-013.pdf" rel="noopener">The Jagged Technological Frontier study</a> <span class="tag t-acad">Field experiment</span></p>
+     <p class="rdesc">A field experiment with BCG consultants showing gains on tasks inside the model's capability boundary and worse performance on a task outside it.</p></div></li>
+    <li><span class="num">34</span><div>
+     <p class="rhead"><a href="https://doi.org/10.1126/science.adh2586" rel="noopener">Experimental Evidence on the Productivity Effects of Generative AI</a> <span class="tag t-acad">Peer-reviewed</span></p>
+     <p class="rdesc">A controlled study of midlevel professional writing tasks that found faster completion and higher evaluator-rated quality among participants using ChatGPT.</p></div></li>
+    <li><span class="num">35</span><div>
+     <p class="rhead"><a href="https://www.microsoft.com/en-us/research/wp-content/uploads/2025/01/lee_2025_ai_critical_thinking_survey.pdf" rel="noopener">Critical Thinking in AI-Assisted Knowledge Work</a> <span class="tag t-vend">Vendor research</span></p>
+     <p class="rdesc">A survey of 319 knowledge workers about when and how they apply critical thinking with generative AI. It measures reported behavior and perceptions, not long-term cognitive change.</p></div></li>
+    <li><span class="num">36</span><div>
+     <p class="rhead"><a href="https://www.microsoft.com/en-us/research/articles/rethinking-ai-in-knowledge-work-from-assistant-to-tool-for-thought/" rel="noopener">Rethinking AI in Knowledge Work</a> <span class="tag t-vend">Vendor analysis</span></p>
+     <p class="rdesc">A useful argument for designing AI as a tool for thought, sensemaking, and reflection rather than only an answer machine.</p></div></li>
+    <li><span class="num">37</span><div>
+     <p class="rhead"><a href="https://www.microsoft.com/en-us/research/project/tools-for-thought/" rel="noopener">Tools for Thought</a> <span class="tag t-vend">Research program</span></p>
+     <p class="rdesc">Microsoft's research program on systems that support human cognition and agency.</p></div></li>
+    <li><span class="num">38</span><div>
+     <p class="rhead"><a href="https://www.microsoft.com/en-us/research/project/the-new-future-of-work/" rel="noopener">The New Future of Work</a> <span class="tag t-vend">Research hub</span></p>
+     <p class="rdesc">A long-running Microsoft Research initiative assembling studies on AI, work, organizations, and education.</p></div></li>
+    <li><span class="num">39</span><div>
+     <p class="rhead"><a href="https://hbr.org/2025/09/ai-generated-workslop-is-destroying-productivity" rel="noopener">AI-Generated “Workslop” Is Destroying Productivity</a> <span class="tag t-vend">Survey and commentary</span></p>
+     <p class="rdesc">The article that popularized “workslop”: plausible-looking AI output that pushes interpretation and repair onto someone else. The underlying findings are survey-based and self-reported; use the concept, not the headline as a measured universal rate.</p></div></li>
+    <li><span class="num">40</span><div>
+     <p class="rhead"><a href="https://www.betterup.com/hubfs/Post-Uplift%20content/BetterUp_Uplift_The%20hidden%20cost%20of%20workslop.pdf" rel="noopener">The hidden cost of workslop</a> <span class="tag t-vend">Vendor research</span></p>
+     <p class="rdesc">The underlying BetterUp Labs and Stanford Social Media Lab report. Useful for method and question wording when evaluating the workslop claims.</p></div></li>
+    <li><span class="num">41</span><div>
+     <p class="rhead"><a href="https://www.anthropic.com/research/AI-assistance-coding-skills" rel="noopener">AI assistance and coding skills</a> <span class="tag t-vend">Vendor research</span></p>
+     <p class="rdesc">A preliminary randomized study of 52 mostly junior software developers that found a learning cost under the tested conditions. Narrow evidence, important question.</p></div></li>
+    <li><span class="num">42</span><div>
+     <p class="rhead"><a href="https://www.anthropic.com/research/claude-code-expertise" rel="noopener">How AI assistance impacts the formation of coding expertise</a> <span class="tag t-vend">Vendor research</span></p>
+     <p class="rdesc">Analysis of Claude Code sessions exploring planning, execution, verification, and the role of prior expertise. The evidence is product-specific telemetry.</p></div></li>
+    <li><span class="num">43</span><div>
+     <p class="rhead"><a href="https://www.anthropic.com/research/economic-index-march-2026-report" rel="noopener">Economic Index: Learning curves</a> <span class="tag t-vend">Vendor research</span></p>
+     <p class="rdesc">Anthropic's analysis of how patterns of Claude use change with experience. Useful for studying adoption behavior, with the limits of one product's data.</p></div></li>
+    <li><span class="num">44</span><div>
+     <p class="rhead"><a href="https://doi.org/10.1126/sciadv.adn5290" rel="noopener">Generative AI enhances individual creativity but reduces collective diversity</a> <span class="tag t-acad">Peer-reviewed</span></p>
+     <p class="rdesc">An experiment using short stories that found higher creativity ratings for individuals receiving AI help alongside lower diversity across outputs. Do not automatically generalize from short fiction to all creative work.</p></div></li>
+    <li><span class="num">45</span><div>
+     <p class="rhead"><a href="https://doi.org/10.1073/pnas.2426766122" rel="noopener">When and why people think worse of others who use AI</a> <span class="tag t-acad">Peer-reviewed</span></p>
+     <p class="rdesc">Research on how observers evaluate people who disclose AI use. Helpful for understanding the social layer of adoption, not just task performance.</p></div></li>
+   </ol></div>
+  </section>
+
+  <section class="part" id="work">
+   <p class="partno">Section 5</p>
+   <h2>Follow AI at work, in organizations, and across the economy</h2>
+   <p class="secnote">These reports answer different questions and use different methods. Read them side by side. Workforce exposure is not the same as job loss. Adoption is not the same as value. A survey of executive expectations is not an audited financial result.</p>
+
+   <div class="group"><ol>
+    <li><span class="num">46</span><div>
+     <p class="rhead"><a href="https://www.microsoft.com/en-us/worklab/work-trend-index" rel="noopener">Microsoft Work Trend Index</a> <span class="tag t-vend">Research hub</span></p>
+     <p class="rdesc">Microsoft's hub for recurring studies on AI and work. It combines surveys, product telemetry, and interpretation; each edition should be read for its specific method.</p></div></li>
+    <li><span class="num">47</span><div>
+     <p class="rhead"><a href="https://www.microsoft.com/en-us/worklab/work-trend-index/agents-human-agency-and-the-opportunity-for-every-organization" rel="noopener">2026 Work Trend Index</a> <span class="tag t-vend">Vendor research</span></p>
+     <p class="rdesc">Microsoft's current report on agents, human agency, and organizational adoption, based on a survey of AI-using workers across ten markets and other Microsoft data.</p></div></li>
+    <li><span class="num">48</span><div>
+     <p class="rhead"><a href="https://www.mckinsey.com/capabilities/quantumblack/our-insights/the-state-of-ai" rel="noopener">The State of AI</a> <span class="tag">Consultancy survey</span></p>
+     <p class="rdesc">McKinsey's 2025 global survey on organizational adoption, scaling, and reported business impact. Useful as a management snapshot; responses are self-reported.</p></div></li>
+    <li><span class="num">49</span><div>
+     <p class="rhead"><a href="https://www.mckinsey.com/capabilities/quantumblack/our-insights/the-state-of-ai-how-organizations-are-rewiring-to-capture-value" rel="noopener">How organizations are rewiring to capture value</a> <span class="tag">Consultancy survey</span></p>
+     <p class="rdesc">McKinsey's earlier 2025 report on workflows, governance, talent, and operating changes associated with reported value.</p></div></li>
+    <li><span class="num">50</span><div>
+     <p class="rhead"><a href="https://www.mckinsey.com/capabilities/quantumblack/our-insights/one-year-of-agentic-ai-six-lessons-from-the-people-doing-the-work" rel="noopener">One year of agentic AI: six lessons</a> <span class="tag">Consultancy analysis</span></p>
+     <p class="rdesc">Practitioner lessons on moving agentic systems from demos into operations. Read as field perspective rather than independent proof.</p></div></li>
+    <li><span class="num">51</span><div>
+     <p class="rhead"><a href="https://www.pwc.com/gx/en/issues/artificial-intelligence/publications/artificial-intelligence-study.html" rel="noopener">PwC 2026 Global AI Jobs Barometer</a> <span class="tag">Consultancy analysis</span></p>
+     <p class="rdesc">PwC's analysis of job postings, skill change, wages, and productivity across AI-exposed industries. Check definitions before translating exposure into displacement.</p></div></li>
+    <li><span class="num">52</span><div>
+     <p class="rhead"><a href="https://www.weforum.org/publications/the-future-of-jobs-report-2025/in-full/" rel="noopener">WEF Future of Jobs Report 2025</a> <span class="tag">Employer survey</span></p>
+     <p class="rdesc">A global employer survey on expected job creation, displacement, skill needs, and transformation through 2030. It reports expectations, not guaranteed outcomes.</p></div></li>
+    <li><span class="num">53</span><div>
+     <p class="rhead"><a href="https://web-assets.bcg.com/fd/0d/bcc5dfae4cbaa08c718b95b16cf5/ai-at-work-2025-slideshow-june-2025-edit-02.pdf" rel="noopener">BCG AI at Work 2025</a> <span class="tag">Consultancy survey</span></p>
+     <p class="rdesc">A survey of more than 10,000 workers and leaders on use, training, trust, and the gap between access and effective adoption.</p></div></li>
+    <li><span class="num">54</span><div>
+     <p class="rhead"><a href="https://hai.stanford.edu/ai-index/2026-ai-index-report" rel="noopener">Stanford AI Index 2026</a> <span class="tag">Independent index</span></p>
+     <p class="rdesc">A wide-ranging annual compilation of data on technical performance, investment, business use, policy, education, and public attitudes.</p></div></li>
+    <li><span class="num">55</span><div>
+     <p class="rhead"><a href="https://www.ilo.org/publications/generative-ai-and-jobs-refined-global-index-occupational-exposure" rel="noopener">ILO: Generative AI and Jobs</a> <span class="tag t-gov">Intergovernmental</span></p>
+     <p class="rdesc">A global occupational-exposure index that stresses the difference between possible automation and likely job transformation.</p></div></li>
+    <li><span class="num">56</span><div>
+     <p class="rhead"><a href="https://www.elibrary.imf.org/view/journals/006/2024/001/article-A000-en.xml" rel="noopener">IMF: Gen-AI and the Future of Work</a> <span class="tag t-gov">Intergovernmental</span></p>
+     <p class="rdesc">An analysis of global labor-market exposure, complementarity, inequality, and policy choices.</p></div></li>
+    <li><span class="num">57</span><div>
+     <p class="rhead"><a href="https://www.microsoft.com/en-us/research/publication/working-with-ai-measuring-the-occupational-implications-of-generative-ai/" rel="noopener">Working with AI: measuring occupational implications</a> <span class="tag t-vend">Vendor research</span></p>
+     <p class="rdesc">A Microsoft Research paper using Copilot conversations to estimate where AI is being used successfully across work activities. It measures observed product interactions, not which occupations will disappear.</p></div></li>
+   </ol></div>
+  </section>
+
+  <section class="part" id="responsible">
+   <p class="partno">Section 6</p>
+   <h2>Use AI responsibly and manage risk</h2>
+   <p class="secnote">A shared vocabulary for risk, and the practical security guidance that goes with it.</p>
+
+   <div class="group"><ol>
+    <li><span class="num">58</span><div>
+     <p class="rhead"><a href="https://www.nist.gov/itl/ai-risk-management-framework" rel="noopener">NIST AI Risk Management Framework</a> <span class="tag t-gov">Government framework</span></p>
+     <p class="rdesc">A voluntary framework for governing, mapping, measuring, and managing AI risk. A strong common language for organizations of many sizes.</p></div></li>
+    <li><span class="num">59</span><div>
+     <p class="rhead"><a href="https://nvlpubs.nist.gov/nistpubs/ai/NIST.AI.600-1.pdf" rel="noopener">NIST Generative AI Profile</a> <span class="tag t-gov">Government guidance</span></p>
+     <p class="rdesc">A companion profile that applies the AI RMF to generative AI risks such as confabulation, privacy, information integrity, bias, security, and human overreliance.</p></div></li>
+    <li><span class="num">60</span><div>
+     <p class="rhead"><a href="https://airc.nist.gov/" rel="noopener">NIST AI Resource Center</a> <span class="tag t-gov">Resource hub</span></p>
+     <p class="rdesc">Playbooks, crosswalks, profiles, and implementation resources for the AI RMF.</p></div></li>
+    <li><span class="num">61</span><div>
+     <p class="rhead"><a href="https://owasp.org/www-project-top-10-for-large-language-model-applications/" rel="noopener">OWASP Top 10 for LLM Applications</a> <span class="tag">Open security guidance</span></p>
+     <p class="rdesc">A practical map of common application-security risks, including prompt injection, sensitive-information disclosure, excessive agency, and unbounded consumption.</p></div></li>
+    <li><span class="num">62</span><div>
+     <p class="rhead"><a href="https://www.cisa.gov/sites/default/files/2024-09/Secure-Our-World-Using-AI-Tip-Sheet.pdf" rel="noopener">CISA: Stay Safe Online When Using AI</a> <span class="tag t-gov">Government guidance</span></p>
+     <p class="rdesc">A short, plain-language guide to protecting private information and recognizing AI-enabled fraud.</p></div></li>
+    <li><span class="num">63</span><div>
+     <p class="rhead"><a href="https://oecd.ai/en/ai-principles" rel="noopener">OECD AI Principles</a> <span class="tag t-gov">Intergovernmental</span></p>
+     <p class="rdesc">International principles covering human rights, fairness, transparency, system reliability, accountability, inclusive growth, and preparation for labor-market change.</p></div></li>
+    <li><span class="num">64</span><div>
+     <p class="rhead"><a href="https://oecd.ai/en/ai-publications/framework-classification" rel="noopener">OECD Framework for the Classification of AI Systems</a> <span class="tag t-gov">Intergovernmental</span></p>
+     <p class="rdesc">A way to characterize an AI system by its context, data and inputs, model, task, output, and effects on people and the planet.</p></div></li>
+   </ol></div>
+  </section>
+
+  <section class="part" id="keep-up">
+   <p class="partno">Section 7</p>
+   <h2>Keep up without drowning in AI news</h2>
+   <p class="secnote">Choose one or two. A healthy information diet combines research, practical interpretation, and reporting. It does not require consuming every launch thread.</p>
+
+   <div class="group"><ol>
+    <li><span class="num">65</span><div>
+     <p class="rhead"><a href="https://hai.stanford.edu/subscribe-hai-mailing-list" rel="noopener">Stanford HAI updates</a> <span class="tag t-news">University newsletter</span></p>
+     <p class="rdesc">Research, policy, education, and event digests from Stanford's Institute for Human-Centered AI.</p></div></li>
+    <li><span class="num">66</span><div>
+     <p class="rhead"><a href="https://www.deeplearning.ai/the-batch/tag/the-batch" rel="noopener">The Batch</a> <span class="tag t-news">Industry newsletter</span></p>
+     <p class="rdesc">A frequent digest of AI research, products, and industry developments from DeepLearning.AI.</p></div></li>
+    <li><span class="num">67</span><div>
+     <p class="rhead"><a href="https://www.oneusefulthing.org/" rel="noopener">One Useful Thing</a> <span class="tag t-news">Independent commentary</span></p>
+     <p class="rdesc">Ethan Mollick's practical interpretation of AI research, work, education, and experimentation.</p></div></li>
+    <li><span class="num">68</span><div>
+     <p class="rhead"><a href="https://importai.substack.com/" rel="noopener">Import AI</a> <span class="tag t-news">Industry commentary</span></p>
+     <p class="rdesc">Jack Clark's long-running newsletter on AI research, capability, policy, and security.</p></div></li>
+   </ol></div>
+  </section>
+
+  <section class="part" id="four-rules">
+   <h2>Four rules for using this library</h2>
+   <ol class="rules">
+    <li>
+     <h3>Prefer the original source</h3>
+     <p>If an article says a study proved something, open the study. If a product comparison describes a feature or price, open the vendor's current plan page. Summaries are useful for discovery. Decisions deserve provenance.</p>
+    </li>
+    <li>
+     <h3>Separate capability, adoption, and value</h3>
+     <p>A benchmark can show that a model can perform a task under test conditions. A usage survey can show that people are trying it. A business report can show reported savings or revenue. Those are three different claims.</p>
+    </li>
+    <li>
+     <h3>Read the boundary, not only the headline</h3>
+     <p>The most useful sentence in a study may be the one that tells you who was tested, what they did, and what the researchers did not measure. Convert every large claim into a bounded one: “In this population, on this task, with this tool, under these conditions...”</p>
+    </li>
+    <li>
+     <h3>Update your view through practice</h3>
+     <p>Reading cannot substitute for responsible use. Choose a task you understand, brief it clearly, inspect the return, verify the consequential parts, and run it again. Your own disciplined practice is where general claims become local knowledge.</p>
+    </li>
+   </ol>
+
+   <a class="xlink" href="field-guide.html">
+    <p class="t">Start with the Field Guide</p>
+    <p>Get to Know AI is the durable teaching page: the mental model, where AI is strong, where it fails, how to brief the work, and how to decide whether a result has earned your trust.</p>
+    <span class="go">Read the field guide →</span>
+   </a>
+
+   <a class="cta" href="index.html#subscribe">Get the Sunday brief &rarr;</a>
+  </section>
+
+ </main>
+</div>
+</div>
+
+<footer class="foot">
+ <div class="container">
+  <a href="index.html">Home</a> &nbsp;·&nbsp; <a href="/current">Current issue</a> &nbsp;·&nbsp; <a href="field-guide.html">Field Guide</a> &nbsp;·&nbsp; <a href="resources.html">Resources</a> &nbsp;·&nbsp; <a href="about.html">About</a> &nbsp;·&nbsp; <a href="index.html#subscribe">Subscribe</a><br>
+  AI Above the Cut — a weekly AI brief for executives.
+ </div>
+</footer>
+
+<script>
+(function(){
+ var toc=document.getElementById('toc'),btn=document.getElementById('tocToggle');
+ if(btn){btn.addEventListener('click',function(){
+  var open=toc.getAttribute('data-collapsed')==='true';
+  toc.setAttribute('data-collapsed',open?'false':'true');
+  btn.setAttribute('aria-expanded',open?'true':'false');
+ });}
+ var links=[].slice.call(document.querySelectorAll('#tocList a[href^="#"]'));
+ var targets=links.map(function(a){return document.getElementById(a.getAttribute('href').slice(1));}).filter(Boolean);
+ if(!targets.length)return;
+ function mark(id){links.forEach(function(a){a.classList.toggle('on',a.getAttribute('href')==='#'+id);});}
+ function onScroll(){
+  var best=targets[0],y=window.scrollY+120;
+  targets.forEach(function(t){if(t.offsetTop<=y)best=t;});
+  mark(best.id);
+ }
+ if('IntersectionObserver' in window){
+  var seen={};
+  var io=new IntersectionObserver(function(es){
+   es.forEach(function(e){seen[e.target.id]=e.isIntersecting;});
+   for(var i=0;i<targets.length;i++){if(seen[targets[i].id]){mark(targets[i].id);return;}}
+   onScroll();
+  },{rootMargin:'-80px 0px -70% 0px'});
+  targets.forEach(function(t){io.observe(t);});
+ }
+ window.addEventListener('scroll',onScroll,{passive:true});
+ onScroll();
+ links.forEach(function(a){a.addEventListener('click',function(){
+  if(window.innerWidth<=1000&&btn){toc.setAttribute('data-collapsed','true');btn.setAttribute('aria-expanded','false');}
+ });});
+})();
+</script>
+</body></html>
