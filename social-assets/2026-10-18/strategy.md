@@ -1,10 +1,12 @@
 # Social - Issue 018 · 2026-10-18 · "Work was built for two kinds of things. AI is a third."
 
-*Current shared draft. Built from Claude's proposal and Mario's subsequent direction. Latest revision leads with Anthropic, develops the leadership questions, and draws the Synthetic Space from the story. Customer relationships and Better for More follow. The previous version is saved as `2026-10-18_social.v4_pre_anthropic_story_first.md`. See `work/cycles/2026-10-18/responses/07-codex-response.md` and LOG.md for the revision history.*
+*Current shared draft. Sunday companion now uses Mario's supplied shorter draft as its baseline, with brief Citizen CEO / new rhythm / Synthetic Space / Better for More connections and a sourced Amazon flywheel paragraph. The standalone Synthetic Space section stays removed. Previous shared copy: `2026-10-18_social.v5_pre_mario_selected_flywheel.md`. Change record: `work/cycles/2026-10-18/responses/09-codex-mario-draft-flywheel.md`.*
 
 **Live:** https://aiabovethecut.com/2026-10-18 (check the link once the issue is sent)
 
-**Illustrations for this version:** [Bridge: build, change, new rhythm](../work/cycles/2026-10-18/drafts/cover_c_build_change_rhythm_pencil_teal_v2_clean.png) is the lead candidate. [Synthetic Space diagram](../work/cycles/2026-10-18/drafts/cover_d_synthetic_space_pencil_teal_v2_clean.png) is an optional companion beside that explanation. Both omit the article headline; upload the selected image separately in LinkedIn.
+**Illustrations for this version:** [Bridge: build, change, new rhythm](../work/cycles/2026-10-18/drafts/cover_c_build_change_rhythm_pencil_teal_v2_clean.png) is the lead candidate. [Synthetic Space diagram](../work/cycles/2026-10-18/drafts/cover_d_synthetic_space_pencil_teal_v2_clean.png) is an earlier optional study; this version has no standalone concept section. Both omit the article headline; upload the selected image separately in LinkedIn.
+
+**Second inline illustration:** [Two moats](../work/cycles/2026-10-18/drafts/inline_two_moats_pencil_teal_v4_balanced.png), placed after the Delta paragraph below. Upload the image separately in LinkedIn and add the caption beneath it. Latest bridge revision for comparison: [V5, destruction and recreation](../work/cycles/2026-10-18/drafts/cover_c_build_change_rhythm_pencil_teal_v5_rebuild.png).
 
 **The plan this week.** Four pieces, one idea each.
 
@@ -36,93 +38,90 @@
 
 **Subtitle:** What jumped out at me from this week's AI news, and the full list of headlines.
 
-Anthropic says seven engineers used Claude to help replace Git, the standard system for managing code, and move its main code base onto the new system in five months. That is the story in this week's AI Above the Cut that I think leaders should spend some time with.
+**Cover image:** work/cycles/2026-10-18/drafts/cover_c_v5_linkedin_1920x1080.png (cover_c v5, padded to 1920 x 1080 so LinkedIn's cover crop keeps all three panels; original: cover_c_build_change_rhythm_pencil_teal_v5_rebuild.png)
+
+**Caption:** Anthropic's rebuild in three moves: build the new system, swap out the old one, and keep up with a much faster flow of work.
+
+**Alt text:** Pencil illustration in three panels with teal highlights. Left, labeled "The power to build": a man in glasses assembles a model bridge from teal girders while a figure whose head is a glass jar holding a brain sketches the plan beside him. Center, labeled "The power to change": the man lifts a new teal span into place as the old stone bridge crumbles beside it, and the jar-headed figure reads a document. Right, labeled "A new rhythm": the man studies a page while sheets of paper stream quickly across the finished bridge, carried by teal arrows.
+
+*AI Above the Cut is my free weekly newsletter on the AI news that matters for business leaders. Subscribe at aiabovethecut.com/subscribe.*
+
+This is my quick editorial on what rose above the cut this week. Three stories stood out to me:
+
+1. **A reimagination worth learning from.** What Anthropic's replacement for Git says about what we can now attempt.
+2. **Who keeps the customer relationship?** Amazon and JPMorgan are blocking outside AI agents from reaching their customers.
+3. **Give applied AI its own budget line.** AI is a third kind of thing, and the budget should show it.
+
+At the end, a quick inventory of everything in this week's issue.
 
 [Heading] A reimagination worth learning from
 
+Anthropic says seven engineers used Claude to help replace Git, the standard system for managing code, and move its main code base onto the new system in five months.
+
 The company says its daily code changes rose from about 2,500 in May to more than 30,000 in September. Its existing system could no longer keep up. The team built a replacement, called Scion, for that different scale and way of working. ([Primary source: Anthropic's account](https://www.anthropic.com/engineering/redesigning-source-control))
 
-Three things stand out to me: the power to build, the power to change, and a new rhythm of work.
+First, **the power to build.** A small team used AI to help create a system central to its own work. That is the promise I see in AI: people able to build things that would once have been beyond their reach.
 
-First, the power to build. A small team used AI to help create a system central to its own work. That is the promise I see in AI: people able to build things that would once have been beyond their reach.
+Second, **the power to change what already exists.** Git is about as close to a universal standard as software has. Linus Torvalds released it in 2005, and about 97% of professional developers responding to Stack Overflow's 2022 survey said they used it. ([Stack Overflow](https://survey.stackoverflow.co/2022/#section-version-control-version-control-systems)) It sits deep inside the daily work of a software team. Replacing it means changing tools, habits and the way work moves between people. We often look at a system like that and assume it is too connected to change. Here, AI helped build the replacement and do the work of getting there.
 
-Second, the power to change what already exists. Git sits deep inside the daily work of a software team. Replacing it means changing tools, habits and the way work moves between people. We often look at a system like that and assume it is too connected to change. Here, AI helped build the replacement and do the work of getting there.
+Third, **a new rhythm of work.** When production moves this fast, how do you review changes and keep the whole system sound? The team building Scion still reviews every change request, but examines its intent rather than reading every line of code. Often, as Anthropic puts it, their role "was to tell Claude 'no.'"
 
-Third, a new rhythm of work. When production moves this fast, how do you review changes and keep the whole system sound? Anthropic's engineers now review what each change is meant to do rather than every line. Their job, as Anthropic puts it, "was to tell Claude 'no.'"
-
-Now step back from the result and imagine being asked to approve this work before it began.
-
-Would you even want to replace Git inside your company, knowing how deeply it runs through the team's work?
-
-Would you give a team of seven engineers the authority to build its replacement?
-
-Would you believe they could go from building it to moving the main code base onto it in five months?
-
-And would you be willing to rethink how changes get reviewed and combined, rather than require the new system to follow the old pattern?
+Imagine being asked to approve this before it began. Would you replace something that deeply woven into your team's work? Would you trust seven engineers to build the replacement and move onto it in five months? Would you also change how their work gets reviewed?
 
 For me, those questions are what make this story significant. They challenge assumptions about which changes are worth attempting, how much capacity a team needs, and how long a transformation should take. They also challenge the way we manage the resulting work.
 
-Taken together, I see signs of a fundamental shift in what is possible. We may hold back on AI simply because our expectations have not caught up with what we can now attempt.
+Taken together, I see signs of a fundamental shift in what is possible. **We may hold back on AI simply because our expectations have not caught up with what we can now attempt.**
 
 There are limits to what one case tells us. Anthropic publishes no defect rate, says Scion is not meant for general use, and has unusual access to AI for its own work.
 
-This example comes from software. The question it raises for me is about work more broadly: which systems and habits do we treat as fixed because changing them used to be too difficult?
+The question it raises for me is about work more broadly: **which systems and habits do we treat as fixed because changing them used to be too difficult?**
 
-[Heading] The Synthetic Space, made concrete
+[Heading] Who keeps the customer relationship?
 
-It is hard to look at this story and see only a team buying another software tool. People and AI are building together, changing the system around them and finding a new way to manage the work.
+Agents can also change how customers reach a business.
 
-In my book, I call the working arrangement that supports this the Synthetic Space: where people and AI work together, with the context, tools and rules they need. It connects what an individual can do with AI to the systems and support of the enterprise.
+Last month Amazon blocked Meta's Muse agent from shopping on its site. Amazon says outside agents should respect a service provider's decision about whether to participate. ([Reported: Bloomberg, via The Star](https://www.thestar.com.my/tech/tech-news/2026/09/22/amazon-blocks-metas-muse-ai-agent-from-its-retail-site))
 
-Most companies organize work around two familiar categories: people and technology. This arrangement draws on both. The people bring direction and judgment. AI adds capacity to build and change. The company provides the setting in which that work can become dependable.
+This week the big banks drew the same line. JPMorgan's Jamie Dimon said the bank is "not going to allow just any outside agent" into customer accounts. "You don't want rogue agents." Schwab said it blocks agents that log in with clients' passwords, and points clients to its own assistant, Charley. Both still allow some approved routes; what they shut is the side door. ([Reported: Fortune](https://fortune.com/2026/10/15/jamie-dimon-ai-agents-meta-muse-jpmorgan/) · [American Banker](https://www.americanbanker.com/news/schwab-blocks-unauthorized-ai-agents-points-clients-to-charley))
 
-The story brings together three ideas I keep returning to in the book. A new rhythm of work changes how teams coordinate. The Citizen CEO asks what someone could undertake with more capacity to help them. The Synthetic Space gives people and AI a working arrangement in which to put that capacity to use.
+Other companies are setting limits too. Delta, for one, says it has no arrangement that lets an outside AI agent book its flights. ([Reported: TechCrunch](https://techcrunch.com/2026/10/06/the-next-hurdle-for-ai-agents-getting-websites-to-let-them-in/))
 
-For a leader, the question becomes what you would give your team permission to attempt, and what you would need to put around it so it could succeed.
+[Image] work/cycles/2026-10-18/drafts/inline_two_moats_pencil_teal_v4_balanced.png
+
+[Caption] Two moats: the data you hold, and the customer who comes to you first.
+
+[Alt text] Pencil illustration with teal highlights. A man stands where a stone path forks, hand on his chin, deciding which way to go. To the left, a bridge crosses a moat to an island holding server racks and filing cabinets. To the right, another bridge crosses a moat to an island with a small shop counter, where a shopkeeper talks with a customer while a figure whose head is a glass jar holding a brain stands close by, tablet in hand.
+
+I used to put more weight on unique data as a company's AI advantage. That still matters. These stories make me put more weight on the customer relationship: who helps the customer decide and carries out the action.
+
+Amazon's famous flywheel helps explain the stakes. Lower prices and a better experience bring more visits; more traffic attracts sellers and selection, while scale helps lower costs. ([Primary: Amazon's explanation](https://aws.amazon.com/executive-insights/content/the-human-side-of-innovation/))
+
+The customer relationship is what I think connects that experience to the next visit. If an independent agent becomes your starting point, Amazon might still deliver the product while someone else holds the conversation, learns your preferences and becomes your first call next time. **The threat is being separated from the customer while still doing the work.**
+
+My read is that Amazon is protecting that relationship as well as its data. If AI makes it easier for customers to switch suppliers, earning the next visit could become even more important.
+
+The answer I see is to use AI to improve the experience, then make that improvement available to more customers. Better service gives people a reason to stay: less effort resolving a problem, a clearer understanding of their needs, or useful help that was previously too costly to provide. **Protecting the relationship and improving the experience belong together.**
 
 [Heading] Give applied AI its own budget line
 
-If we are going to build the Synthetic Space deliberately, I think the investment should be visible in the budget.
+Work was built for two kinds of things: people and technology. Companies budget, manage and measure them separately. **AI is a third kind of thing,** and it needs its own place in the budget.
 
-Today we can usually point to what we spend on people and what we spend on technology. Buy a call center service, and that cost sits with people doing work for us. Buy a software platform, and it sits with technology.
+Workday, which sells HR and finance software to large companies, is signaling a big change in how it gets paid. It told investors its AI agents could reach "beyond the software budgets into the labor and services spend." ([Reported: The Register](https://www.theregister.com/saas/2026/10/15/workday-wants-a-slice-of-customers-labour-budget-that-its-ai-agents-could-replace/5303281)) I think that is reasonable. AI may look like software, but it does work that people and outside services used to do. It delivers both kinds of value. That holds for companies selling AI as a service and for companies managing AI inside their own walls. It is a distinct kind of spending, and it deserves to be seen that way.
 
-AI crosses that line, and vendors know it. Workday said this week that its agents could reach "beyond the software budgets into the labor and services spend." ([Reported: The Register's conference coverage](https://www.theregister.com/saas/2026/10/15/workday-wants-a-slice-of-customers-labour-budget-that-its-ai-agents-could-replace/5303281))
+**I would give applied AI its own line in the management budget:** the AI consumed, its connections to company data and systems, and the means to supervise it. Each cost still gets its proper accounting treatment. The point is to see the whole investment, who owns it and what it delivers.
 
-I would give applied AI its own line in the management budget: the AI consumed to do the work, plus what makes it useful, such as the connections to company data and systems and the means to supervise it. Each cost still gets its proper accounting treatment. The point is to see what we are investing in this way of working, who owns it and what it delivers, instead of spreading it across budgets where no one sees the whole.
+[Heading] Each story points to a new space for work
 
-[Heading] How the Synthetic Space changes competition
+Put the three stories side by side and I see the same shift. Each one shows a new space for work, where people and AI do the work together. I call it the **Synthetic Space**.
 
-Work in the Synthetic Space reaches into other companies' systems and services. An agent's ability to reach a service does not settle whether it should act there, or on what terms. Companies are putting guardrails around that access.
+• **It moves faster.** Anthropic's engineers needed a **new rhythm of work** to keep up with what Claude produced.
+• **It can change more.** Seven people rebuilt a system most companies would treat as fixed. That is the **Citizen CEO** idea: deciding what is worth doing, then directing the capability to deliver it.
+• **It can take over interactions people used to own.** An agent can now hold the conversation between a business and its customer.
+• **It has to be paid for differently.** It combines software costs with work capacity, so I would make the investment visible in its own budget line.
 
-JPMorgan and Schwab are restricting outside agents' access to customer accounts. Schwab blocks agents using customers' login details, while allowing some approved connections and building its own assistant, Charley. The banks cite risks to clients and their data. ([Reported: American Banker](https://www.americanbanker.com/news/schwab-blocks-unauthorized-ai-agents-points-clients-to-charley))
+The goal I keep coming back to is **Better for More**: use AI to make work and service better, then extend that improvement to more people. I first wrote about the Citizen CEO and the Synthetic Space in [my first editorial](https://aiabovethecut.com/2026-10-04).
 
-Amazon drew a similar line last month. On September 20 it blocked Meta's Muse agent from shopping on Amazon.com, after Meta declined to remove Amazon from the agent's experience. Amazon says outside agents should "respect service provider decisions about whether or not to participate." ([Reported: Bloomberg, via The Star](https://www.thestar.com.my/tech/tech-news/2026/09/22/amazon-blocks-metas-muse-ai-agent-from-its-retail-site))
-
-I remember debating whether a company's strongest advantage in AI would be its data. If you have useful information that others do not, you can use AI to develop intelligence they cannot easily match. I still think that matters.
-
-But these stories make me put more weight on the customer relationship: who the customer turns to, who helps them decide, and who carries out the action.
-
-Think about Amazon. How much of its value lies in its ability to get a product to you, drawing on its infrastructure and delivery network? How much lies in being the place you turn to, where it can help you with many different needs?
-
-Both matter. But if an independent agent becomes your starting point, it may decide which seller to approach and which service to use. Amazon might still deliver the product, while someone else holds the conversation, learns your preferences and becomes your first call next time.
-
-My read is that companies are beginning to protect that relationship as well as the data behind it. Data can provide differentiated intelligence. The relationship is where a company gets the opportunity to put that intelligence to work for a customer.
-
-[Heading] Better for More
-
-This connects to what I call Better for More: use AI's expanded capability to improve the work, service or experience, then extend that improvement where it matters.
-
-If customer relationships become more important to competition, the quality of the service will become more important too. A company will need to give customers a reason to keep choosing it. That might mean resolving a problem with less effort, understanding a need more clearly, or making useful help available where it was previously too costly to provide.
-
-Protecting the relationship and improving the service belong together. Guardrails set the terms of access. Better service gives the customer a reason to stay. I think doing both will rapidly become a priority for companies.
-
-[Heading] My bet
-
-My bet is that companies that build the Synthetic Space deliberately will find possibilities they would miss by fitting AI into each existing process as it stands. That means giving it a visible budget, reshaping how work gets done, and deciding how it engages with customers and other businesses.
-
-The test is whether that turns into better work and a better customer experience at a cost they can sustain. More activity on its own will not settle it.
-
-For the leaders reading this: if your customer's next request comes through an AI agent, what would make that customer still want you to be the one who serves them?
+The test for all of it is whether it turns into better work and a better customer experience at a cost companies can sustain. More activity on its own will not settle it.
 
 A note on sources: I use Anthropic and OpenAI models to help build the newsletter. Anthropic's account is its own, and the broader argument here is my interpretation.
 
@@ -165,28 +164,26 @@ Get it in your inbox every Sunday: aiabovethecut.com
 ## 2 · Feed teaser (Sunday night, right after piece 1)
 
 ```
-Anthropic says its daily code changes rose from about 2,500 in May to more than 30,000 in September.
+Anthropic says seven engineers used Claude to help replace Git, the standard system for managing code, and move its main code base onto the replacement in five months.
 
-So 7 engineers used Claude to help rebuild the system that manages that code, and moved onto it in five months.
+Would you have approved that project?
 
-Would you approve replacing something that deeply woven into your team's work? Would you trust seven engineers to build the replacement? Would you believe they could build it and move onto it in five months?
+Git is woven into a software team's tools, habits and daily work. Replacing it means changing how the team works together, as well as what it uses.
 
-For me, this shows the power to build, the power to change, and a new rhythm of work. It makes me wonder which limits we still accept because we have not realized what we can now attempt.
+For me, this story shows the power to build, the power to change, and a new rhythm of work. It makes me wonder how many limits we still accept because our expectations have not caught up with what we can now attempt.
 
-In my book, I call the working arrangement behind this the Synthetic Space: people and AI working together, with the context, tools and rules they need.
+In this week's AI Above the Cut editorial, I connect that rebuild to two business questions: who keeps the customer relationship when an AI agent becomes the place we turn first, and how should companies budget for AI that does the work?
 
-In tonight's newsletter, I connect that to a budget for applied AI and a competitive question: who keeps the customer relationship when an agent starts making the choices?
+My bet is that building more will be the easy part. Deciding what to change, how to manage it, and how to make the experience better for customers will take more judgment.
 
-Data can make your AI more useful. Better service gives the customer a reason to keep choosing you. That is where Better for More comes in.
+For leaders: which system or habit in your organization would you reconsider if a small team could change it in months?
 
-For business leaders: if your customer's next request comes through an AI agent, what would make them still want you to serve them?
-
-Issue 018 of AI Above the Cut is out, and my companion piece is in my newsletter.
+Read the editorial in the attached newsletter.
 
 #AI #FutureOfWork #Leadership
 ```
 
-Link: put the newsletter article link in the first comment, and test against putting it in the body (your playbook is testing both).
+Posting: use this text when sharing or attaching the LinkedIn newsletter article. For a standalone feed post, replace the final sentence with the real article link or put that link in the first comment. The LinkedIn article URL has not yet been supplied.
 
 ---
 
