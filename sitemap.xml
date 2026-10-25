@@ -26,4 +26,9 @@
   <url><loc>https://aiabovethecut.com/2026-07-05.html</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
   <url><loc>https://aiabovethecut.com/2026-06-28.html</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
   <url><loc>https://aiabovethecut.com/2026-06-21.html</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <!-- editorials START -->
+  <url><loc>https://aiabovethecut.com/editorials/ai-and-the-citizen-ceo.html</loc><lastmod>2026-10-25</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://aiabovethecut.com/editorials/work-was-built-for-two-kinds-of-things.html</loc><lastmod>2026-10-18</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://aiabovethecut.com/editorials/welcome-to-ai-above-the-cut.html</loc><lastmod>2026-10-17</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <!-- editorials END -->
 </urlset>

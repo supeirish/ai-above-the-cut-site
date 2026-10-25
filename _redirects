@@ -12,3 +12,8 @@
 /field-guide    /field-guide.html   200
 /resources      /resources.html     200
 /lexicon        /lexicon.html       200
+
+# editorials START (build_editorials.py: The Editor's Cut tab opens the newest piece)
+/editorials      /editorials/ai-and-the-citizen-ceo.html   302
+/editorials/     /editorials/ai-and-the-citizen-ceo.html   302
+# editorials END
