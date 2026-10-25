@@ -1,5 +1,5 @@
 <!doctype html><html lang="en"><head><meta charset="utf-8">
-<meta name="viewport" content="width=device-width,initial-scale=1">
+<!-- polish:jsclass START --><script>document.documentElement.classList.add('js')</script><!-- polish:jsclass END --><meta name="viewport" content="width=device-width,initial-scale=1">
 <title>AI Above the Cut — the weekly AI brief for executives</title>
 <meta name="description" content="AI Above the Cut is a free weekly brief for executives — a fast Sunday skim of what the field's top minds actually said, then a deeper brief. Signal over hype.">
 <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'><rect width='32' height='32' rx='7' fill='%231B57F0'/><g fill='none' stroke='%23ffffff' stroke-width='2'><circle cx='16' cy='16' r='10'/><circle cx='16' cy='16' r='6'/></g><circle cx='16' cy='16' r='2.6' fill='%23ffffff'/></svg>">
@@ -100,7 +100,48 @@ ml('account', '2488958');
  .ml-form-embedWrapper .ml-form-embedSubmit button,.ml-form-embedWrapper button.primary{background-color:var(--blue)!important;background:var(--blue)!important;color:#fff!important;border:0!important;border-radius:8px!important;padding:14px 22px!important;font:700 16px 'Space Grotesk'!important;box-shadow:none!important;min-height:48px!important}
  .ml-form-embedWrapper .ml-form-embedSubmit button:hover,.ml-form-embedWrapper button.primary:hover{background-color:var(--blue-dk)!important;background:var(--blue-dk)!important}
  .ml-form-successBody h4,.ml-form-successBody p{color:var(--navy)!important;font-family:'IBM Plex Sans'!important}
-</style></head><body>
+/* polish:nav START (site_polish.py, 2026-10-25) */
+/* Compact header on phones and tablets. The full menu wrapped onto three or more
+   lines and stayed pinned while scrolling. Only applies when JavaScript runs (html.js),
+   so without it the old header still shows and the menu is never unreachable. */
+.sitenav .sub-m,.sitenav .navtoggle{display:none}
+.sitenav .navtoggle .ico-close{display:none}
+@media(max-width:960px){
+ html.js .sitenav .container{min-height:58px;gap:8px;flex-wrap:wrap;padding-left:16px;padding-right:12px}
+ html.js .sitenav .brand{font-size:15px;gap:8px;white-space:nowrap}
+ html.js .sitenav .brand svg{width:24px;height:24px}
+ html.js .sitenav .menu{display:none}
+ html.js .sitenav .sub-m{display:inline-flex;align-items:center;margin-left:auto;height:44px;padding:0 12px;border-radius:8px;background:#1B57F0;color:#fff;text-decoration:none;font:700 15px/1 'IBM Plex Sans',sans-serif}
+ html.js .sitenav .sub-m:hover{background:#3a6cff}
+ html.js .sitenav .navtoggle{display:inline-flex;align-items:center;justify-content:center;width:44px;height:44px;padding:0;border:1px solid rgba(255,255,255,.22);border-radius:8px;background:transparent;cursor:pointer}
+ html.js .sitenav.open .navtoggle{background:rgba(255,255,255,.10);border-color:rgba(255,255,255,.4)}
+ html.js .sitenav.open .navtoggle .ico-open{display:none}
+ html.js .sitenav.open .navtoggle .ico-close{display:inline}
+ html.js .sitenav.open .menu{display:flex;order:3;flex-basis:100%;flex-direction:column;align-items:stretch;gap:2px;margin:0;padding:6px 0 14px;border-top:1px solid rgba(255,255,255,.12)}
+ html.js .sitenav.open .menu a{min-height:52px;font-size:17px;padding:0 12px}
+ html.js .sitenav.open .menu a.sub{display:none}
+ html.js .sitenav.open .menu a[aria-current="page"]{box-shadow:none;background:rgba(255,255,255,.08)}
+}
+/* polish:nav END *//* polish:home START (site_polish.py, 2026-10-25) */
+/* Homepage leads with this week's issue (was: the mission statement, with the issue
+   as a small button). refresh_latest() rewrites the card; prep_issue.py calls it weekly. */
+.sr-only{position:absolute;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip:rect(0,0,0,0);white-space:nowrap;border:0}
+.latest{border:1.5px solid var(--hair);border-radius:16px;padding:30px 32px;background:#fff}
+.latest .eyebrow{margin:0 0 14px}
+.latest h2{font:700 clamp(30px,3.6vw,44px)/1.08 'Space Grotesk',sans-serif;letter-spacing:-.03em;color:var(--navy);margin:0 0 16px}
+.latest h2 a{color:inherit;text-decoration:none}
+.latest h2 a:hover{color:var(--blue)}
+.latest .dek{font-size:18px;line-height:1.6;color:var(--body);margin:0 0 18px}
+.latest .rt{font:600 12px/1.5 'IBM Plex Mono',monospace;letter-spacing:.08em;text-transform:uppercase;color:var(--slate);margin:0 0 20px}
+.btn-primary{display:inline-flex;align-items:center;gap:8px;background:var(--blue);border-radius:10px;padding:14px 22px;text-decoration:none;color:#fff;font:700 15.5px 'Space Grotesk',sans-serif;min-height:48px;box-sizing:border-box}
+.btn-primary:hover{background:var(--blue-dk);color:#fff}
+.why{display:grid;grid-template-columns:1.15fr .85fr;gap:54px;margin-top:8px;padding-top:26px;border-top:1px solid var(--hair)}
+.why h2{font:700 28px/1.15 'Space Grotesk',sans-serif;letter-spacing:-.02em;color:var(--navy);margin:0}
+.why h2 .hl{color:var(--blue)}
+.why p{font-size:16px;line-height:1.6;margin:0}
+@media(min-width:861px){.hero{padding-top:40px}}
+@media(max-width:860px){.why{grid-template-columns:1fr;gap:12px}.latest{padding:24px 20px}}
+/* polish:home END */</style></head><body>
 <a class="skip" href="#main">Skip to content</a>
 <header class="sitenav">
  <div class="container">
@@ -108,7 +149,7 @@ ml('account', '2488958');
    <svg width="27" height="27" viewBox="0 0 30 30" aria-hidden="true" focusable="false"><g fill="none" stroke="#1B57F0" stroke-width="1.8"><circle cx="15" cy="15" r="13.2"/><circle cx="15" cy="15" r="8.6"/><circle cx="15" cy="15" r="4"/></g><circle cx="15" cy="15" r="2.4" fill="#1B57F0"/></svg>
    AI ABOVE THE CUT
   </a>
-  <nav class="menu" aria-label="Main">
+  <nav class="menu" id="mainmenu" aria-label="Main">
    <a href="index.html" aria-current="page">Home</a>
    <a href="/current">Current issue</a>
    <a href="field-guide.html">Field Guide</a>
@@ -117,32 +158,41 @@ ml('account', '2488958');
    <a href="about.html">About</a>
    <a class="sub" href="#subscribe">Subscribe</a>
   </nav>
+  <!-- polish:navctl START --><a class="sub-m" href="#subscribe">Subscribe</a><button class="navtoggle" type="button" aria-expanded="false" aria-controls="mainmenu" aria-label="Open menu"><svg class="ico-open" width="20" height="20" viewBox="0 0 20 20" aria-hidden="true" focusable="false" fill="none" stroke="#fff" stroke-width="2" stroke-linecap="round"><line x1="3" y1="5.5" x2="17" y2="5.5"/><line x1="3" y1="10" x2="17" y2="10"/><line x1="3" y1="14.5" x2="17" y2="14.5"/></svg><svg class="ico-close" width="20" height="20" viewBox="0 0 20 20" aria-hidden="true" focusable="false" fill="none" stroke="#fff" stroke-width="2" stroke-linecap="round"><line x1="4.5" y1="4.5" x2="15.5" y2="15.5"/><line x1="15.5" y1="4.5" x2="4.5" y2="15.5"/></svg></button><!-- polish:navctl END -->
  </div>
 </header>
 <main id="main">
  <section class="hero container">
-  <div class="hero-left">
-   <p class="eyebrow">AI Above the Cut · A weekly brief for executives</p>
-   <h1>What changed in AI, what the evidence supports, and <span class="hl">who keeps the money it makes.</span></h1>
-   <p class="intro">Most AI coverage tells you what was announced. Every Sunday this brief reads the primary sources, separates what is proven from what is merely reported, and names the decisions worth making this week. Written for executives. Free.</p>
-   <div class="chips" aria-label="Coverage areas">
-    <span>Frontier</span><span>Labs</span><span>Enterprise</span><span>Policy</span><span>Healthcare</span>
-   </div>
-   <div class="hero-btns">
-    <a class="btn-ghost" href="/current">Current issue &rarr;</a>
-    <a class="btn-ghost" href="#archive">Past issues &darr;</a>
-   </div>
+  <div class="hero-left"><!-- polish:latest START -->
+   <h1 class="sr-only">AI Above the Cut: the weekly AI brief for executives</h1>
+   <article class="latest" aria-labelledby="latest-h">
+    <p class="eyebrow">This week · Issue 019 · October 25, 2026</p>
+    <h2 id="latest-h"><a href="2026-10-25.html">AI is finding security flaws faster than we can fix them</a></h2>
+    <p class="dek">AI helped researchers turn two flaws in PHP, software behind much of the web, into working attacks. Governments said patch or go offline. Millions of attempts, zero confirmed break-ins so far.</p>
+    <p class="rt">13 min skim · 25 min full</p>
+    <div class="hero-btns" style="margin-top:0">
+     <a class="btn-primary" href="2026-10-25.html">Read this issue &rarr;</a>
+     <a class="btn-ghost" href="#archive">Past issues &darr;</a>
+    </div>
+   </article>
+   <!-- polish:latest END -->
   </div>
   <aside class="hero-right">
    <section class="subscribe" id="subscribe" aria-labelledby="sub-h">
     <h2 id="sub-h">Get the Sunday brief</h2>
     <p class="sub-p">Free, every Sunday morning. A fast skim of what the field's top minds actually said this week — signal over hype.</p>
     <div class="ml-embedded" data-form="cgeGZU"></div>
-    <p class="formfall" id="formfall">Loading the signup form. <a href="/subscribe">Use the signup page instead &rarr;</a></p>
-    <noscript><p class="formfall">The signup form needs JavaScript. <a href="/subscribe">Open the signup page &rarr;</a></p></noscript>
+    <p class="formfall" id="formfall">Form not loading? <a href="https://preview.mailerlite.io/forms/2488958/192033442282603955/share">Sign up on our MailerLite signup page &rarr;</a></p>
+    <noscript><p class="formfall">The signup form needs JavaScript. <a href="https://preview.mailerlite.io/forms/2488958/192033442282603955/share">Use our MailerLite signup page &rarr;</a></p></noscript>
     <p class="fineprint">Free · Weekly · Sundays · No spam · Unsubscribe anytime</p>
    </section>
   </aside>
+ </section>
+ <section class="container" aria-labelledby="why-h">
+  <div class="why">
+   <h2 id="why-h">What changed in AI, what the evidence supports, and <span class="hl">who keeps the money it makes.</span></h2>
+   <p>Most AI coverage tells you what was announced. Every Sunday this brief reads the primary sources, separates what is proven from what is merely reported, and names the decisions worth making this week. Written for executives. Free.</p>
+  </div>
  </section>
 
  <section class="container">
@@ -257,6 +307,7 @@ ml('account', '2488958');
  <div class="container">
   <a href="index.html">Home</a> &nbsp;·&nbsp; <a href="/current">Current issue</a> &nbsp;·&nbsp; <a href="field-guide.html">Field Guide</a> &nbsp;·&nbsp; <a href="resources.html">Resources</a> &nbsp;·&nbsp; <a href="lexicon.html">Lexicon</a> &nbsp;·&nbsp; <a href="about.html">About</a> &nbsp;·&nbsp; <a href="#subscribe">Subscribe</a><br>
   AI Above the Cut — a weekly AI brief for executives.
+  <!-- polish:play START --><br><span class="play">Take a two-minute break: <a href="https://theashburnpulse.com/games/interchange">play The Interchange</a>, a daily word puzzle from The Ashburn Pulse.</span><!-- polish:play END -->
  </div>
 </footer>
 <script>
@@ -266,7 +317,7 @@ ml('account', '2488958');
    moment a real input appears. If the script never loads, the link stays. */
 (function(){var f=document.getElementById('formfall');if(!f)return;var n=0,t=setInterval(function(){
  if(document.querySelector('.ml-embedded input')){f.style.display='none';clearInterval(t);}
- else if(++n>60){f.textContent='The signup form did not load. ';var a=document.createElement('a');a.href='/subscribe';a.textContent='Open the signup page →';f.appendChild(a);clearInterval(t);}
+ else if(++n>60){f.textContent='The signup form did not load. ';var a=document.createElement('a');a.href='https://preview.mailerlite.io/forms/2488958/192033442282603955/share';a.textContent='Sign up on our MailerLite signup page →';f.appendChild(a);clearInterval(t);}
 },250);})();
 </script>
-</body></html>
+<!-- polish:navjs START --><script>(function(){var h=document.querySelector('.sitenav'),b=h&&h.querySelector('.navtoggle');if(!b)return;function set(o){h.classList.toggle('open',o);b.setAttribute('aria-expanded',o?'true':'false');b.setAttribute('aria-label',o?'Close menu':'Open menu');}b.addEventListener('click',function(){set(!h.classList.contains('open'));});document.addEventListener('keydown',function(e){if(e.key==='Escape'&&h.classList.contains('open')){set(false);b.focus();}});h.querySelectorAll('.menu a').forEach(function(a){a.addEventListener('click',function(){set(false);});});})();</script><!-- polish:navjs END --></body></html>

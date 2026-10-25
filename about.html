@@ -1,5 +1,5 @@
 <!doctype html><html lang="en"><head><meta charset="utf-8">
-<meta name="viewport" content="width=device-width,initial-scale=1">
+<!-- polish:jsclass START --><script>document.documentElement.classList.add('js')</script><!-- polish:jsclass END --><meta name="viewport" content="width=device-width,initial-scale=1">
 <title>About — AI Above the Cut</title>
 <meta name="description" content="AI Above the Cut makes it simple for executives to stay on top of AI. We track the field's top minds and curate what actually matters — signal over hype.">
 <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'><rect width='32' height='32' rx='7' fill='%231B57F0'/><g fill='none' stroke='%23ffffff' stroke-width='2'><circle cx='16' cy='16' r='10'/><circle cx='16' cy='16' r='6'/></g><circle cx='16' cy='16' r='2.6' fill='%23ffffff'/></svg>">
@@ -63,7 +63,29 @@
  .foot a{color:var(--slate);text-decoration:underline;font-weight:600}
  .foot a:hover{color:var(--blue)}
  @media(max-width:860px){.container{padding:0 20px}.article{padding:12px 20px 46px}.roster{grid-template-columns:1fr}}
-</style></head><body>
+/* polish:nav START (site_polish.py, 2026-10-25) */
+/* Compact header on phones and tablets. The full menu wrapped onto three or more
+   lines and stayed pinned while scrolling. Only applies when JavaScript runs (html.js),
+   so without it the old header still shows and the menu is never unreachable. */
+.sitenav .sub-m,.sitenav .navtoggle{display:none}
+.sitenav .navtoggle .ico-close{display:none}
+@media(max-width:960px){
+ html.js .sitenav .container{min-height:58px;gap:8px;flex-wrap:wrap;padding-left:16px;padding-right:12px}
+ html.js .sitenav .brand{font-size:15px;gap:8px;white-space:nowrap}
+ html.js .sitenav .brand svg{width:24px;height:24px}
+ html.js .sitenav .menu{display:none}
+ html.js .sitenav .sub-m{display:inline-flex;align-items:center;margin-left:auto;height:44px;padding:0 12px;border-radius:8px;background:#1B57F0;color:#fff;text-decoration:none;font:700 15px/1 'IBM Plex Sans',sans-serif}
+ html.js .sitenav .sub-m:hover{background:#3a6cff}
+ html.js .sitenav .navtoggle{display:inline-flex;align-items:center;justify-content:center;width:44px;height:44px;padding:0;border:1px solid rgba(255,255,255,.22);border-radius:8px;background:transparent;cursor:pointer}
+ html.js .sitenav.open .navtoggle{background:rgba(255,255,255,.10);border-color:rgba(255,255,255,.4)}
+ html.js .sitenav.open .navtoggle .ico-open{display:none}
+ html.js .sitenav.open .navtoggle .ico-close{display:inline}
+ html.js .sitenav.open .menu{display:flex;order:3;flex-basis:100%;flex-direction:column;align-items:stretch;gap:2px;margin:0;padding:6px 0 14px;border-top:1px solid rgba(255,255,255,.12)}
+ html.js .sitenav.open .menu a{min-height:52px;font-size:17px;padding:0 12px}
+ html.js .sitenav.open .menu a.sub{display:none}
+ html.js .sitenav.open .menu a[aria-current="page"]{box-shadow:none;background:rgba(255,255,255,.08)}
+}
+/* polish:nav END */</style></head><body>
 <a class="skip" href="#main">Skip to content</a>
 <header class="sitenav">
  <div class="container">
@@ -71,7 +93,7 @@
    <svg width="27" height="27" viewBox="0 0 30 30" aria-hidden="true" focusable="false"><g fill="none" stroke="#1B57F0" stroke-width="1.8"><circle cx="15" cy="15" r="13.2"/><circle cx="15" cy="15" r="8.6"/><circle cx="15" cy="15" r="4"/></g><circle cx="15" cy="15" r="2.4" fill="#1B57F0"/></svg>
    AI ABOVE THE CUT
   </a>
-  <nav class="menu" aria-label="Main">
+  <nav class="menu" id="mainmenu" aria-label="Main">
    <a href="index.html">Home</a>
    <a href="/current">Current issue</a>
    <a href="field-guide.html">Field Guide</a>
@@ -80,6 +102,7 @@
    <a href="about.html" aria-current="page">About</a>
    <a class="sub" href="index.html#subscribe">Subscribe</a>
   </nav>
+  <!-- polish:navctl START --><a class="sub-m" href="index.html#subscribe">Subscribe</a><button class="navtoggle" type="button" aria-expanded="false" aria-controls="mainmenu" aria-label="Open menu"><svg class="ico-open" width="20" height="20" viewBox="0 0 20 20" aria-hidden="true" focusable="false" fill="none" stroke="#fff" stroke-width="2" stroke-linecap="round"><line x1="3" y1="5.5" x2="17" y2="5.5"/><line x1="3" y1="10" x2="17" y2="10"/><line x1="3" y1="14.5" x2="17" y2="14.5"/></svg><svg class="ico-close" width="20" height="20" viewBox="0 0 20 20" aria-hidden="true" focusable="false" fill="none" stroke="#fff" stroke-width="2" stroke-linecap="round"><line x1="4.5" y1="4.5" x2="15.5" y2="15.5"/><line x1="15.5" y1="4.5" x2="4.5" y2="15.5"/></svg></button><!-- polish:navctl END -->
  </div>
 </header>
 <main class="article" id="main">
@@ -164,6 +187,7 @@
  <div class="container">
   <a href="index.html">Home</a> &nbsp;·&nbsp; <a href="/current">Current issue</a> &nbsp;·&nbsp; <a href="field-guide.html">Field Guide</a> &nbsp;·&nbsp; <a href="resources.html">Resources</a> &nbsp;·&nbsp; <a href="lexicon.html">Lexicon</a> &nbsp;·&nbsp; <a href="about.html">About</a> &nbsp;·&nbsp; <a href="index.html#subscribe">Subscribe</a><br>
   AI Above the Cut — a weekly AI brief for executives.
+  <!-- polish:play START --><br><span class="play">Take a two-minute break: <a href="https://theashburnpulse.com/games/interchange">play The Interchange</a>, a daily word puzzle from The Ashburn Pulse.</span><!-- polish:play END -->
  </div>
 </footer>
-</body></html>
+<!-- polish:navjs START --><script>(function(){var h=document.querySelector('.sitenav'),b=h&&h.querySelector('.navtoggle');if(!b)return;function set(o){h.classList.toggle('open',o);b.setAttribute('aria-expanded',o?'true':'false');b.setAttribute('aria-label',o?'Close menu':'Open menu');}b.addEventListener('click',function(){set(!h.classList.contains('open'));});document.addEventListener('keydown',function(e){if(e.key==='Escape'&&h.classList.contains('open')){set(false);b.focus();}});h.querySelectorAll('.menu a').forEach(function(a){a.addEventListener('click',function(){set(false);});});})();</script><!-- polish:navjs END --></body></html>
