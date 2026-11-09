@@ -1,8 +1,8 @@
 # Social - Issue 021 · 2026-11-08 · "Who gets to build with AI? Goldman just drew a line."
 
-Status: final. Drafted Sunday, November 8, from the issue as it stands now (`editions/2026-11-08_full.md`, Draft 11, with the claim-check fixes) and the claim check (`work/cycles/2026-11-08/reviews/10-claude-claim-check.md` and `claimcheck/claims_A.md` to `_C.md`). Where the claim check questioned a line in the issue, this plan leaves that line out or uses the issue's corrected wording. Mario refines it after the site goes live.
+Status: final. Drafted Sunday, November 8, from the issue as it stands now (`editions/2026-11-08_full.md`, Draft 12, the published text) and the claim check (`work/cycles/2026-11-08/reviews/10-claude-claim-check.md` and `claimcheck/claims_A.md` to `_C.md`). Where the claim check questioned a line in the issue, this plan leaves that line out or uses the issue's corrected wording. Mario refines it after the site goes live.
 
-**Where this sits in the cycle:** Gather ✅ → Lead picked (Goldman Sachs, chosen by Mario) ✅ → Draft and outside review ✅ → Claim check ✅ → Fixes from the claim check ✅ (Draft 11, approved Nov 8) → **Social plan, final ← here (drafted ahead of the send)** → Site release → Send, Sun 7pm ET → Mario's refinement → Post: Sun night (1, 2) · Tue (3) · Thu or Sat (4) · daily X replies
+**Where this sits in the cycle:** Gather ✅ → Lead picked (Goldman Sachs, chosen by Mario) ✅ → Draft and outside review ✅ → Claim check ✅ → Fixes from the claim check ✅ (Drafts 11 and 12, approved Nov 8) → Site release ✅ (Nov 8 morning) → **Social plan, final ← here** → MailerLite draft → Send, Sun 7pm ET → Mario's refinement → Post: Sun night (1, 2) · Tue (3) · Thu or Sat (4) · daily X replies
 
 **Live:** https://aiabovethecut.com/2026-11-08 (check the link once the issue is live)
 
@@ -23,16 +23,16 @@ Status: final. Drafted Sunday, November 8, from the issue as it stands now (`edi
 **Discipline notes for each piece below.**
 
 1. **Goldman comes from Bloomberg,** November 2, read through The Edge Malaysia's copy. Say "Bloomberg reported." Under guidance updated in October, Claude Code and GitHub's coding tools are now for engineers. Strats are exempt. Goldman still runs its own in-house assistant. Do not write "Goldman banned AI." Do not say how long traders used the tools. Say "traders had used the tools to track client flows."
-2. **Goldman's reasons:** the claim check found the "productivity and risk management" line was a general remark by a spokesperson about how Goldman decides who gets which tools. This plan leaves it out. "Goldman may be right on risk" is your view, so mark it as yours.
+2. **Goldman's reasons:** Goldman's spokesperson told Bloomberg that after a period of experimentation it assessed factors "including productivity and risk management" before putting the tools with those best suited to them. You can use that line, credited to Goldman via Bloomberg. "Goldman may be right on risk" is your view, so mark it as yours.
 3. **July:** Goldman's technology chief praised "vibe coding" by non-technical staff, and the July model was that staff build the first version and engineers harden it. Both are in the issue. Keep them as July facts, not as Goldman's current policy.
-4. **Replit's chief executive.** The "this week" timing was not confirmed by the claim check (the page did not load). This plan leaves it out.
+4. **Replit's chief executive** wrote on X on Tuesday, November 3, that AI agents on employee computers are a growing security risk (The New Stack). Usable if you credit it that way.
 5. **Menlo's $177 billion** is an annualized run-rate estimate as of September, up from $33 billion in 2025. It is built on a survey of about 400 US buyers, and Menlo invests in Anthropic. Say all three when the number appears. AI coding alone is about $34 billion, mostly Claude Code and Codex.
 6. **"Companies are controlling AI more tightly"** overstated its support in the claim check. Use "some are," and name Goldman. Do not generalize.
 7. **Visa:** 22 models from 12 labs. 42.8% of runs failed. In 54% of the failed runs, the agent still chose to buy. These were simulated purchase decisions in a test. Checkout and payment were not tested. Say "bought even though it had failed the task," not "wrong purchase."
-8. **Anthropic's 58%:** share of third-quarter revenue spent on compute, up from 48% in the second quarter, its filing shows. It paid extra for short-term capacity. Do not use the "about 47%" revenue growth figure; the claim check could not recompute it from the filing text it opened.
+8. **Anthropic's 58%:** share of third-quarter revenue spent on compute, up from 48% in the second quarter, its filing shows. It paid extra for short-term capacity. Revenue was $17.0 billion, about 47% above the second quarter (our arithmetic from the filing's own table).
 9. **Data centers:** local measures passed in 44 of 45 completed counts, by Redbud Consulting's count, AP reported. Do not write "unofficial." In Tuesday's post, "analysts cited by Ars Technica expect the new measures to mostly hit projects planned for 2028" is the corrected wording; skip it if space is tight.
 10. **Gartner's 21%:** of 275 service and support leaders, said they cut agent headcount because of AI. This plan does not use Microsoft's buyouts. If you do, add that Microsoft says they are not about AI.
-11. **The Tracker:** Duolingo's test came due and held. N = 21. The 10-Q quote is not repeated in this plan because the claim check could not read that sentence word for word.
+11. **The Tracker:** Duolingo's test came due and held. N = 21. The 10-Q credits "lower feature based AI costs" for the higher margin (read in the filing earlier this cycle).
 12. **Disclosure:** Anthropic and OpenAI models help make the newsletter, and the lead concerns Anthropic's Claude Code. Piece 1 says so once.
 13. **Event first, read second.** Each opinion below is marked as yours ("my read," "I think," "in my view").
 14. **Terms:** **Citizen CEO**, **Synthetic Space** and **Better for More** are yours. Bold them in the article editor only (see below).
@@ -231,7 +231,7 @@ It connects back to your essays. The Citizen CEO is a person who builds a capabi
 **Suggested hook (plain text, for the feed):**
 
 ```
-Goldman Sachs took AI coding tools from most of its bankers and traders, Bloomberg reported. In the same week, Meta let anyone describe a small app and have it built.
+Goldman Sachs took AI coding tools from most of its bankers and traders, Bloomberg reported. In the same week, Meta's Muse started building small custom apps from a description.
 
 Inside a company, the real question is not whether people can build. It is who can build, what they can change, and who answers for the result.
 ```
@@ -252,7 +252,7 @@ If you post on Saturday, end with a short tease of next Sunday's issue.
 
 **"So Goldman banned AI?"** No. Under its October guidance, Claude Code and GitHub's coding tools are now for engineers, Bloomberg reported. Strats are exempt and Goldman still runs its own in-house assistant.
 
-**"Isn't Goldman just being careful?"** It may be. I think so on risk. My point is that limiting a tool and limiting who can invent better ways of working are different decisions. The test is whether people closest to the work still have a governed path to a working tool.
+**"Isn't Goldman just being careful?"** It may be, and on risk I think it has a point. My point is that limiting a tool and limiting who can invent better ways of working are different decisions. The test is whether people closest to the work still have a governed path to a working tool.
 
 **"Isn't this an Anthropic ad?"** The lead is about Goldman limiting Claude Code, which is Anthropic's product, and the issue says the newsletter uses Anthropic and OpenAI models. The Goldman facts come from Bloomberg. The Menlo spending estimate comes from a firm that invests in Anthropic, and the issue says so.
 
